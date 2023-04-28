@@ -1,34 +1,81 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <group>
+
+    <style>
+        .Campo {
+            width: 96;
+            margins:{top=2,bottom=2,left=2,right=2};
+        }
+
+        .Campo label {
+            width: 96;
+            horzTextAlign: center;
+        }
+
+        edit {
+            align: client;
+        }
+
+        .Campo edit {
+            readOnly: true;
+            canFocus: false;
+            horzTextAlign: center;
+        }
+
+        
+    </style>
+
     <template name="tabelaAtributos">
 
-        <flowLayout maxWidth="1500" height="200" minWidth="1000" minScaledWidth="500" horzAlign="center">
+        <flowLayout maxWidth="1500" autoHeight="true" minWidth="1000" minScaledWidth="500" horzAlign="center" maxControlsPerLine="10">
 
-            <colunaDeAtributo color="red"/>
-            <colunaDeAtributo color="blue"/>
-            <colunaDeAtributo color="green"/>
-            <colunaDeAtributo color="yellow"/>
-            <colunaDeAtributo color="black"/>
-            <colunaDeAtributo color="red"/>
-            <colunaDeAtributo color="blue"/>
-            <colunaDeAtributo color="green"/>
-            <colunaDeAtributo color="yellow"/>
-            <colunaDeAtributo color="black"/>
+            <titulosDasColunas/>
+            <linha text="Constituição"/>
+            <linha text="Força"/>
+            <linha text="Destreza"/>
+            <linha text="Carisma"/>
+            <linha text="Inteligência"/>
+            <linha text="Sabedoria"/>
 
         </flowLayout>
     </template>
 
-    <template name="colunaDeAtributo">
-        <flowLayout width="96" margins="{top}">
+    <template name="titulosDasColunas">
+        <campo/>
+        <campo text="Nível"/>
+        <campo text="Classe"/>
+        <campo text="Raça"/>
+        <campo text="Treino"/>
+        <campo text="Outro"/>
+        <campo text="Base"/>
+        <campo text="Multiplicador"/>
+        <campo text="Extra"/>
+        <campo text="Total"/>
+    </template>
 
-            <flowPart width="96" margins="{top=2,bottom=2,left=2,right=2}">
-                <rectangle align="client" color="$(color)"/>
-            </flowPart>
+    <template name="linha">
+        <campo text="$(text)"/>
+        <valor/>
+        <valor/>
+        <valor/>
+        <valor/>
+        <valor/>
+        <valor readOnly="true" canFocus="false"/>
+        <valor/>
+        <valor/>
+        <valor readOnly="true" canFocus="false"/>
+    </template>
 
-            <flowPart width="96" margins="{top=2,bottom=2,left=2,right=2}">
-                <rectangle align="client" color="white"/>
-            </flowPart>
-
+    <template name="campo">
+        <flowLayout class="Campo">
+            <edit text="$(text)"/>
         </flowLayout>
     </template>
+
+    <template name="valor">
+        <flowLayout class="Campo">
+            <edit type="number" readOnly="$(readOnly or 'false')" canFocus="$(canFocus or 'true')"/>
+        </flowLayout>
+    </template>
+
 </group>
