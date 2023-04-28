@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<group>
+    <template name="tabelaAtributos">
+
+        <flowLayout maxWidth="1500" height="200" minWidth="1000" minScaledWidth="500" horzAlign="center">
+
+            <colunaDeAtributo color="red"/>
+            <colunaDeAtributo color="blue"/>
+            <colunaDeAtributo color="green"/>
+            <colunaDeAtributo color="yellow"/>
+            <colunaDeAtributo color="black"/>
+            <colunaDeAtributo color="red"/>
+            <colunaDeAtributo color="blue"/>
+            <colunaDeAtributo color="green"/>
+            <colunaDeAtributo color="yellow"/>
+            <colunaDeAtributo color="black"/>
+
+        </flowLayout>
+    </template>
+
+    <template name="colunaDeAtributo">
+        <flowLayout width="96" margins="{top}">
+
+            <flowPart width="96" margins="{top=2,bottom=2,left=2,right=2}">
+                <rectangle align="client" color="$(color)"/>
+            </flowPart>
+
+            <flowPart width="96" margins="{top=2,bottom=2,left=2,right=2}">
+                <rectangle align="client" color="white"/>
+            </flowPart>
+
+        </flowLayout>
+    </template>
+</group>

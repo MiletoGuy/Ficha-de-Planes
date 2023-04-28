@@ -2,17 +2,20 @@
 <form formType="sheetTemplate" dataType="FICHA_PLANES" title="Ficha de Jogador [Planes]" name="frmFichaPlanes"
       theme="dark">
 
-    <import file="aba.xml"/>
+    <import file="./componentes/abaVazia.xml"/>
+    <import file="./componentes/atributos/abaAtributos.xml"/>
+
     <tabControl align="client" name="pgcPrincipal">
-        <aba nome="Perfil" field="aba1"/>
-        <aba nome="Habilidades" field="aba2"/>
-        <aba nome="Inventário" field="aba3"/>
-        <aba nome="Outros Itens" field="aba4"/>
-        <aba nome="NPC's" field="aba5"/>
-        <aba nome="Anotações" field="aba6"/>
-        <aba nome="Extra1" field="aba7"/>
-        <aba nome="Extra2" field="aba8"/>
-        <aba nome="Extra3" field="aba9"/>
-        <aba nome="Extra4" field="aba10"/>
+        <abaAtributos field="aba11"/>
+        <abaVazia nome="Perfil" field="aba1"/>
+        <abaVazia nome="Habilidades" field="aba2"/>
+        <abaVazia nome="Inventário" field="aba3"/>
+        <abaVazia nome="Outros Itens" field="aba4"/>
+        <abaVazia nome="NPC's" field="aba5"/>
+        <abaVazia nome="Anotações" field="aba6"/>
+        <abaVazia nome="Extra1" field="aba7"/>
+        <abaVazia nome="Extra2" field="aba8"/>
+        <abaVazia nome="Extra3" field="aba9"/>
+        <abaVazia nome="Extra4" field="aba10"/>
     </tabControl>
 </form>

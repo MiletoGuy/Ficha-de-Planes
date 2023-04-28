@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<group>
+    <import file="tabelaAtributos.xml"/>
+
+    <template name="abaAtributos">
+        <tab name="abaAtributos" title="Atributos">
+            <rectangle align="client" color="#40000000" xradius="10" yradius="10">
+                <scrollBox align="client">
+                    <flowLayout align="client" maxControlsPerLine="1" autoHeight="true" horzAlign="center">
+                        <tabelaAtributos/>
+                    </flowLayout>
+                </scrollBox>
+            </rectangle>
+        </tab>
+    </template>
+</group>
