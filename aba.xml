@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<group>
+    <template name="aba">
+        <tab name="aba$(field)" title="$(nome)" 
+            onDblClick="self.popup$(field):show('bottomCenter',self.aba$(field))">
+            <rectangle align="client" color="#40000000" xradius="10" yradius="10">
+                <scrollBox align="client">
+                    <richEdit align="client" backgroundColor="#40000000" field="$(nome)"/>
+                </scrollBox>
+            </rectangle>
+        </tab>
+
+        <popup name="popup$(field)" width="150" height="50" backOpacity="0">
+            <flowLayout width="150" height="50" padding="{top=5,bottom=5,left=5,right=5}" maxControlsPerLine="2">
+                 <edit align="top" name="edit$(field)" field="edit$(field)" fontSize="10" transparent="true"
+                  vertTextAlign="center" width="100"
+                  onKeyDown="
+                        if event.keyCode == 13 then
+                            self.okButton$(field):setFocus();
+                            self.aba$(field).title = sheet.edit$(field);
+                            self.popup$(field):close();
+                            sheet.edit$(field) = '';
+                        end"/>
+                  <button name="okButton$(field)" text="ok" width="25" fontSize="10" 
+                          onClick="self.aba$(field).title = sheet.edit$(field);
+                                   self.popup$(field):close();
+                                   sheet.edit$(field) = '';"/>
+                  <horzLine align="top" strokeColor="#FFFFFF50" strokeSize="1" width="100"/>
+            </flowLayout>
+        </popup>
+    </template>
+</group>

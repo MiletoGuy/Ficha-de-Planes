@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module sdkVersion="3.6c">
+    <id>FICHA_DE_JOGADOR_PLANES</id>
+    <version>1.0</version>
+    <info lang="pt-BR">
+        <name>Ficha Planes</name>
+        <description>Ficha do jogador de [planes]</description>
+        <author>Tales Moreira</author>
+        <site>http://talesmoreira.com</site>
+        <contact>+55 45 998494274</contact>
+    </info>
+</module>

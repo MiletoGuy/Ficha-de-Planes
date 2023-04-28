@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form formType="sheetTemplate" dataType="FICHA_PLANES" title="Ficha de Jogador [Planes]" name="frmFichaPlanes"
+      theme="dark">
+
+    <import file="aba.xml"/>
+    <tabControl align="client" name="pgcPrincipal">
+        <aba nome="Perfil" field="aba1"/>
+        <aba nome="Habilidades" field="aba2"/>
+        <aba nome="Inventário" field="aba3"/>
+        <aba nome="Outros Itens" field="aba4"/>
+        <aba nome="NPC's" field="aba5"/>
+        <aba nome="Anotações" field="aba6"/>
+        <aba nome="Extra1" field="aba7"/>
+        <aba nome="Extra2" field="aba8"/>
+        <aba nome="Extra3" field="aba9"/>
+        <aba nome="Extra4" field="aba10"/>
+    </tabControl>
+</form>
