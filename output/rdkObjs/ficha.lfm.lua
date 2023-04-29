@@ -82,6 +82,7 @@ local function constructNew_frmFichaPlanes()
     obj.edit1 = GUI.fromHandle(_obj_newObject("edit"));
     obj.edit1:setParent(obj.flowLayout3);
     obj.edit1:setText("");
+    lfm_setPropAsString(obj.edit1, "fontStyle",  "bold");
     obj.edit1:setName("edit1");
     obj.edit1:setReadOnly(true);
     obj.edit1:setCanFocus(false);
@@ -97,6 +98,7 @@ local function constructNew_frmFichaPlanes()
     obj.edit2 = GUI.fromHandle(_obj_newObject("edit"));
     obj.edit2:setParent(obj.flowLayout4);
     obj.edit2:setText("Nível");
+    lfm_setPropAsString(obj.edit2, "fontStyle",  "bold");
     obj.edit2:setName("edit2");
     obj.edit2:setReadOnly(true);
     obj.edit2:setCanFocus(false);
@@ -112,6 +114,7 @@ local function constructNew_frmFichaPlanes()
     obj.edit3 = GUI.fromHandle(_obj_newObject("edit"));
     obj.edit3:setParent(obj.flowLayout5);
     obj.edit3:setText("Classe");
+    lfm_setPropAsString(obj.edit3, "fontStyle",  "bold");
     obj.edit3:setName("edit3");
     obj.edit3:setReadOnly(true);
     obj.edit3:setCanFocus(false);
@@ -127,6 +130,7 @@ local function constructNew_frmFichaPlanes()
     obj.edit4 = GUI.fromHandle(_obj_newObject("edit"));
     obj.edit4:setParent(obj.flowLayout6);
     obj.edit4:setText("Raça");
+    lfm_setPropAsString(obj.edit4, "fontStyle",  "bold");
     obj.edit4:setName("edit4");
     obj.edit4:setReadOnly(true);
     obj.edit4:setCanFocus(false);
@@ -142,6 +146,7 @@ local function constructNew_frmFichaPlanes()
     obj.edit5 = GUI.fromHandle(_obj_newObject("edit"));
     obj.edit5:setParent(obj.flowLayout7);
     obj.edit5:setText("Treino");
+    lfm_setPropAsString(obj.edit5, "fontStyle",  "bold");
     obj.edit5:setName("edit5");
     obj.edit5:setReadOnly(true);
     obj.edit5:setCanFocus(false);
@@ -157,6 +162,7 @@ local function constructNew_frmFichaPlanes()
     obj.edit6 = GUI.fromHandle(_obj_newObject("edit"));
     obj.edit6:setParent(obj.flowLayout8);
     obj.edit6:setText("Outro");
+    lfm_setPropAsString(obj.edit6, "fontStyle",  "bold");
     obj.edit6:setName("edit6");
     obj.edit6:setReadOnly(true);
     obj.edit6:setCanFocus(false);
@@ -172,6 +178,7 @@ local function constructNew_frmFichaPlanes()
     obj.edit7 = GUI.fromHandle(_obj_newObject("edit"));
     obj.edit7:setParent(obj.flowLayout9);
     obj.edit7:setText("Base");
+    lfm_setPropAsString(obj.edit7, "fontStyle",  "bold");
     obj.edit7:setName("edit7");
     obj.edit7:setReadOnly(true);
     obj.edit7:setCanFocus(false);
@@ -187,6 +194,7 @@ local function constructNew_frmFichaPlanes()
     obj.edit8 = GUI.fromHandle(_obj_newObject("edit"));
     obj.edit8:setParent(obj.flowLayout10);
     obj.edit8:setText("Multiplicador");
+    lfm_setPropAsString(obj.edit8, "fontStyle",  "bold");
     obj.edit8:setName("edit8");
     obj.edit8:setReadOnly(true);
     obj.edit8:setCanFocus(false);
@@ -202,6 +210,7 @@ local function constructNew_frmFichaPlanes()
     obj.edit9 = GUI.fromHandle(_obj_newObject("edit"));
     obj.edit9:setParent(obj.flowLayout11);
     obj.edit9:setText("Extra");
+    lfm_setPropAsString(obj.edit9, "fontStyle",  "bold");
     obj.edit9:setName("edit9");
     obj.edit9:setReadOnly(true);
     obj.edit9:setCanFocus(false);
@@ -217,6 +226,7 @@ local function constructNew_frmFichaPlanes()
     obj.edit10 = GUI.fromHandle(_obj_newObject("edit"));
     obj.edit10:setParent(obj.flowLayout12);
     obj.edit10:setText("Total");
+    lfm_setPropAsString(obj.edit10, "fontStyle",  "bold");
     obj.edit10:setName("edit10");
     obj.edit10:setReadOnly(true);
     obj.edit10:setCanFocus(false);
@@ -232,6 +242,7 @@ local function constructNew_frmFichaPlanes()
     obj.edit11 = GUI.fromHandle(_obj_newObject("edit"));
     obj.edit11:setParent(obj.flowLayout13);
     obj.edit11:setText("Constituição");
+    lfm_setPropAsString(obj.edit11, "fontStyle",  "bold");
     obj.edit11:setName("edit11");
     obj.edit11:setReadOnly(true);
     obj.edit11:setCanFocus(false);
@@ -244,14 +255,16 @@ local function constructNew_frmFichaPlanes()
     obj.flowLayout14:setWidth(96);
     obj.flowLayout14:setMargins({top=2,bottom=2,left=2,right=2});
 
-    obj.edit12 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit12:setParent(obj.flowLayout14);
-    obj.edit12:setType("number");
-    obj.edit12:setReadOnly(false);
-    obj.edit12:setCanFocus(true);
-    obj.edit12:setName("edit12");
-    obj.edit12:setHorzTextAlign("center");
-    obj.edit12:setAlign("client");
+    obj.nivelcon = GUI.fromHandle(_obj_newObject("edit"));
+    obj.nivelcon:setParent(obj.flowLayout14);
+    obj.nivelcon:setName("nivelcon");
+    obj.nivelcon:setType("number");
+    obj.nivelcon:setField("nivelcon");
+    obj.nivelcon:setMin(0);
+    obj.nivelcon:setReadOnly(false);
+    obj.nivelcon:setCanFocus(true);
+    obj.nivelcon:setHorzTextAlign("center");
+    obj.nivelcon:setAlign("client");
 
     obj.flowLayout15 = GUI.fromHandle(_obj_newObject("flowLayout"));
     obj.flowLayout15:setParent(obj.flowLayout2);
@@ -259,14 +272,16 @@ local function constructNew_frmFichaPlanes()
     obj.flowLayout15:setWidth(96);
     obj.flowLayout15:setMargins({top=2,bottom=2,left=2,right=2});
 
-    obj.edit13 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit13:setParent(obj.flowLayout15);
-    obj.edit13:setType("number");
-    obj.edit13:setReadOnly(false);
-    obj.edit13:setCanFocus(true);
-    obj.edit13:setName("edit13");
-    obj.edit13:setHorzTextAlign("center");
-    obj.edit13:setAlign("client");
+    obj.classecon = GUI.fromHandle(_obj_newObject("edit"));
+    obj.classecon:setParent(obj.flowLayout15);
+    obj.classecon:setName("classecon");
+    obj.classecon:setType("number");
+    obj.classecon:setField("classecon");
+    obj.classecon:setMin(0);
+    obj.classecon:setReadOnly(false);
+    obj.classecon:setCanFocus(true);
+    obj.classecon:setHorzTextAlign("center");
+    obj.classecon:setAlign("client");
 
     obj.flowLayout16 = GUI.fromHandle(_obj_newObject("flowLayout"));
     obj.flowLayout16:setParent(obj.flowLayout2);
@@ -274,14 +289,16 @@ local function constructNew_frmFichaPlanes()
     obj.flowLayout16:setWidth(96);
     obj.flowLayout16:setMargins({top=2,bottom=2,left=2,right=2});
 
-    obj.edit14 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit14:setParent(obj.flowLayout16);
-    obj.edit14:setType("number");
-    obj.edit14:setReadOnly(false);
-    obj.edit14:setCanFocus(true);
-    obj.edit14:setName("edit14");
-    obj.edit14:setHorzTextAlign("center");
-    obj.edit14:setAlign("client");
+    obj.racacon = GUI.fromHandle(_obj_newObject("edit"));
+    obj.racacon:setParent(obj.flowLayout16);
+    obj.racacon:setName("racacon");
+    obj.racacon:setType("number");
+    obj.racacon:setField("racacon");
+    obj.racacon:setMin(0);
+    obj.racacon:setReadOnly(false);
+    obj.racacon:setCanFocus(true);
+    obj.racacon:setHorzTextAlign("center");
+    obj.racacon:setAlign("client");
 
     obj.flowLayout17 = GUI.fromHandle(_obj_newObject("flowLayout"));
     obj.flowLayout17:setParent(obj.flowLayout2);
@@ -289,14 +306,16 @@ local function constructNew_frmFichaPlanes()
     obj.flowLayout17:setWidth(96);
     obj.flowLayout17:setMargins({top=2,bottom=2,left=2,right=2});
 
-    obj.edit15 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit15:setParent(obj.flowLayout17);
-    obj.edit15:setType("number");
-    obj.edit15:setReadOnly(false);
-    obj.edit15:setCanFocus(true);
-    obj.edit15:setName("edit15");
-    obj.edit15:setHorzTextAlign("center");
-    obj.edit15:setAlign("client");
+    obj.treinocon = GUI.fromHandle(_obj_newObject("edit"));
+    obj.treinocon:setParent(obj.flowLayout17);
+    obj.treinocon:setName("treinocon");
+    obj.treinocon:setType("number");
+    obj.treinocon:setField("treinocon");
+    obj.treinocon:setMin(0);
+    obj.treinocon:setReadOnly(false);
+    obj.treinocon:setCanFocus(true);
+    obj.treinocon:setHorzTextAlign("center");
+    obj.treinocon:setAlign("client");
 
     obj.flowLayout18 = GUI.fromHandle(_obj_newObject("flowLayout"));
     obj.flowLayout18:setParent(obj.flowLayout2);
@@ -304,14 +323,16 @@ local function constructNew_frmFichaPlanes()
     obj.flowLayout18:setWidth(96);
     obj.flowLayout18:setMargins({top=2,bottom=2,left=2,right=2});
 
-    obj.edit16 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit16:setParent(obj.flowLayout18);
-    obj.edit16:setType("number");
-    obj.edit16:setReadOnly(false);
-    obj.edit16:setCanFocus(true);
-    obj.edit16:setName("edit16");
-    obj.edit16:setHorzTextAlign("center");
-    obj.edit16:setAlign("client");
+    obj.outrocon = GUI.fromHandle(_obj_newObject("edit"));
+    obj.outrocon:setParent(obj.flowLayout18);
+    obj.outrocon:setName("outrocon");
+    obj.outrocon:setType("number");
+    obj.outrocon:setField("outrocon");
+    obj.outrocon:setMin(0);
+    obj.outrocon:setReadOnly(false);
+    obj.outrocon:setCanFocus(true);
+    obj.outrocon:setHorzTextAlign("center");
+    obj.outrocon:setAlign("client");
 
     obj.flowLayout19 = GUI.fromHandle(_obj_newObject("flowLayout"));
     obj.flowLayout19:setParent(obj.flowLayout2);
@@ -319,14 +340,16 @@ local function constructNew_frmFichaPlanes()
     obj.flowLayout19:setWidth(96);
     obj.flowLayout19:setMargins({top=2,bottom=2,left=2,right=2});
 
-    obj.edit17 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit17:setParent(obj.flowLayout19);
-    obj.edit17:setType("number");
-    obj.edit17:setReadOnly(true);
-    obj.edit17:setCanFocus(false);
-    obj.edit17:setName("edit17");
-    obj.edit17:setHorzTextAlign("center");
-    obj.edit17:setAlign("client");
+    obj.basecon = GUI.fromHandle(_obj_newObject("edit"));
+    obj.basecon:setParent(obj.flowLayout19);
+    obj.basecon:setName("basecon");
+    obj.basecon:setType("number");
+    obj.basecon:setField("basecon");
+    obj.basecon:setMin(0);
+    obj.basecon:setReadOnly(true);
+    obj.basecon:setCanFocus(false);
+    obj.basecon:setHorzTextAlign("center");
+    obj.basecon:setAlign("client");
 
     obj.flowLayout20 = GUI.fromHandle(_obj_newObject("flowLayout"));
     obj.flowLayout20:setParent(obj.flowLayout2);
@@ -334,14 +357,16 @@ local function constructNew_frmFichaPlanes()
     obj.flowLayout20:setWidth(96);
     obj.flowLayout20:setMargins({top=2,bottom=2,left=2,right=2});
 
-    obj.edit18 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit18:setParent(obj.flowLayout20);
-    obj.edit18:setType("number");
-    obj.edit18:setReadOnly(false);
-    obj.edit18:setCanFocus(true);
-    obj.edit18:setName("edit18");
-    obj.edit18:setHorzTextAlign("center");
-    obj.edit18:setAlign("client");
+    obj.multiplicadorcon = GUI.fromHandle(_obj_newObject("edit"));
+    obj.multiplicadorcon:setParent(obj.flowLayout20);
+    obj.multiplicadorcon:setName("multiplicadorcon");
+    obj.multiplicadorcon:setType("number");
+    obj.multiplicadorcon:setField("multiplicadorcon");
+    obj.multiplicadorcon:setMin(0);
+    obj.multiplicadorcon:setReadOnly(false);
+    obj.multiplicadorcon:setCanFocus(true);
+    obj.multiplicadorcon:setHorzTextAlign("center");
+    obj.multiplicadorcon:setAlign("client");
 
     obj.flowLayout21 = GUI.fromHandle(_obj_newObject("flowLayout"));
     obj.flowLayout21:setParent(obj.flowLayout2);
@@ -349,14 +374,16 @@ local function constructNew_frmFichaPlanes()
     obj.flowLayout21:setWidth(96);
     obj.flowLayout21:setMargins({top=2,bottom=2,left=2,right=2});
 
-    obj.edit19 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit19:setParent(obj.flowLayout21);
-    obj.edit19:setType("number");
-    obj.edit19:setReadOnly(false);
-    obj.edit19:setCanFocus(true);
-    obj.edit19:setName("edit19");
-    obj.edit19:setHorzTextAlign("center");
-    obj.edit19:setAlign("client");
+    obj.extracon = GUI.fromHandle(_obj_newObject("edit"));
+    obj.extracon:setParent(obj.flowLayout21);
+    obj.extracon:setName("extracon");
+    obj.extracon:setType("number");
+    obj.extracon:setField("extracon");
+    obj.extracon:setMin(0);
+    obj.extracon:setReadOnly(false);
+    obj.extracon:setCanFocus(true);
+    obj.extracon:setHorzTextAlign("center");
+    obj.extracon:setAlign("client");
 
     obj.flowLayout22 = GUI.fromHandle(_obj_newObject("flowLayout"));
     obj.flowLayout22:setParent(obj.flowLayout2);
@@ -364,14 +391,22 @@ local function constructNew_frmFichaPlanes()
     obj.flowLayout22:setWidth(96);
     obj.flowLayout22:setMargins({top=2,bottom=2,left=2,right=2});
 
-    obj.edit20 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit20:setParent(obj.flowLayout22);
-    obj.edit20:setType("number");
-    obj.edit20:setReadOnly(true);
-    obj.edit20:setCanFocus(false);
-    obj.edit20:setName("edit20");
-    obj.edit20:setHorzTextAlign("center");
-    obj.edit20:setAlign("client");
+    obj.totalcon = GUI.fromHandle(_obj_newObject("edit"));
+    obj.totalcon:setParent(obj.flowLayout22);
+    obj.totalcon:setName("totalcon");
+    obj.totalcon:setType("number");
+    obj.totalcon:setField("totalcon");
+    obj.totalcon:setMin(0);
+    obj.totalcon:setReadOnly(true);
+    obj.totalcon:setCanFocus(false);
+    obj.totalcon:setHorzTextAlign("center");
+    obj.totalcon:setAlign("client");
+
+    obj.dataLink1 = GUI.fromHandle(_obj_newObject("dataLink"));
+    obj.dataLink1:setParent(obj.flowLayout2);
+    obj.dataLink1:setFields({'nivelcon', 'classecon', 'racacon', 'treinocon', 'outrocon',
+                           'basecon', 'multiplicadorcon', 'extracon', 'totalcon'});
+    obj.dataLink1:setName("dataLink1");
 
     obj.flowLayout23 = GUI.fromHandle(_obj_newObject("flowLayout"));
     obj.flowLayout23:setParent(obj.flowLayout2);
@@ -379,14 +414,15 @@ local function constructNew_frmFichaPlanes()
     obj.flowLayout23:setWidth(96);
     obj.flowLayout23:setMargins({top=2,bottom=2,left=2,right=2});
 
-    obj.edit21 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit21:setParent(obj.flowLayout23);
-    obj.edit21:setText("Força");
-    obj.edit21:setName("edit21");
-    obj.edit21:setReadOnly(true);
-    obj.edit21:setCanFocus(false);
-    obj.edit21:setHorzTextAlign("center");
-    obj.edit21:setAlign("client");
+    obj.edit12 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit12:setParent(obj.flowLayout23);
+    obj.edit12:setText("Força");
+    lfm_setPropAsString(obj.edit12, "fontStyle",  "bold");
+    obj.edit12:setName("edit12");
+    obj.edit12:setReadOnly(true);
+    obj.edit12:setCanFocus(false);
+    obj.edit12:setHorzTextAlign("center");
+    obj.edit12:setAlign("client");
 
     obj.flowLayout24 = GUI.fromHandle(_obj_newObject("flowLayout"));
     obj.flowLayout24:setParent(obj.flowLayout2);
@@ -394,14 +430,16 @@ local function constructNew_frmFichaPlanes()
     obj.flowLayout24:setWidth(96);
     obj.flowLayout24:setMargins({top=2,bottom=2,left=2,right=2});
 
-    obj.edit22 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit22:setParent(obj.flowLayout24);
-    obj.edit22:setType("number");
-    obj.edit22:setReadOnly(false);
-    obj.edit22:setCanFocus(true);
-    obj.edit22:setName("edit22");
-    obj.edit22:setHorzTextAlign("center");
-    obj.edit22:setAlign("client");
+    obj.nivelfor = GUI.fromHandle(_obj_newObject("edit"));
+    obj.nivelfor:setParent(obj.flowLayout24);
+    obj.nivelfor:setName("nivelfor");
+    obj.nivelfor:setType("number");
+    obj.nivelfor:setField("nivelfor");
+    obj.nivelfor:setMin(0);
+    obj.nivelfor:setReadOnly(false);
+    obj.nivelfor:setCanFocus(true);
+    obj.nivelfor:setHorzTextAlign("center");
+    obj.nivelfor:setAlign("client");
 
     obj.flowLayout25 = GUI.fromHandle(_obj_newObject("flowLayout"));
     obj.flowLayout25:setParent(obj.flowLayout2);
@@ -409,14 +447,16 @@ local function constructNew_frmFichaPlanes()
     obj.flowLayout25:setWidth(96);
     obj.flowLayout25:setMargins({top=2,bottom=2,left=2,right=2});
 
-    obj.edit23 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit23:setParent(obj.flowLayout25);
-    obj.edit23:setType("number");
-    obj.edit23:setReadOnly(false);
-    obj.edit23:setCanFocus(true);
-    obj.edit23:setName("edit23");
-    obj.edit23:setHorzTextAlign("center");
-    obj.edit23:setAlign("client");
+    obj.classefor = GUI.fromHandle(_obj_newObject("edit"));
+    obj.classefor:setParent(obj.flowLayout25);
+    obj.classefor:setName("classefor");
+    obj.classefor:setType("number");
+    obj.classefor:setField("classefor");
+    obj.classefor:setMin(0);
+    obj.classefor:setReadOnly(false);
+    obj.classefor:setCanFocus(true);
+    obj.classefor:setHorzTextAlign("center");
+    obj.classefor:setAlign("client");
 
     obj.flowLayout26 = GUI.fromHandle(_obj_newObject("flowLayout"));
     obj.flowLayout26:setParent(obj.flowLayout2);
@@ -424,14 +464,16 @@ local function constructNew_frmFichaPlanes()
     obj.flowLayout26:setWidth(96);
     obj.flowLayout26:setMargins({top=2,bottom=2,left=2,right=2});
 
-    obj.edit24 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit24:setParent(obj.flowLayout26);
-    obj.edit24:setType("number");
-    obj.edit24:setReadOnly(false);
-    obj.edit24:setCanFocus(true);
-    obj.edit24:setName("edit24");
-    obj.edit24:setHorzTextAlign("center");
-    obj.edit24:setAlign("client");
+    obj.racafor = GUI.fromHandle(_obj_newObject("edit"));
+    obj.racafor:setParent(obj.flowLayout26);
+    obj.racafor:setName("racafor");
+    obj.racafor:setType("number");
+    obj.racafor:setField("racafor");
+    obj.racafor:setMin(0);
+    obj.racafor:setReadOnly(false);
+    obj.racafor:setCanFocus(true);
+    obj.racafor:setHorzTextAlign("center");
+    obj.racafor:setAlign("client");
 
     obj.flowLayout27 = GUI.fromHandle(_obj_newObject("flowLayout"));
     obj.flowLayout27:setParent(obj.flowLayout2);
@@ -439,14 +481,16 @@ local function constructNew_frmFichaPlanes()
     obj.flowLayout27:setWidth(96);
     obj.flowLayout27:setMargins({top=2,bottom=2,left=2,right=2});
 
-    obj.edit25 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit25:setParent(obj.flowLayout27);
-    obj.edit25:setType("number");
-    obj.edit25:setReadOnly(false);
-    obj.edit25:setCanFocus(true);
-    obj.edit25:setName("edit25");
-    obj.edit25:setHorzTextAlign("center");
-    obj.edit25:setAlign("client");
+    obj.treinofor = GUI.fromHandle(_obj_newObject("edit"));
+    obj.treinofor:setParent(obj.flowLayout27);
+    obj.treinofor:setName("treinofor");
+    obj.treinofor:setType("number");
+    obj.treinofor:setField("treinofor");
+    obj.treinofor:setMin(0);
+    obj.treinofor:setReadOnly(false);
+    obj.treinofor:setCanFocus(true);
+    obj.treinofor:setHorzTextAlign("center");
+    obj.treinofor:setAlign("client");
 
     obj.flowLayout28 = GUI.fromHandle(_obj_newObject("flowLayout"));
     obj.flowLayout28:setParent(obj.flowLayout2);
@@ -454,14 +498,16 @@ local function constructNew_frmFichaPlanes()
     obj.flowLayout28:setWidth(96);
     obj.flowLayout28:setMargins({top=2,bottom=2,left=2,right=2});
 
-    obj.edit26 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit26:setParent(obj.flowLayout28);
-    obj.edit26:setType("number");
-    obj.edit26:setReadOnly(false);
-    obj.edit26:setCanFocus(true);
-    obj.edit26:setName("edit26");
-    obj.edit26:setHorzTextAlign("center");
-    obj.edit26:setAlign("client");
+    obj.outrofor = GUI.fromHandle(_obj_newObject("edit"));
+    obj.outrofor:setParent(obj.flowLayout28);
+    obj.outrofor:setName("outrofor");
+    obj.outrofor:setType("number");
+    obj.outrofor:setField("outrofor");
+    obj.outrofor:setMin(0);
+    obj.outrofor:setReadOnly(false);
+    obj.outrofor:setCanFocus(true);
+    obj.outrofor:setHorzTextAlign("center");
+    obj.outrofor:setAlign("client");
 
     obj.flowLayout29 = GUI.fromHandle(_obj_newObject("flowLayout"));
     obj.flowLayout29:setParent(obj.flowLayout2);
@@ -469,14 +515,16 @@ local function constructNew_frmFichaPlanes()
     obj.flowLayout29:setWidth(96);
     obj.flowLayout29:setMargins({top=2,bottom=2,left=2,right=2});
 
-    obj.edit27 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit27:setParent(obj.flowLayout29);
-    obj.edit27:setType("number");
-    obj.edit27:setReadOnly(true);
-    obj.edit27:setCanFocus(false);
-    obj.edit27:setName("edit27");
-    obj.edit27:setHorzTextAlign("center");
-    obj.edit27:setAlign("client");
+    obj.basefor = GUI.fromHandle(_obj_newObject("edit"));
+    obj.basefor:setParent(obj.flowLayout29);
+    obj.basefor:setName("basefor");
+    obj.basefor:setType("number");
+    obj.basefor:setField("basefor");
+    obj.basefor:setMin(0);
+    obj.basefor:setReadOnly(true);
+    obj.basefor:setCanFocus(false);
+    obj.basefor:setHorzTextAlign("center");
+    obj.basefor:setAlign("client");
 
     obj.flowLayout30 = GUI.fromHandle(_obj_newObject("flowLayout"));
     obj.flowLayout30:setParent(obj.flowLayout2);
@@ -484,14 +532,16 @@ local function constructNew_frmFichaPlanes()
     obj.flowLayout30:setWidth(96);
     obj.flowLayout30:setMargins({top=2,bottom=2,left=2,right=2});
 
-    obj.edit28 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit28:setParent(obj.flowLayout30);
-    obj.edit28:setType("number");
-    obj.edit28:setReadOnly(false);
-    obj.edit28:setCanFocus(true);
-    obj.edit28:setName("edit28");
-    obj.edit28:setHorzTextAlign("center");
-    obj.edit28:setAlign("client");
+    obj.multiplicadorfor = GUI.fromHandle(_obj_newObject("edit"));
+    obj.multiplicadorfor:setParent(obj.flowLayout30);
+    obj.multiplicadorfor:setName("multiplicadorfor");
+    obj.multiplicadorfor:setType("number");
+    obj.multiplicadorfor:setField("multiplicadorfor");
+    obj.multiplicadorfor:setMin(0);
+    obj.multiplicadorfor:setReadOnly(false);
+    obj.multiplicadorfor:setCanFocus(true);
+    obj.multiplicadorfor:setHorzTextAlign("center");
+    obj.multiplicadorfor:setAlign("client");
 
     obj.flowLayout31 = GUI.fromHandle(_obj_newObject("flowLayout"));
     obj.flowLayout31:setParent(obj.flowLayout2);
@@ -499,14 +549,16 @@ local function constructNew_frmFichaPlanes()
     obj.flowLayout31:setWidth(96);
     obj.flowLayout31:setMargins({top=2,bottom=2,left=2,right=2});
 
-    obj.edit29 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit29:setParent(obj.flowLayout31);
-    obj.edit29:setType("number");
-    obj.edit29:setReadOnly(false);
-    obj.edit29:setCanFocus(true);
-    obj.edit29:setName("edit29");
-    obj.edit29:setHorzTextAlign("center");
-    obj.edit29:setAlign("client");
+    obj.extrafor = GUI.fromHandle(_obj_newObject("edit"));
+    obj.extrafor:setParent(obj.flowLayout31);
+    obj.extrafor:setName("extrafor");
+    obj.extrafor:setType("number");
+    obj.extrafor:setField("extrafor");
+    obj.extrafor:setMin(0);
+    obj.extrafor:setReadOnly(false);
+    obj.extrafor:setCanFocus(true);
+    obj.extrafor:setHorzTextAlign("center");
+    obj.extrafor:setAlign("client");
 
     obj.flowLayout32 = GUI.fromHandle(_obj_newObject("flowLayout"));
     obj.flowLayout32:setParent(obj.flowLayout2);
@@ -514,14 +566,22 @@ local function constructNew_frmFichaPlanes()
     obj.flowLayout32:setWidth(96);
     obj.flowLayout32:setMargins({top=2,bottom=2,left=2,right=2});
 
-    obj.edit30 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit30:setParent(obj.flowLayout32);
-    obj.edit30:setType("number");
-    obj.edit30:setReadOnly(true);
-    obj.edit30:setCanFocus(false);
-    obj.edit30:setName("edit30");
-    obj.edit30:setHorzTextAlign("center");
-    obj.edit30:setAlign("client");
+    obj.totalfor = GUI.fromHandle(_obj_newObject("edit"));
+    obj.totalfor:setParent(obj.flowLayout32);
+    obj.totalfor:setName("totalfor");
+    obj.totalfor:setType("number");
+    obj.totalfor:setField("totalfor");
+    obj.totalfor:setMin(0);
+    obj.totalfor:setReadOnly(true);
+    obj.totalfor:setCanFocus(false);
+    obj.totalfor:setHorzTextAlign("center");
+    obj.totalfor:setAlign("client");
+
+    obj.dataLink2 = GUI.fromHandle(_obj_newObject("dataLink"));
+    obj.dataLink2:setParent(obj.flowLayout2);
+    obj.dataLink2:setFields({'nivelfor', 'classefor', 'racafor', 'treinofor', 'outrofor',
+                           'basefor', 'multiplicadorfor', 'extrafor', 'totalfor'});
+    obj.dataLink2:setName("dataLink2");
 
     obj.flowLayout33 = GUI.fromHandle(_obj_newObject("flowLayout"));
     obj.flowLayout33:setParent(obj.flowLayout2);
@@ -529,14 +589,15 @@ local function constructNew_frmFichaPlanes()
     obj.flowLayout33:setWidth(96);
     obj.flowLayout33:setMargins({top=2,bottom=2,left=2,right=2});
 
-    obj.edit31 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit31:setParent(obj.flowLayout33);
-    obj.edit31:setText("Destreza");
-    obj.edit31:setName("edit31");
-    obj.edit31:setReadOnly(true);
-    obj.edit31:setCanFocus(false);
-    obj.edit31:setHorzTextAlign("center");
-    obj.edit31:setAlign("client");
+    obj.edit13 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit13:setParent(obj.flowLayout33);
+    obj.edit13:setText("Destreza");
+    lfm_setPropAsString(obj.edit13, "fontStyle",  "bold");
+    obj.edit13:setName("edit13");
+    obj.edit13:setReadOnly(true);
+    obj.edit13:setCanFocus(false);
+    obj.edit13:setHorzTextAlign("center");
+    obj.edit13:setAlign("client");
 
     obj.flowLayout34 = GUI.fromHandle(_obj_newObject("flowLayout"));
     obj.flowLayout34:setParent(obj.flowLayout2);
@@ -544,14 +605,16 @@ local function constructNew_frmFichaPlanes()
     obj.flowLayout34:setWidth(96);
     obj.flowLayout34:setMargins({top=2,bottom=2,left=2,right=2});
 
-    obj.edit32 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit32:setParent(obj.flowLayout34);
-    obj.edit32:setType("number");
-    obj.edit32:setReadOnly(false);
-    obj.edit32:setCanFocus(true);
-    obj.edit32:setName("edit32");
-    obj.edit32:setHorzTextAlign("center");
-    obj.edit32:setAlign("client");
+    obj.niveldex = GUI.fromHandle(_obj_newObject("edit"));
+    obj.niveldex:setParent(obj.flowLayout34);
+    obj.niveldex:setName("niveldex");
+    obj.niveldex:setType("number");
+    obj.niveldex:setField("niveldex");
+    obj.niveldex:setMin(0);
+    obj.niveldex:setReadOnly(false);
+    obj.niveldex:setCanFocus(true);
+    obj.niveldex:setHorzTextAlign("center");
+    obj.niveldex:setAlign("client");
 
     obj.flowLayout35 = GUI.fromHandle(_obj_newObject("flowLayout"));
     obj.flowLayout35:setParent(obj.flowLayout2);
@@ -559,14 +622,16 @@ local function constructNew_frmFichaPlanes()
     obj.flowLayout35:setWidth(96);
     obj.flowLayout35:setMargins({top=2,bottom=2,left=2,right=2});
 
-    obj.edit33 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit33:setParent(obj.flowLayout35);
-    obj.edit33:setType("number");
-    obj.edit33:setReadOnly(false);
-    obj.edit33:setCanFocus(true);
-    obj.edit33:setName("edit33");
-    obj.edit33:setHorzTextAlign("center");
-    obj.edit33:setAlign("client");
+    obj.classedex = GUI.fromHandle(_obj_newObject("edit"));
+    obj.classedex:setParent(obj.flowLayout35);
+    obj.classedex:setName("classedex");
+    obj.classedex:setType("number");
+    obj.classedex:setField("classedex");
+    obj.classedex:setMin(0);
+    obj.classedex:setReadOnly(false);
+    obj.classedex:setCanFocus(true);
+    obj.classedex:setHorzTextAlign("center");
+    obj.classedex:setAlign("client");
 
     obj.flowLayout36 = GUI.fromHandle(_obj_newObject("flowLayout"));
     obj.flowLayout36:setParent(obj.flowLayout2);
@@ -574,14 +639,16 @@ local function constructNew_frmFichaPlanes()
     obj.flowLayout36:setWidth(96);
     obj.flowLayout36:setMargins({top=2,bottom=2,left=2,right=2});
 
-    obj.edit34 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit34:setParent(obj.flowLayout36);
-    obj.edit34:setType("number");
-    obj.edit34:setReadOnly(false);
-    obj.edit34:setCanFocus(true);
-    obj.edit34:setName("edit34");
-    obj.edit34:setHorzTextAlign("center");
-    obj.edit34:setAlign("client");
+    obj.racadex = GUI.fromHandle(_obj_newObject("edit"));
+    obj.racadex:setParent(obj.flowLayout36);
+    obj.racadex:setName("racadex");
+    obj.racadex:setType("number");
+    obj.racadex:setField("racadex");
+    obj.racadex:setMin(0);
+    obj.racadex:setReadOnly(false);
+    obj.racadex:setCanFocus(true);
+    obj.racadex:setHorzTextAlign("center");
+    obj.racadex:setAlign("client");
 
     obj.flowLayout37 = GUI.fromHandle(_obj_newObject("flowLayout"));
     obj.flowLayout37:setParent(obj.flowLayout2);
@@ -589,14 +656,16 @@ local function constructNew_frmFichaPlanes()
     obj.flowLayout37:setWidth(96);
     obj.flowLayout37:setMargins({top=2,bottom=2,left=2,right=2});
 
-    obj.edit35 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit35:setParent(obj.flowLayout37);
-    obj.edit35:setType("number");
-    obj.edit35:setReadOnly(false);
-    obj.edit35:setCanFocus(true);
-    obj.edit35:setName("edit35");
-    obj.edit35:setHorzTextAlign("center");
-    obj.edit35:setAlign("client");
+    obj.treinodex = GUI.fromHandle(_obj_newObject("edit"));
+    obj.treinodex:setParent(obj.flowLayout37);
+    obj.treinodex:setName("treinodex");
+    obj.treinodex:setType("number");
+    obj.treinodex:setField("treinodex");
+    obj.treinodex:setMin(0);
+    obj.treinodex:setReadOnly(false);
+    obj.treinodex:setCanFocus(true);
+    obj.treinodex:setHorzTextAlign("center");
+    obj.treinodex:setAlign("client");
 
     obj.flowLayout38 = GUI.fromHandle(_obj_newObject("flowLayout"));
     obj.flowLayout38:setParent(obj.flowLayout2);
@@ -604,14 +673,16 @@ local function constructNew_frmFichaPlanes()
     obj.flowLayout38:setWidth(96);
     obj.flowLayout38:setMargins({top=2,bottom=2,left=2,right=2});
 
-    obj.edit36 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit36:setParent(obj.flowLayout38);
-    obj.edit36:setType("number");
-    obj.edit36:setReadOnly(false);
-    obj.edit36:setCanFocus(true);
-    obj.edit36:setName("edit36");
-    obj.edit36:setHorzTextAlign("center");
-    obj.edit36:setAlign("client");
+    obj.outrodex = GUI.fromHandle(_obj_newObject("edit"));
+    obj.outrodex:setParent(obj.flowLayout38);
+    obj.outrodex:setName("outrodex");
+    obj.outrodex:setType("number");
+    obj.outrodex:setField("outrodex");
+    obj.outrodex:setMin(0);
+    obj.outrodex:setReadOnly(false);
+    obj.outrodex:setCanFocus(true);
+    obj.outrodex:setHorzTextAlign("center");
+    obj.outrodex:setAlign("client");
 
     obj.flowLayout39 = GUI.fromHandle(_obj_newObject("flowLayout"));
     obj.flowLayout39:setParent(obj.flowLayout2);
@@ -619,14 +690,16 @@ local function constructNew_frmFichaPlanes()
     obj.flowLayout39:setWidth(96);
     obj.flowLayout39:setMargins({top=2,bottom=2,left=2,right=2});
 
-    obj.edit37 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit37:setParent(obj.flowLayout39);
-    obj.edit37:setType("number");
-    obj.edit37:setReadOnly(true);
-    obj.edit37:setCanFocus(false);
-    obj.edit37:setName("edit37");
-    obj.edit37:setHorzTextAlign("center");
-    obj.edit37:setAlign("client");
+    obj.basedex = GUI.fromHandle(_obj_newObject("edit"));
+    obj.basedex:setParent(obj.flowLayout39);
+    obj.basedex:setName("basedex");
+    obj.basedex:setType("number");
+    obj.basedex:setField("basedex");
+    obj.basedex:setMin(0);
+    obj.basedex:setReadOnly(true);
+    obj.basedex:setCanFocus(false);
+    obj.basedex:setHorzTextAlign("center");
+    obj.basedex:setAlign("client");
 
     obj.flowLayout40 = GUI.fromHandle(_obj_newObject("flowLayout"));
     obj.flowLayout40:setParent(obj.flowLayout2);
@@ -634,14 +707,16 @@ local function constructNew_frmFichaPlanes()
     obj.flowLayout40:setWidth(96);
     obj.flowLayout40:setMargins({top=2,bottom=2,left=2,right=2});
 
-    obj.edit38 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit38:setParent(obj.flowLayout40);
-    obj.edit38:setType("number");
-    obj.edit38:setReadOnly(false);
-    obj.edit38:setCanFocus(true);
-    obj.edit38:setName("edit38");
-    obj.edit38:setHorzTextAlign("center");
-    obj.edit38:setAlign("client");
+    obj.multiplicadordex = GUI.fromHandle(_obj_newObject("edit"));
+    obj.multiplicadordex:setParent(obj.flowLayout40);
+    obj.multiplicadordex:setName("multiplicadordex");
+    obj.multiplicadordex:setType("number");
+    obj.multiplicadordex:setField("multiplicadordex");
+    obj.multiplicadordex:setMin(0);
+    obj.multiplicadordex:setReadOnly(false);
+    obj.multiplicadordex:setCanFocus(true);
+    obj.multiplicadordex:setHorzTextAlign("center");
+    obj.multiplicadordex:setAlign("client");
 
     obj.flowLayout41 = GUI.fromHandle(_obj_newObject("flowLayout"));
     obj.flowLayout41:setParent(obj.flowLayout2);
@@ -649,14 +724,16 @@ local function constructNew_frmFichaPlanes()
     obj.flowLayout41:setWidth(96);
     obj.flowLayout41:setMargins({top=2,bottom=2,left=2,right=2});
 
-    obj.edit39 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit39:setParent(obj.flowLayout41);
-    obj.edit39:setType("number");
-    obj.edit39:setReadOnly(false);
-    obj.edit39:setCanFocus(true);
-    obj.edit39:setName("edit39");
-    obj.edit39:setHorzTextAlign("center");
-    obj.edit39:setAlign("client");
+    obj.extradex = GUI.fromHandle(_obj_newObject("edit"));
+    obj.extradex:setParent(obj.flowLayout41);
+    obj.extradex:setName("extradex");
+    obj.extradex:setType("number");
+    obj.extradex:setField("extradex");
+    obj.extradex:setMin(0);
+    obj.extradex:setReadOnly(false);
+    obj.extradex:setCanFocus(true);
+    obj.extradex:setHorzTextAlign("center");
+    obj.extradex:setAlign("client");
 
     obj.flowLayout42 = GUI.fromHandle(_obj_newObject("flowLayout"));
     obj.flowLayout42:setParent(obj.flowLayout2);
@@ -664,14 +741,22 @@ local function constructNew_frmFichaPlanes()
     obj.flowLayout42:setWidth(96);
     obj.flowLayout42:setMargins({top=2,bottom=2,left=2,right=2});
 
-    obj.edit40 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit40:setParent(obj.flowLayout42);
-    obj.edit40:setType("number");
-    obj.edit40:setReadOnly(true);
-    obj.edit40:setCanFocus(false);
-    obj.edit40:setName("edit40");
-    obj.edit40:setHorzTextAlign("center");
-    obj.edit40:setAlign("client");
+    obj.totaldex = GUI.fromHandle(_obj_newObject("edit"));
+    obj.totaldex:setParent(obj.flowLayout42);
+    obj.totaldex:setName("totaldex");
+    obj.totaldex:setType("number");
+    obj.totaldex:setField("totaldex");
+    obj.totaldex:setMin(0);
+    obj.totaldex:setReadOnly(true);
+    obj.totaldex:setCanFocus(false);
+    obj.totaldex:setHorzTextAlign("center");
+    obj.totaldex:setAlign("client");
+
+    obj.dataLink3 = GUI.fromHandle(_obj_newObject("dataLink"));
+    obj.dataLink3:setParent(obj.flowLayout2);
+    obj.dataLink3:setFields({'niveldex', 'classedex', 'racadex', 'treinodex', 'outrodex',
+                           'basedex', 'multiplicadordex', 'extradex', 'totaldex'});
+    obj.dataLink3:setName("dataLink3");
 
     obj.flowLayout43 = GUI.fromHandle(_obj_newObject("flowLayout"));
     obj.flowLayout43:setParent(obj.flowLayout2);
@@ -679,14 +764,15 @@ local function constructNew_frmFichaPlanes()
     obj.flowLayout43:setWidth(96);
     obj.flowLayout43:setMargins({top=2,bottom=2,left=2,right=2});
 
-    obj.edit41 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit41:setParent(obj.flowLayout43);
-    obj.edit41:setText("Carisma");
-    obj.edit41:setName("edit41");
-    obj.edit41:setReadOnly(true);
-    obj.edit41:setCanFocus(false);
-    obj.edit41:setHorzTextAlign("center");
-    obj.edit41:setAlign("client");
+    obj.edit14 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit14:setParent(obj.flowLayout43);
+    obj.edit14:setText("Carisma");
+    lfm_setPropAsString(obj.edit14, "fontStyle",  "bold");
+    obj.edit14:setName("edit14");
+    obj.edit14:setReadOnly(true);
+    obj.edit14:setCanFocus(false);
+    obj.edit14:setHorzTextAlign("center");
+    obj.edit14:setAlign("client");
 
     obj.flowLayout44 = GUI.fromHandle(_obj_newObject("flowLayout"));
     obj.flowLayout44:setParent(obj.flowLayout2);
@@ -694,14 +780,16 @@ local function constructNew_frmFichaPlanes()
     obj.flowLayout44:setWidth(96);
     obj.flowLayout44:setMargins({top=2,bottom=2,left=2,right=2});
 
-    obj.edit42 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit42:setParent(obj.flowLayout44);
-    obj.edit42:setType("number");
-    obj.edit42:setReadOnly(false);
-    obj.edit42:setCanFocus(true);
-    obj.edit42:setName("edit42");
-    obj.edit42:setHorzTextAlign("center");
-    obj.edit42:setAlign("client");
+    obj.nivelcar = GUI.fromHandle(_obj_newObject("edit"));
+    obj.nivelcar:setParent(obj.flowLayout44);
+    obj.nivelcar:setName("nivelcar");
+    obj.nivelcar:setType("number");
+    obj.nivelcar:setField("nivelcar");
+    obj.nivelcar:setMin(0);
+    obj.nivelcar:setReadOnly(false);
+    obj.nivelcar:setCanFocus(true);
+    obj.nivelcar:setHorzTextAlign("center");
+    obj.nivelcar:setAlign("client");
 
     obj.flowLayout45 = GUI.fromHandle(_obj_newObject("flowLayout"));
     obj.flowLayout45:setParent(obj.flowLayout2);
@@ -709,14 +797,16 @@ local function constructNew_frmFichaPlanes()
     obj.flowLayout45:setWidth(96);
     obj.flowLayout45:setMargins({top=2,bottom=2,left=2,right=2});
 
-    obj.edit43 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit43:setParent(obj.flowLayout45);
-    obj.edit43:setType("number");
-    obj.edit43:setReadOnly(false);
-    obj.edit43:setCanFocus(true);
-    obj.edit43:setName("edit43");
-    obj.edit43:setHorzTextAlign("center");
-    obj.edit43:setAlign("client");
+    obj.classecar = GUI.fromHandle(_obj_newObject("edit"));
+    obj.classecar:setParent(obj.flowLayout45);
+    obj.classecar:setName("classecar");
+    obj.classecar:setType("number");
+    obj.classecar:setField("classecar");
+    obj.classecar:setMin(0);
+    obj.classecar:setReadOnly(false);
+    obj.classecar:setCanFocus(true);
+    obj.classecar:setHorzTextAlign("center");
+    obj.classecar:setAlign("client");
 
     obj.flowLayout46 = GUI.fromHandle(_obj_newObject("flowLayout"));
     obj.flowLayout46:setParent(obj.flowLayout2);
@@ -724,14 +814,16 @@ local function constructNew_frmFichaPlanes()
     obj.flowLayout46:setWidth(96);
     obj.flowLayout46:setMargins({top=2,bottom=2,left=2,right=2});
 
-    obj.edit44 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit44:setParent(obj.flowLayout46);
-    obj.edit44:setType("number");
-    obj.edit44:setReadOnly(false);
-    obj.edit44:setCanFocus(true);
-    obj.edit44:setName("edit44");
-    obj.edit44:setHorzTextAlign("center");
-    obj.edit44:setAlign("client");
+    obj.racacar = GUI.fromHandle(_obj_newObject("edit"));
+    obj.racacar:setParent(obj.flowLayout46);
+    obj.racacar:setName("racacar");
+    obj.racacar:setType("number");
+    obj.racacar:setField("racacar");
+    obj.racacar:setMin(0);
+    obj.racacar:setReadOnly(false);
+    obj.racacar:setCanFocus(true);
+    obj.racacar:setHorzTextAlign("center");
+    obj.racacar:setAlign("client");
 
     obj.flowLayout47 = GUI.fromHandle(_obj_newObject("flowLayout"));
     obj.flowLayout47:setParent(obj.flowLayout2);
@@ -739,14 +831,16 @@ local function constructNew_frmFichaPlanes()
     obj.flowLayout47:setWidth(96);
     obj.flowLayout47:setMargins({top=2,bottom=2,left=2,right=2});
 
-    obj.edit45 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit45:setParent(obj.flowLayout47);
-    obj.edit45:setType("number");
-    obj.edit45:setReadOnly(false);
-    obj.edit45:setCanFocus(true);
-    obj.edit45:setName("edit45");
-    obj.edit45:setHorzTextAlign("center");
-    obj.edit45:setAlign("client");
+    obj.treinocar = GUI.fromHandle(_obj_newObject("edit"));
+    obj.treinocar:setParent(obj.flowLayout47);
+    obj.treinocar:setName("treinocar");
+    obj.treinocar:setType("number");
+    obj.treinocar:setField("treinocar");
+    obj.treinocar:setMin(0);
+    obj.treinocar:setReadOnly(false);
+    obj.treinocar:setCanFocus(true);
+    obj.treinocar:setHorzTextAlign("center");
+    obj.treinocar:setAlign("client");
 
     obj.flowLayout48 = GUI.fromHandle(_obj_newObject("flowLayout"));
     obj.flowLayout48:setParent(obj.flowLayout2);
@@ -754,14 +848,16 @@ local function constructNew_frmFichaPlanes()
     obj.flowLayout48:setWidth(96);
     obj.flowLayout48:setMargins({top=2,bottom=2,left=2,right=2});
 
-    obj.edit46 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit46:setParent(obj.flowLayout48);
-    obj.edit46:setType("number");
-    obj.edit46:setReadOnly(false);
-    obj.edit46:setCanFocus(true);
-    obj.edit46:setName("edit46");
-    obj.edit46:setHorzTextAlign("center");
-    obj.edit46:setAlign("client");
+    obj.outrocar = GUI.fromHandle(_obj_newObject("edit"));
+    obj.outrocar:setParent(obj.flowLayout48);
+    obj.outrocar:setName("outrocar");
+    obj.outrocar:setType("number");
+    obj.outrocar:setField("outrocar");
+    obj.outrocar:setMin(0);
+    obj.outrocar:setReadOnly(false);
+    obj.outrocar:setCanFocus(true);
+    obj.outrocar:setHorzTextAlign("center");
+    obj.outrocar:setAlign("client");
 
     obj.flowLayout49 = GUI.fromHandle(_obj_newObject("flowLayout"));
     obj.flowLayout49:setParent(obj.flowLayout2);
@@ -769,14 +865,16 @@ local function constructNew_frmFichaPlanes()
     obj.flowLayout49:setWidth(96);
     obj.flowLayout49:setMargins({top=2,bottom=2,left=2,right=2});
 
-    obj.edit47 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit47:setParent(obj.flowLayout49);
-    obj.edit47:setType("number");
-    obj.edit47:setReadOnly(true);
-    obj.edit47:setCanFocus(false);
-    obj.edit47:setName("edit47");
-    obj.edit47:setHorzTextAlign("center");
-    obj.edit47:setAlign("client");
+    obj.basecar = GUI.fromHandle(_obj_newObject("edit"));
+    obj.basecar:setParent(obj.flowLayout49);
+    obj.basecar:setName("basecar");
+    obj.basecar:setType("number");
+    obj.basecar:setField("basecar");
+    obj.basecar:setMin(0);
+    obj.basecar:setReadOnly(true);
+    obj.basecar:setCanFocus(false);
+    obj.basecar:setHorzTextAlign("center");
+    obj.basecar:setAlign("client");
 
     obj.flowLayout50 = GUI.fromHandle(_obj_newObject("flowLayout"));
     obj.flowLayout50:setParent(obj.flowLayout2);
@@ -784,14 +882,16 @@ local function constructNew_frmFichaPlanes()
     obj.flowLayout50:setWidth(96);
     obj.flowLayout50:setMargins({top=2,bottom=2,left=2,right=2});
 
-    obj.edit48 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit48:setParent(obj.flowLayout50);
-    obj.edit48:setType("number");
-    obj.edit48:setReadOnly(false);
-    obj.edit48:setCanFocus(true);
-    obj.edit48:setName("edit48");
-    obj.edit48:setHorzTextAlign("center");
-    obj.edit48:setAlign("client");
+    obj.multiplicadorcar = GUI.fromHandle(_obj_newObject("edit"));
+    obj.multiplicadorcar:setParent(obj.flowLayout50);
+    obj.multiplicadorcar:setName("multiplicadorcar");
+    obj.multiplicadorcar:setType("number");
+    obj.multiplicadorcar:setField("multiplicadorcar");
+    obj.multiplicadorcar:setMin(0);
+    obj.multiplicadorcar:setReadOnly(false);
+    obj.multiplicadorcar:setCanFocus(true);
+    obj.multiplicadorcar:setHorzTextAlign("center");
+    obj.multiplicadorcar:setAlign("client");
 
     obj.flowLayout51 = GUI.fromHandle(_obj_newObject("flowLayout"));
     obj.flowLayout51:setParent(obj.flowLayout2);
@@ -799,14 +899,16 @@ local function constructNew_frmFichaPlanes()
     obj.flowLayout51:setWidth(96);
     obj.flowLayout51:setMargins({top=2,bottom=2,left=2,right=2});
 
-    obj.edit49 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit49:setParent(obj.flowLayout51);
-    obj.edit49:setType("number");
-    obj.edit49:setReadOnly(false);
-    obj.edit49:setCanFocus(true);
-    obj.edit49:setName("edit49");
-    obj.edit49:setHorzTextAlign("center");
-    obj.edit49:setAlign("client");
+    obj.extracar = GUI.fromHandle(_obj_newObject("edit"));
+    obj.extracar:setParent(obj.flowLayout51);
+    obj.extracar:setName("extracar");
+    obj.extracar:setType("number");
+    obj.extracar:setField("extracar");
+    obj.extracar:setMin(0);
+    obj.extracar:setReadOnly(false);
+    obj.extracar:setCanFocus(true);
+    obj.extracar:setHorzTextAlign("center");
+    obj.extracar:setAlign("client");
 
     obj.flowLayout52 = GUI.fromHandle(_obj_newObject("flowLayout"));
     obj.flowLayout52:setParent(obj.flowLayout2);
@@ -814,14 +916,22 @@ local function constructNew_frmFichaPlanes()
     obj.flowLayout52:setWidth(96);
     obj.flowLayout52:setMargins({top=2,bottom=2,left=2,right=2});
 
-    obj.edit50 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit50:setParent(obj.flowLayout52);
-    obj.edit50:setType("number");
-    obj.edit50:setReadOnly(true);
-    obj.edit50:setCanFocus(false);
-    obj.edit50:setName("edit50");
-    obj.edit50:setHorzTextAlign("center");
-    obj.edit50:setAlign("client");
+    obj.totalcar = GUI.fromHandle(_obj_newObject("edit"));
+    obj.totalcar:setParent(obj.flowLayout52);
+    obj.totalcar:setName("totalcar");
+    obj.totalcar:setType("number");
+    obj.totalcar:setField("totalcar");
+    obj.totalcar:setMin(0);
+    obj.totalcar:setReadOnly(true);
+    obj.totalcar:setCanFocus(false);
+    obj.totalcar:setHorzTextAlign("center");
+    obj.totalcar:setAlign("client");
+
+    obj.dataLink4 = GUI.fromHandle(_obj_newObject("dataLink"));
+    obj.dataLink4:setParent(obj.flowLayout2);
+    obj.dataLink4:setFields({'nivelcar', 'classecar', 'racacar', 'treinocar', 'outrocar',
+                           'basecar', 'multiplicadorcar', 'extracar', 'totalcar'});
+    obj.dataLink4:setName("dataLink4");
 
     obj.flowLayout53 = GUI.fromHandle(_obj_newObject("flowLayout"));
     obj.flowLayout53:setParent(obj.flowLayout2);
@@ -829,14 +939,15 @@ local function constructNew_frmFichaPlanes()
     obj.flowLayout53:setWidth(96);
     obj.flowLayout53:setMargins({top=2,bottom=2,left=2,right=2});
 
-    obj.edit51 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit51:setParent(obj.flowLayout53);
-    obj.edit51:setText("Inteligência");
-    obj.edit51:setName("edit51");
-    obj.edit51:setReadOnly(true);
-    obj.edit51:setCanFocus(false);
-    obj.edit51:setHorzTextAlign("center");
-    obj.edit51:setAlign("client");
+    obj.edit15 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit15:setParent(obj.flowLayout53);
+    obj.edit15:setText("Inteligência");
+    lfm_setPropAsString(obj.edit15, "fontStyle",  "bold");
+    obj.edit15:setName("edit15");
+    obj.edit15:setReadOnly(true);
+    obj.edit15:setCanFocus(false);
+    obj.edit15:setHorzTextAlign("center");
+    obj.edit15:setAlign("client");
 
     obj.flowLayout54 = GUI.fromHandle(_obj_newObject("flowLayout"));
     obj.flowLayout54:setParent(obj.flowLayout2);
@@ -844,14 +955,16 @@ local function constructNew_frmFichaPlanes()
     obj.flowLayout54:setWidth(96);
     obj.flowLayout54:setMargins({top=2,bottom=2,left=2,right=2});
 
-    obj.edit52 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit52:setParent(obj.flowLayout54);
-    obj.edit52:setType("number");
-    obj.edit52:setReadOnly(false);
-    obj.edit52:setCanFocus(true);
-    obj.edit52:setName("edit52");
-    obj.edit52:setHorzTextAlign("center");
-    obj.edit52:setAlign("client");
+    obj.nivelint = GUI.fromHandle(_obj_newObject("edit"));
+    obj.nivelint:setParent(obj.flowLayout54);
+    obj.nivelint:setName("nivelint");
+    obj.nivelint:setType("number");
+    obj.nivelint:setField("nivelint");
+    obj.nivelint:setMin(0);
+    obj.nivelint:setReadOnly(false);
+    obj.nivelint:setCanFocus(true);
+    obj.nivelint:setHorzTextAlign("center");
+    obj.nivelint:setAlign("client");
 
     obj.flowLayout55 = GUI.fromHandle(_obj_newObject("flowLayout"));
     obj.flowLayout55:setParent(obj.flowLayout2);
@@ -859,14 +972,16 @@ local function constructNew_frmFichaPlanes()
     obj.flowLayout55:setWidth(96);
     obj.flowLayout55:setMargins({top=2,bottom=2,left=2,right=2});
 
-    obj.edit53 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit53:setParent(obj.flowLayout55);
-    obj.edit53:setType("number");
-    obj.edit53:setReadOnly(false);
-    obj.edit53:setCanFocus(true);
-    obj.edit53:setName("edit53");
-    obj.edit53:setHorzTextAlign("center");
-    obj.edit53:setAlign("client");
+    obj.classeint = GUI.fromHandle(_obj_newObject("edit"));
+    obj.classeint:setParent(obj.flowLayout55);
+    obj.classeint:setName("classeint");
+    obj.classeint:setType("number");
+    obj.classeint:setField("classeint");
+    obj.classeint:setMin(0);
+    obj.classeint:setReadOnly(false);
+    obj.classeint:setCanFocus(true);
+    obj.classeint:setHorzTextAlign("center");
+    obj.classeint:setAlign("client");
 
     obj.flowLayout56 = GUI.fromHandle(_obj_newObject("flowLayout"));
     obj.flowLayout56:setParent(obj.flowLayout2);
@@ -874,14 +989,16 @@ local function constructNew_frmFichaPlanes()
     obj.flowLayout56:setWidth(96);
     obj.flowLayout56:setMargins({top=2,bottom=2,left=2,right=2});
 
-    obj.edit54 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit54:setParent(obj.flowLayout56);
-    obj.edit54:setType("number");
-    obj.edit54:setReadOnly(false);
-    obj.edit54:setCanFocus(true);
-    obj.edit54:setName("edit54");
-    obj.edit54:setHorzTextAlign("center");
-    obj.edit54:setAlign("client");
+    obj.racaint = GUI.fromHandle(_obj_newObject("edit"));
+    obj.racaint:setParent(obj.flowLayout56);
+    obj.racaint:setName("racaint");
+    obj.racaint:setType("number");
+    obj.racaint:setField("racaint");
+    obj.racaint:setMin(0);
+    obj.racaint:setReadOnly(false);
+    obj.racaint:setCanFocus(true);
+    obj.racaint:setHorzTextAlign("center");
+    obj.racaint:setAlign("client");
 
     obj.flowLayout57 = GUI.fromHandle(_obj_newObject("flowLayout"));
     obj.flowLayout57:setParent(obj.flowLayout2);
@@ -889,14 +1006,16 @@ local function constructNew_frmFichaPlanes()
     obj.flowLayout57:setWidth(96);
     obj.flowLayout57:setMargins({top=2,bottom=2,left=2,right=2});
 
-    obj.edit55 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit55:setParent(obj.flowLayout57);
-    obj.edit55:setType("number");
-    obj.edit55:setReadOnly(false);
-    obj.edit55:setCanFocus(true);
-    obj.edit55:setName("edit55");
-    obj.edit55:setHorzTextAlign("center");
-    obj.edit55:setAlign("client");
+    obj.treinoint = GUI.fromHandle(_obj_newObject("edit"));
+    obj.treinoint:setParent(obj.flowLayout57);
+    obj.treinoint:setName("treinoint");
+    obj.treinoint:setType("number");
+    obj.treinoint:setField("treinoint");
+    obj.treinoint:setMin(0);
+    obj.treinoint:setReadOnly(false);
+    obj.treinoint:setCanFocus(true);
+    obj.treinoint:setHorzTextAlign("center");
+    obj.treinoint:setAlign("client");
 
     obj.flowLayout58 = GUI.fromHandle(_obj_newObject("flowLayout"));
     obj.flowLayout58:setParent(obj.flowLayout2);
@@ -904,14 +1023,16 @@ local function constructNew_frmFichaPlanes()
     obj.flowLayout58:setWidth(96);
     obj.flowLayout58:setMargins({top=2,bottom=2,left=2,right=2});
 
-    obj.edit56 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit56:setParent(obj.flowLayout58);
-    obj.edit56:setType("number");
-    obj.edit56:setReadOnly(false);
-    obj.edit56:setCanFocus(true);
-    obj.edit56:setName("edit56");
-    obj.edit56:setHorzTextAlign("center");
-    obj.edit56:setAlign("client");
+    obj.outroint = GUI.fromHandle(_obj_newObject("edit"));
+    obj.outroint:setParent(obj.flowLayout58);
+    obj.outroint:setName("outroint");
+    obj.outroint:setType("number");
+    obj.outroint:setField("outroint");
+    obj.outroint:setMin(0);
+    obj.outroint:setReadOnly(false);
+    obj.outroint:setCanFocus(true);
+    obj.outroint:setHorzTextAlign("center");
+    obj.outroint:setAlign("client");
 
     obj.flowLayout59 = GUI.fromHandle(_obj_newObject("flowLayout"));
     obj.flowLayout59:setParent(obj.flowLayout2);
@@ -919,14 +1040,16 @@ local function constructNew_frmFichaPlanes()
     obj.flowLayout59:setWidth(96);
     obj.flowLayout59:setMargins({top=2,bottom=2,left=2,right=2});
 
-    obj.edit57 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit57:setParent(obj.flowLayout59);
-    obj.edit57:setType("number");
-    obj.edit57:setReadOnly(true);
-    obj.edit57:setCanFocus(false);
-    obj.edit57:setName("edit57");
-    obj.edit57:setHorzTextAlign("center");
-    obj.edit57:setAlign("client");
+    obj.baseint = GUI.fromHandle(_obj_newObject("edit"));
+    obj.baseint:setParent(obj.flowLayout59);
+    obj.baseint:setName("baseint");
+    obj.baseint:setType("number");
+    obj.baseint:setField("baseint");
+    obj.baseint:setMin(0);
+    obj.baseint:setReadOnly(true);
+    obj.baseint:setCanFocus(false);
+    obj.baseint:setHorzTextAlign("center");
+    obj.baseint:setAlign("client");
 
     obj.flowLayout60 = GUI.fromHandle(_obj_newObject("flowLayout"));
     obj.flowLayout60:setParent(obj.flowLayout2);
@@ -934,14 +1057,16 @@ local function constructNew_frmFichaPlanes()
     obj.flowLayout60:setWidth(96);
     obj.flowLayout60:setMargins({top=2,bottom=2,left=2,right=2});
 
-    obj.edit58 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit58:setParent(obj.flowLayout60);
-    obj.edit58:setType("number");
-    obj.edit58:setReadOnly(false);
-    obj.edit58:setCanFocus(true);
-    obj.edit58:setName("edit58");
-    obj.edit58:setHorzTextAlign("center");
-    obj.edit58:setAlign("client");
+    obj.multiplicadorint = GUI.fromHandle(_obj_newObject("edit"));
+    obj.multiplicadorint:setParent(obj.flowLayout60);
+    obj.multiplicadorint:setName("multiplicadorint");
+    obj.multiplicadorint:setType("number");
+    obj.multiplicadorint:setField("multiplicadorint");
+    obj.multiplicadorint:setMin(0);
+    obj.multiplicadorint:setReadOnly(false);
+    obj.multiplicadorint:setCanFocus(true);
+    obj.multiplicadorint:setHorzTextAlign("center");
+    obj.multiplicadorint:setAlign("client");
 
     obj.flowLayout61 = GUI.fromHandle(_obj_newObject("flowLayout"));
     obj.flowLayout61:setParent(obj.flowLayout2);
@@ -949,14 +1074,16 @@ local function constructNew_frmFichaPlanes()
     obj.flowLayout61:setWidth(96);
     obj.flowLayout61:setMargins({top=2,bottom=2,left=2,right=2});
 
-    obj.edit59 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit59:setParent(obj.flowLayout61);
-    obj.edit59:setType("number");
-    obj.edit59:setReadOnly(false);
-    obj.edit59:setCanFocus(true);
-    obj.edit59:setName("edit59");
-    obj.edit59:setHorzTextAlign("center");
-    obj.edit59:setAlign("client");
+    obj.extraint = GUI.fromHandle(_obj_newObject("edit"));
+    obj.extraint:setParent(obj.flowLayout61);
+    obj.extraint:setName("extraint");
+    obj.extraint:setType("number");
+    obj.extraint:setField("extraint");
+    obj.extraint:setMin(0);
+    obj.extraint:setReadOnly(false);
+    obj.extraint:setCanFocus(true);
+    obj.extraint:setHorzTextAlign("center");
+    obj.extraint:setAlign("client");
 
     obj.flowLayout62 = GUI.fromHandle(_obj_newObject("flowLayout"));
     obj.flowLayout62:setParent(obj.flowLayout2);
@@ -964,14 +1091,22 @@ local function constructNew_frmFichaPlanes()
     obj.flowLayout62:setWidth(96);
     obj.flowLayout62:setMargins({top=2,bottom=2,left=2,right=2});
 
-    obj.edit60 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit60:setParent(obj.flowLayout62);
-    obj.edit60:setType("number");
-    obj.edit60:setReadOnly(true);
-    obj.edit60:setCanFocus(false);
-    obj.edit60:setName("edit60");
-    obj.edit60:setHorzTextAlign("center");
-    obj.edit60:setAlign("client");
+    obj.totalint = GUI.fromHandle(_obj_newObject("edit"));
+    obj.totalint:setParent(obj.flowLayout62);
+    obj.totalint:setName("totalint");
+    obj.totalint:setType("number");
+    obj.totalint:setField("totalint");
+    obj.totalint:setMin(0);
+    obj.totalint:setReadOnly(true);
+    obj.totalint:setCanFocus(false);
+    obj.totalint:setHorzTextAlign("center");
+    obj.totalint:setAlign("client");
+
+    obj.dataLink5 = GUI.fromHandle(_obj_newObject("dataLink"));
+    obj.dataLink5:setParent(obj.flowLayout2);
+    obj.dataLink5:setFields({'nivelint', 'classeint', 'racaint', 'treinoint', 'outroint',
+                           'baseint', 'multiplicadorint', 'extraint', 'totalint'});
+    obj.dataLink5:setName("dataLink5");
 
     obj.flowLayout63 = GUI.fromHandle(_obj_newObject("flowLayout"));
     obj.flowLayout63:setParent(obj.flowLayout2);
@@ -979,14 +1114,15 @@ local function constructNew_frmFichaPlanes()
     obj.flowLayout63:setWidth(96);
     obj.flowLayout63:setMargins({top=2,bottom=2,left=2,right=2});
 
-    obj.edit61 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit61:setParent(obj.flowLayout63);
-    obj.edit61:setText("Sabedoria");
-    obj.edit61:setName("edit61");
-    obj.edit61:setReadOnly(true);
-    obj.edit61:setCanFocus(false);
-    obj.edit61:setHorzTextAlign("center");
-    obj.edit61:setAlign("client");
+    obj.edit16 = GUI.fromHandle(_obj_newObject("edit"));
+    obj.edit16:setParent(obj.flowLayout63);
+    obj.edit16:setText("Sabedoria");
+    lfm_setPropAsString(obj.edit16, "fontStyle",  "bold");
+    obj.edit16:setName("edit16");
+    obj.edit16:setReadOnly(true);
+    obj.edit16:setCanFocus(false);
+    obj.edit16:setHorzTextAlign("center");
+    obj.edit16:setAlign("client");
 
     obj.flowLayout64 = GUI.fromHandle(_obj_newObject("flowLayout"));
     obj.flowLayout64:setParent(obj.flowLayout2);
@@ -994,14 +1130,16 @@ local function constructNew_frmFichaPlanes()
     obj.flowLayout64:setWidth(96);
     obj.flowLayout64:setMargins({top=2,bottom=2,left=2,right=2});
 
-    obj.edit62 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit62:setParent(obj.flowLayout64);
-    obj.edit62:setType("number");
-    obj.edit62:setReadOnly(false);
-    obj.edit62:setCanFocus(true);
-    obj.edit62:setName("edit62");
-    obj.edit62:setHorzTextAlign("center");
-    obj.edit62:setAlign("client");
+    obj.nivelsab = GUI.fromHandle(_obj_newObject("edit"));
+    obj.nivelsab:setParent(obj.flowLayout64);
+    obj.nivelsab:setName("nivelsab");
+    obj.nivelsab:setType("number");
+    obj.nivelsab:setField("nivelsab");
+    obj.nivelsab:setMin(0);
+    obj.nivelsab:setReadOnly(false);
+    obj.nivelsab:setCanFocus(true);
+    obj.nivelsab:setHorzTextAlign("center");
+    obj.nivelsab:setAlign("client");
 
     obj.flowLayout65 = GUI.fromHandle(_obj_newObject("flowLayout"));
     obj.flowLayout65:setParent(obj.flowLayout2);
@@ -1009,14 +1147,16 @@ local function constructNew_frmFichaPlanes()
     obj.flowLayout65:setWidth(96);
     obj.flowLayout65:setMargins({top=2,bottom=2,left=2,right=2});
 
-    obj.edit63 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit63:setParent(obj.flowLayout65);
-    obj.edit63:setType("number");
-    obj.edit63:setReadOnly(false);
-    obj.edit63:setCanFocus(true);
-    obj.edit63:setName("edit63");
-    obj.edit63:setHorzTextAlign("center");
-    obj.edit63:setAlign("client");
+    obj.classesab = GUI.fromHandle(_obj_newObject("edit"));
+    obj.classesab:setParent(obj.flowLayout65);
+    obj.classesab:setName("classesab");
+    obj.classesab:setType("number");
+    obj.classesab:setField("classesab");
+    obj.classesab:setMin(0);
+    obj.classesab:setReadOnly(false);
+    obj.classesab:setCanFocus(true);
+    obj.classesab:setHorzTextAlign("center");
+    obj.classesab:setAlign("client");
 
     obj.flowLayout66 = GUI.fromHandle(_obj_newObject("flowLayout"));
     obj.flowLayout66:setParent(obj.flowLayout2);
@@ -1024,14 +1164,16 @@ local function constructNew_frmFichaPlanes()
     obj.flowLayout66:setWidth(96);
     obj.flowLayout66:setMargins({top=2,bottom=2,left=2,right=2});
 
-    obj.edit64 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit64:setParent(obj.flowLayout66);
-    obj.edit64:setType("number");
-    obj.edit64:setReadOnly(false);
-    obj.edit64:setCanFocus(true);
-    obj.edit64:setName("edit64");
-    obj.edit64:setHorzTextAlign("center");
-    obj.edit64:setAlign("client");
+    obj.racasab = GUI.fromHandle(_obj_newObject("edit"));
+    obj.racasab:setParent(obj.flowLayout66);
+    obj.racasab:setName("racasab");
+    obj.racasab:setType("number");
+    obj.racasab:setField("racasab");
+    obj.racasab:setMin(0);
+    obj.racasab:setReadOnly(false);
+    obj.racasab:setCanFocus(true);
+    obj.racasab:setHorzTextAlign("center");
+    obj.racasab:setAlign("client");
 
     obj.flowLayout67 = GUI.fromHandle(_obj_newObject("flowLayout"));
     obj.flowLayout67:setParent(obj.flowLayout2);
@@ -1039,14 +1181,16 @@ local function constructNew_frmFichaPlanes()
     obj.flowLayout67:setWidth(96);
     obj.flowLayout67:setMargins({top=2,bottom=2,left=2,right=2});
 
-    obj.edit65 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit65:setParent(obj.flowLayout67);
-    obj.edit65:setType("number");
-    obj.edit65:setReadOnly(false);
-    obj.edit65:setCanFocus(true);
-    obj.edit65:setName("edit65");
-    obj.edit65:setHorzTextAlign("center");
-    obj.edit65:setAlign("client");
+    obj.treinosab = GUI.fromHandle(_obj_newObject("edit"));
+    obj.treinosab:setParent(obj.flowLayout67);
+    obj.treinosab:setName("treinosab");
+    obj.treinosab:setType("number");
+    obj.treinosab:setField("treinosab");
+    obj.treinosab:setMin(0);
+    obj.treinosab:setReadOnly(false);
+    obj.treinosab:setCanFocus(true);
+    obj.treinosab:setHorzTextAlign("center");
+    obj.treinosab:setAlign("client");
 
     obj.flowLayout68 = GUI.fromHandle(_obj_newObject("flowLayout"));
     obj.flowLayout68:setParent(obj.flowLayout2);
@@ -1054,14 +1198,16 @@ local function constructNew_frmFichaPlanes()
     obj.flowLayout68:setWidth(96);
     obj.flowLayout68:setMargins({top=2,bottom=2,left=2,right=2});
 
-    obj.edit66 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit66:setParent(obj.flowLayout68);
-    obj.edit66:setType("number");
-    obj.edit66:setReadOnly(false);
-    obj.edit66:setCanFocus(true);
-    obj.edit66:setName("edit66");
-    obj.edit66:setHorzTextAlign("center");
-    obj.edit66:setAlign("client");
+    obj.outrosab = GUI.fromHandle(_obj_newObject("edit"));
+    obj.outrosab:setParent(obj.flowLayout68);
+    obj.outrosab:setName("outrosab");
+    obj.outrosab:setType("number");
+    obj.outrosab:setField("outrosab");
+    obj.outrosab:setMin(0);
+    obj.outrosab:setReadOnly(false);
+    obj.outrosab:setCanFocus(true);
+    obj.outrosab:setHorzTextAlign("center");
+    obj.outrosab:setAlign("client");
 
     obj.flowLayout69 = GUI.fromHandle(_obj_newObject("flowLayout"));
     obj.flowLayout69:setParent(obj.flowLayout2);
@@ -1069,14 +1215,16 @@ local function constructNew_frmFichaPlanes()
     obj.flowLayout69:setWidth(96);
     obj.flowLayout69:setMargins({top=2,bottom=2,left=2,right=2});
 
-    obj.edit67 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit67:setParent(obj.flowLayout69);
-    obj.edit67:setType("number");
-    obj.edit67:setReadOnly(true);
-    obj.edit67:setCanFocus(false);
-    obj.edit67:setName("edit67");
-    obj.edit67:setHorzTextAlign("center");
-    obj.edit67:setAlign("client");
+    obj.basesab = GUI.fromHandle(_obj_newObject("edit"));
+    obj.basesab:setParent(obj.flowLayout69);
+    obj.basesab:setName("basesab");
+    obj.basesab:setType("number");
+    obj.basesab:setField("basesab");
+    obj.basesab:setMin(0);
+    obj.basesab:setReadOnly(true);
+    obj.basesab:setCanFocus(false);
+    obj.basesab:setHorzTextAlign("center");
+    obj.basesab:setAlign("client");
 
     obj.flowLayout70 = GUI.fromHandle(_obj_newObject("flowLayout"));
     obj.flowLayout70:setParent(obj.flowLayout2);
@@ -1084,14 +1232,16 @@ local function constructNew_frmFichaPlanes()
     obj.flowLayout70:setWidth(96);
     obj.flowLayout70:setMargins({top=2,bottom=2,left=2,right=2});
 
-    obj.edit68 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit68:setParent(obj.flowLayout70);
-    obj.edit68:setType("number");
-    obj.edit68:setReadOnly(false);
-    obj.edit68:setCanFocus(true);
-    obj.edit68:setName("edit68");
-    obj.edit68:setHorzTextAlign("center");
-    obj.edit68:setAlign("client");
+    obj.multiplicadorsab = GUI.fromHandle(_obj_newObject("edit"));
+    obj.multiplicadorsab:setParent(obj.flowLayout70);
+    obj.multiplicadorsab:setName("multiplicadorsab");
+    obj.multiplicadorsab:setType("number");
+    obj.multiplicadorsab:setField("multiplicadorsab");
+    obj.multiplicadorsab:setMin(0);
+    obj.multiplicadorsab:setReadOnly(false);
+    obj.multiplicadorsab:setCanFocus(true);
+    obj.multiplicadorsab:setHorzTextAlign("center");
+    obj.multiplicadorsab:setAlign("client");
 
     obj.flowLayout71 = GUI.fromHandle(_obj_newObject("flowLayout"));
     obj.flowLayout71:setParent(obj.flowLayout2);
@@ -1099,14 +1249,16 @@ local function constructNew_frmFichaPlanes()
     obj.flowLayout71:setWidth(96);
     obj.flowLayout71:setMargins({top=2,bottom=2,left=2,right=2});
 
-    obj.edit69 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit69:setParent(obj.flowLayout71);
-    obj.edit69:setType("number");
-    obj.edit69:setReadOnly(false);
-    obj.edit69:setCanFocus(true);
-    obj.edit69:setName("edit69");
-    obj.edit69:setHorzTextAlign("center");
-    obj.edit69:setAlign("client");
+    obj.extrasab = GUI.fromHandle(_obj_newObject("edit"));
+    obj.extrasab:setParent(obj.flowLayout71);
+    obj.extrasab:setName("extrasab");
+    obj.extrasab:setType("number");
+    obj.extrasab:setField("extrasab");
+    obj.extrasab:setMin(0);
+    obj.extrasab:setReadOnly(false);
+    obj.extrasab:setCanFocus(true);
+    obj.extrasab:setHorzTextAlign("center");
+    obj.extrasab:setAlign("client");
 
     obj.flowLayout72 = GUI.fromHandle(_obj_newObject("flowLayout"));
     obj.flowLayout72:setParent(obj.flowLayout2);
@@ -1114,14 +1266,27 @@ local function constructNew_frmFichaPlanes()
     obj.flowLayout72:setWidth(96);
     obj.flowLayout72:setMargins({top=2,bottom=2,left=2,right=2});
 
-    obj.edit70 = GUI.fromHandle(_obj_newObject("edit"));
-    obj.edit70:setParent(obj.flowLayout72);
-    obj.edit70:setType("number");
-    obj.edit70:setReadOnly(true);
-    obj.edit70:setCanFocus(false);
-    obj.edit70:setName("edit70");
-    obj.edit70:setHorzTextAlign("center");
-    obj.edit70:setAlign("client");
+    obj.totalsab = GUI.fromHandle(_obj_newObject("edit"));
+    obj.totalsab:setParent(obj.flowLayout72);
+    obj.totalsab:setName("totalsab");
+    obj.totalsab:setType("number");
+    obj.totalsab:setField("totalsab");
+    obj.totalsab:setMin(0);
+    obj.totalsab:setReadOnly(true);
+    obj.totalsab:setCanFocus(false);
+    obj.totalsab:setHorzTextAlign("center");
+    obj.totalsab:setAlign("client");
+
+    obj.dataLink6 = GUI.fromHandle(_obj_newObject("dataLink"));
+    obj.dataLink6:setParent(obj.flowLayout2);
+    obj.dataLink6:setFields({'nivelsab', 'classesab', 'racasab', 'treinosab', 'outrosab',
+                           'basesab', 'multiplicadorsab', 'extrasab', 'totalsab'});
+    obj.dataLink6:setName("dataLink6");
+
+    obj.button1 = GUI.fromHandle(_obj_newObject("button"));
+    obj.button1:setParent(obj.flowLayout2);
+    obj.button1:setText("Botão Teste");
+    obj.button1:setName("button1");
 
     obj.abaVaziaaba1 = GUI.fromHandle(_obj_newObject("tab"));
     obj.abaVaziaaba1:setParent(obj.pgcPrincipal);
@@ -1773,13 +1938,216 @@ local function constructNew_frmFichaPlanes()
     obj.horzLine10:setWidth(100);
     obj.horzLine10:setName("horzLine10");
 
-    obj._e_event0 = obj.abaVaziaaba1:addEventListener("onDblClick",
+    obj._e_event0 = obj.dataLink1:addEventListener("onChange",
+        function (_, field, oldValue, newValue)
+            local nivel = tonumber(sheet.nivelcon) or 0
+                            local classe = tonumber(sheet.classecon) or 0
+                            local raca = tonumber(sheet.racacon) or 0
+                            local treino = tonumber(sheet.treinocon) or 0
+                            local outro = tonumber(sheet.outrocon) or 0
+                            local multiplicador = tonumber(sheet.multiplicadorcon) or 0
+                            local extra = tonumber(sheet.extracon) or 0
+                            local base = nivel + classe + raca + treino + outro
+            
+                            sheet.basecon = base
+                            sheet.totalcon = math.floor(base * (1 + (multiplicador/100))) + extra
+            
+                            if 'con' ~= 'car' and 'con' ~= 'sab' then
+                                if base >= 800 then 
+                                    self.basecon.fontColor = 'red'
+                                elseif base >= 400 then
+                                    self.basecon.fontColor = 'yellow'
+                                else
+                                    self.basecon.fontCOlor = 'white'
+                                end
+                            else
+                                if base >= 400 then
+                                    self.basecon.fontColor = 'red'
+                                elseif base >= 200 then
+                                    self.basecon.fontColor = 'yellow'
+                                else
+                                    self.basecon.fontCOlor = 'white'
+                                end
+                            end
+        end, obj);
+
+    obj._e_event1 = obj.dataLink2:addEventListener("onChange",
+        function (_, field, oldValue, newValue)
+            local nivel = tonumber(sheet.nivelfor) or 0
+                            local classe = tonumber(sheet.classefor) or 0
+                            local raca = tonumber(sheet.racafor) or 0
+                            local treino = tonumber(sheet.treinofor) or 0
+                            local outro = tonumber(sheet.outrofor) or 0
+                            local multiplicador = tonumber(sheet.multiplicadorfor) or 0
+                            local extra = tonumber(sheet.extrafor) or 0
+                            local base = nivel + classe + raca + treino + outro
+            
+                            sheet.basefor = base
+                            sheet.totalfor = math.floor(base * (1 + (multiplicador/100))) + extra
+            
+                            if 'for' ~= 'car' and 'for' ~= 'sab' then
+                                if base >= 800 then 
+                                    self.basefor.fontColor = 'red'
+                                elseif base >= 400 then
+                                    self.basefor.fontColor = 'yellow'
+                                else
+                                    self.basefor.fontCOlor = 'white'
+                                end
+                            else
+                                if base >= 400 then
+                                    self.basefor.fontColor = 'red'
+                                elseif base >= 200 then
+                                    self.basefor.fontColor = 'yellow'
+                                else
+                                    self.basefor.fontCOlor = 'white'
+                                end
+                            end
+        end, obj);
+
+    obj._e_event2 = obj.dataLink3:addEventListener("onChange",
+        function (_, field, oldValue, newValue)
+            local nivel = tonumber(sheet.niveldex) or 0
+                            local classe = tonumber(sheet.classedex) or 0
+                            local raca = tonumber(sheet.racadex) or 0
+                            local treino = tonumber(sheet.treinodex) or 0
+                            local outro = tonumber(sheet.outrodex) or 0
+                            local multiplicador = tonumber(sheet.multiplicadordex) or 0
+                            local extra = tonumber(sheet.extradex) or 0
+                            local base = nivel + classe + raca + treino + outro
+            
+                            sheet.basedex = base
+                            sheet.totaldex = math.floor(base * (1 + (multiplicador/100))) + extra
+            
+                            if 'dex' ~= 'car' and 'dex' ~= 'sab' then
+                                if base >= 800 then 
+                                    self.basedex.fontColor = 'red'
+                                elseif base >= 400 then
+                                    self.basedex.fontColor = 'yellow'
+                                else
+                                    self.basedex.fontCOlor = 'white'
+                                end
+                            else
+                                if base >= 400 then
+                                    self.basedex.fontColor = 'red'
+                                elseif base >= 200 then
+                                    self.basedex.fontColor = 'yellow'
+                                else
+                                    self.basedex.fontCOlor = 'white'
+                                end
+                            end
+        end, obj);
+
+    obj._e_event3 = obj.dataLink4:addEventListener("onChange",
+        function (_, field, oldValue, newValue)
+            local nivel = tonumber(sheet.nivelcar) or 0
+                            local classe = tonumber(sheet.classecar) or 0
+                            local raca = tonumber(sheet.racacar) or 0
+                            local treino = tonumber(sheet.treinocar) or 0
+                            local outro = tonumber(sheet.outrocar) or 0
+                            local multiplicador = tonumber(sheet.multiplicadorcar) or 0
+                            local extra = tonumber(sheet.extracar) or 0
+                            local base = nivel + classe + raca + treino + outro
+            
+                            sheet.basecar = base
+                            sheet.totalcar = math.floor(base * (1 + (multiplicador/100))) + extra
+            
+                            if 'car' ~= 'car' and 'car' ~= 'sab' then
+                                if base >= 800 then 
+                                    self.basecar.fontColor = 'red'
+                                elseif base >= 400 then
+                                    self.basecar.fontColor = 'yellow'
+                                else
+                                    self.basecar.fontCOlor = 'white'
+                                end
+                            else
+                                if base >= 400 then
+                                    self.basecar.fontColor = 'red'
+                                elseif base >= 200 then
+                                    self.basecar.fontColor = 'yellow'
+                                else
+                                    self.basecar.fontCOlor = 'white'
+                                end
+                            end
+        end, obj);
+
+    obj._e_event4 = obj.dataLink5:addEventListener("onChange",
+        function (_, field, oldValue, newValue)
+            local nivel = tonumber(sheet.nivelint) or 0
+                            local classe = tonumber(sheet.classeint) or 0
+                            local raca = tonumber(sheet.racaint) or 0
+                            local treino = tonumber(sheet.treinoint) or 0
+                            local outro = tonumber(sheet.outroint) or 0
+                            local multiplicador = tonumber(sheet.multiplicadorint) or 0
+                            local extra = tonumber(sheet.extraint) or 0
+                            local base = nivel + classe + raca + treino + outro
+            
+                            sheet.baseint = base
+                            sheet.totalint = math.floor(base * (1 + (multiplicador/100))) + extra
+            
+                            if 'int' ~= 'car' and 'int' ~= 'sab' then
+                                if base >= 800 then 
+                                    self.baseint.fontColor = 'red'
+                                elseif base >= 400 then
+                                    self.baseint.fontColor = 'yellow'
+                                else
+                                    self.baseint.fontCOlor = 'white'
+                                end
+                            else
+                                if base >= 400 then
+                                    self.baseint.fontColor = 'red'
+                                elseif base >= 200 then
+                                    self.baseint.fontColor = 'yellow'
+                                else
+                                    self.baseint.fontCOlor = 'white'
+                                end
+                            end
+        end, obj);
+
+    obj._e_event5 = obj.dataLink6:addEventListener("onChange",
+        function (_, field, oldValue, newValue)
+            local nivel = tonumber(sheet.nivelsab) or 0
+                            local classe = tonumber(sheet.classesab) or 0
+                            local raca = tonumber(sheet.racasab) or 0
+                            local treino = tonumber(sheet.treinosab) or 0
+                            local outro = tonumber(sheet.outrosab) or 0
+                            local multiplicador = tonumber(sheet.multiplicadorsab) or 0
+                            local extra = tonumber(sheet.extrasab) or 0
+                            local base = nivel + classe + raca + treino + outro
+            
+                            sheet.basesab = base
+                            sheet.totalsab = math.floor(base * (1 + (multiplicador/100))) + extra
+            
+                            if 'sab' ~= 'car' and 'sab' ~= 'sab' then
+                                if base >= 800 then 
+                                    self.basesab.fontColor = 'red'
+                                elseif base >= 400 then
+                                    self.basesab.fontColor = 'yellow'
+                                else
+                                    self.basesab.fontCOlor = 'white'
+                                end
+                            else
+                                if base >= 400 then
+                                    self.basesab.fontColor = 'red'
+                                elseif base >= 200 then
+                                    self.basesab.fontColor = 'yellow'
+                                else
+                                    self.basesab.fontCOlor = 'white'
+                                end
+                            end
+        end, obj);
+
+    obj._e_event6 = obj.button1:addEventListener("onClick",
+        function (_)
+            alert(sheet.totalcon..' : '..sheet.basecon..' : '..sheet.multiplicadorcon)
+        end, obj);
+
+    obj._e_event7 = obj.abaVaziaaba1:addEventListener("onDblClick",
         function (_)
             self.popupaba1:show('bottomCenter',self.abaaba1)
                                     self.editaba1:setFocus();
         end, obj);
 
-    obj._e_event1 = obj.editaba1:addEventListener("onKeyDown",
+    obj._e_event8 = obj.editaba1:addEventListener("onKeyDown",
         function (_, event)
             
                                     if event.keyCode == 13 then
@@ -1790,20 +2158,20 @@ local function constructNew_frmFichaPlanes()
                                     end
         end, obj);
 
-    obj._e_event2 = obj.okButtonaba1:addEventListener("onClick",
+    obj._e_event9 = obj.okButtonaba1:addEventListener("onClick",
         function (_)
             self.abaVaziaaba1.title = sheet.editaba1;
                                                self.popupaba1:close();
                                                sheet.editaba1 = '';
         end, obj);
 
-    obj._e_event3 = obj.abaVaziaaba2:addEventListener("onDblClick",
+    obj._e_event10 = obj.abaVaziaaba2:addEventListener("onDblClick",
         function (_)
             self.popupaba2:show('bottomCenter',self.abaaba2)
                                     self.editaba2:setFocus();
         end, obj);
 
-    obj._e_event4 = obj.editaba2:addEventListener("onKeyDown",
+    obj._e_event11 = obj.editaba2:addEventListener("onKeyDown",
         function (_, event)
             
                                     if event.keyCode == 13 then
@@ -1814,20 +2182,20 @@ local function constructNew_frmFichaPlanes()
                                     end
         end, obj);
 
-    obj._e_event5 = obj.okButtonaba2:addEventListener("onClick",
+    obj._e_event12 = obj.okButtonaba2:addEventListener("onClick",
         function (_)
             self.abaVaziaaba2.title = sheet.editaba2;
                                                self.popupaba2:close();
                                                sheet.editaba2 = '';
         end, obj);
 
-    obj._e_event6 = obj.abaVaziaaba3:addEventListener("onDblClick",
+    obj._e_event13 = obj.abaVaziaaba3:addEventListener("onDblClick",
         function (_)
             self.popupaba3:show('bottomCenter',self.abaaba3)
                                     self.editaba3:setFocus();
         end, obj);
 
-    obj._e_event7 = obj.editaba3:addEventListener("onKeyDown",
+    obj._e_event14 = obj.editaba3:addEventListener("onKeyDown",
         function (_, event)
             
                                     if event.keyCode == 13 then
@@ -1838,20 +2206,20 @@ local function constructNew_frmFichaPlanes()
                                     end
         end, obj);
 
-    obj._e_event8 = obj.okButtonaba3:addEventListener("onClick",
+    obj._e_event15 = obj.okButtonaba3:addEventListener("onClick",
         function (_)
             self.abaVaziaaba3.title = sheet.editaba3;
                                                self.popupaba3:close();
                                                sheet.editaba3 = '';
         end, obj);
 
-    obj._e_event9 = obj.abaVaziaaba4:addEventListener("onDblClick",
+    obj._e_event16 = obj.abaVaziaaba4:addEventListener("onDblClick",
         function (_)
             self.popupaba4:show('bottomCenter',self.abaaba4)
                                     self.editaba4:setFocus();
         end, obj);
 
-    obj._e_event10 = obj.editaba4:addEventListener("onKeyDown",
+    obj._e_event17 = obj.editaba4:addEventListener("onKeyDown",
         function (_, event)
             
                                     if event.keyCode == 13 then
@@ -1862,20 +2230,20 @@ local function constructNew_frmFichaPlanes()
                                     end
         end, obj);
 
-    obj._e_event11 = obj.okButtonaba4:addEventListener("onClick",
+    obj._e_event18 = obj.okButtonaba4:addEventListener("onClick",
         function (_)
             self.abaVaziaaba4.title = sheet.editaba4;
                                                self.popupaba4:close();
                                                sheet.editaba4 = '';
         end, obj);
 
-    obj._e_event12 = obj.abaVaziaaba5:addEventListener("onDblClick",
+    obj._e_event19 = obj.abaVaziaaba5:addEventListener("onDblClick",
         function (_)
             self.popupaba5:show('bottomCenter',self.abaaba5)
                                     self.editaba5:setFocus();
         end, obj);
 
-    obj._e_event13 = obj.editaba5:addEventListener("onKeyDown",
+    obj._e_event20 = obj.editaba5:addEventListener("onKeyDown",
         function (_, event)
             
                                     if event.keyCode == 13 then
@@ -1886,20 +2254,20 @@ local function constructNew_frmFichaPlanes()
                                     end
         end, obj);
 
-    obj._e_event14 = obj.okButtonaba5:addEventListener("onClick",
+    obj._e_event21 = obj.okButtonaba5:addEventListener("onClick",
         function (_)
             self.abaVaziaaba5.title = sheet.editaba5;
                                                self.popupaba5:close();
                                                sheet.editaba5 = '';
         end, obj);
 
-    obj._e_event15 = obj.abaVaziaaba6:addEventListener("onDblClick",
+    obj._e_event22 = obj.abaVaziaaba6:addEventListener("onDblClick",
         function (_)
             self.popupaba6:show('bottomCenter',self.abaaba6)
                                     self.editaba6:setFocus();
         end, obj);
 
-    obj._e_event16 = obj.editaba6:addEventListener("onKeyDown",
+    obj._e_event23 = obj.editaba6:addEventListener("onKeyDown",
         function (_, event)
             
                                     if event.keyCode == 13 then
@@ -1910,20 +2278,20 @@ local function constructNew_frmFichaPlanes()
                                     end
         end, obj);
 
-    obj._e_event17 = obj.okButtonaba6:addEventListener("onClick",
+    obj._e_event24 = obj.okButtonaba6:addEventListener("onClick",
         function (_)
             self.abaVaziaaba6.title = sheet.editaba6;
                                                self.popupaba6:close();
                                                sheet.editaba6 = '';
         end, obj);
 
-    obj._e_event18 = obj.abaVaziaaba7:addEventListener("onDblClick",
+    obj._e_event25 = obj.abaVaziaaba7:addEventListener("onDblClick",
         function (_)
             self.popupaba7:show('bottomCenter',self.abaaba7)
                                     self.editaba7:setFocus();
         end, obj);
 
-    obj._e_event19 = obj.editaba7:addEventListener("onKeyDown",
+    obj._e_event26 = obj.editaba7:addEventListener("onKeyDown",
         function (_, event)
             
                                     if event.keyCode == 13 then
@@ -1934,20 +2302,20 @@ local function constructNew_frmFichaPlanes()
                                     end
         end, obj);
 
-    obj._e_event20 = obj.okButtonaba7:addEventListener("onClick",
+    obj._e_event27 = obj.okButtonaba7:addEventListener("onClick",
         function (_)
             self.abaVaziaaba7.title = sheet.editaba7;
                                                self.popupaba7:close();
                                                sheet.editaba7 = '';
         end, obj);
 
-    obj._e_event21 = obj.abaVaziaaba8:addEventListener("onDblClick",
+    obj._e_event28 = obj.abaVaziaaba8:addEventListener("onDblClick",
         function (_)
             self.popupaba8:show('bottomCenter',self.abaaba8)
                                     self.editaba8:setFocus();
         end, obj);
 
-    obj._e_event22 = obj.editaba8:addEventListener("onKeyDown",
+    obj._e_event29 = obj.editaba8:addEventListener("onKeyDown",
         function (_, event)
             
                                     if event.keyCode == 13 then
@@ -1958,20 +2326,20 @@ local function constructNew_frmFichaPlanes()
                                     end
         end, obj);
 
-    obj._e_event23 = obj.okButtonaba8:addEventListener("onClick",
+    obj._e_event30 = obj.okButtonaba8:addEventListener("onClick",
         function (_)
             self.abaVaziaaba8.title = sheet.editaba8;
                                                self.popupaba8:close();
                                                sheet.editaba8 = '';
         end, obj);
 
-    obj._e_event24 = obj.abaVaziaaba9:addEventListener("onDblClick",
+    obj._e_event31 = obj.abaVaziaaba9:addEventListener("onDblClick",
         function (_)
             self.popupaba9:show('bottomCenter',self.abaaba9)
                                     self.editaba9:setFocus();
         end, obj);
 
-    obj._e_event25 = obj.editaba9:addEventListener("onKeyDown",
+    obj._e_event32 = obj.editaba9:addEventListener("onKeyDown",
         function (_, event)
             
                                     if event.keyCode == 13 then
@@ -1982,20 +2350,20 @@ local function constructNew_frmFichaPlanes()
                                     end
         end, obj);
 
-    obj._e_event26 = obj.okButtonaba9:addEventListener("onClick",
+    obj._e_event33 = obj.okButtonaba9:addEventListener("onClick",
         function (_)
             self.abaVaziaaba9.title = sheet.editaba9;
                                                self.popupaba9:close();
                                                sheet.editaba9 = '';
         end, obj);
 
-    obj._e_event27 = obj.abaVaziaaba10:addEventListener("onDblClick",
+    obj._e_event34 = obj.abaVaziaaba10:addEventListener("onDblClick",
         function (_)
             self.popupaba10:show('bottomCenter',self.abaaba10)
                                     self.editaba10:setFocus();
         end, obj);
 
-    obj._e_event28 = obj.editaba10:addEventListener("onKeyDown",
+    obj._e_event35 = obj.editaba10:addEventListener("onKeyDown",
         function (_, event)
             
                                     if event.keyCode == 13 then
@@ -2006,7 +2374,7 @@ local function constructNew_frmFichaPlanes()
                                     end
         end, obj);
 
-    obj._e_event29 = obj.okButtonaba10:addEventListener("onClick",
+    obj._e_event36 = obj.okButtonaba10:addEventListener("onClick",
         function (_)
             self.abaVaziaaba10.title = sheet.editaba10;
                                                self.popupaba10:close();
@@ -2014,6 +2382,13 @@ local function constructNew_frmFichaPlanes()
         end, obj);
 
     function obj:_releaseEvents()
+        __o_rrpgObjs.removeEventListenerById(self._e_event36);
+        __o_rrpgObjs.removeEventListenerById(self._e_event35);
+        __o_rrpgObjs.removeEventListenerById(self._e_event34);
+        __o_rrpgObjs.removeEventListenerById(self._e_event33);
+        __o_rrpgObjs.removeEventListenerById(self._e_event32);
+        __o_rrpgObjs.removeEventListenerById(self._e_event31);
+        __o_rrpgObjs.removeEventListenerById(self._e_event30);
         __o_rrpgObjs.removeEventListenerById(self._e_event29);
         __o_rrpgObjs.removeEventListenerById(self._e_event28);
         __o_rrpgObjs.removeEventListenerById(self._e_event27);
@@ -2056,20 +2431,18 @@ local function constructNew_frmFichaPlanes()
         end;
 
         if self.flowLayout37 ~= nil then self.flowLayout37:destroy(); self.flowLayout37 = nil; end;
+        if self.baseint ~= nil then self.baseint:destroy(); self.baseint = nil; end;
         if self.flowLayout22 ~= nil then self.flowLayout22:destroy(); self.flowLayout22 = nil; end;
         if self.flowLayout24 ~= nil then self.flowLayout24:destroy(); self.flowLayout24 = nil; end;
-        if self.edit64 ~= nil then self.edit64:destroy(); self.edit64 = nil; end;
-        if self.edit41 ~= nil then self.edit41:destroy(); self.edit41 = nil; end;
         if self.horzLine7 ~= nil then self.horzLine7:destroy(); self.horzLine7 = nil; end;
         if self.flowLayout65 ~= nil then self.flowLayout65:destroy(); self.flowLayout65 = nil; end;
-        if self.edit36 ~= nil then self.edit36:destroy(); self.edit36 = nil; end;
+        if self.treinodex ~= nil then self.treinodex:destroy(); self.treinodex = nil; end;
         if self.edit9 ~= nil then self.edit9:destroy(); self.edit9 = nil; end;
-        if self.edit33 ~= nil then self.edit33:destroy(); self.edit33 = nil; end;
+        if self.dataLink4 ~= nil then self.dataLink4:destroy(); self.dataLink4 = nil; end;
         if self.flowLayout47 ~= nil then self.flowLayout47:destroy(); self.flowLayout47 = nil; end;
-        if self.edit29 ~= nil then self.edit29:destroy(); self.edit29 = nil; end;
+        if self.outrocar ~= nil then self.outrocar:destroy(); self.outrocar = nil; end;
         if self.flowLayout19 ~= nil then self.flowLayout19:destroy(); self.flowLayout19 = nil; end;
         if self.flowLayout13 ~= nil then self.flowLayout13:destroy(); self.flowLayout13 = nil; end;
-        if self.edit28 ~= nil then self.edit28:destroy(); self.edit28 = nil; end;
         if self.flowLayout1 ~= nil then self.flowLayout1:destroy(); self.flowLayout1 = nil; end;
         if self.richEdit10 ~= nil then self.richEdit10:destroy(); self.richEdit10 = nil; end;
         if self.flowLayout67 ~= nil then self.flowLayout67:destroy(); self.flowLayout67 = nil; end;
@@ -2078,67 +2451,69 @@ local function constructNew_frmFichaPlanes()
         if self.flowLayout5 ~= nil then self.flowLayout5:destroy(); self.flowLayout5 = nil; end;
         if self.editaba2 ~= nil then self.editaba2:destroy(); self.editaba2 = nil; end;
         if self.abaVaziaaba1 ~= nil then self.abaVaziaaba1:destroy(); self.abaVaziaaba1 = nil; end;
-        if self.edit47 ~= nil then self.edit47:destroy(); self.edit47 = nil; end;
         if self.flowLayout74 ~= nil then self.flowLayout74:destroy(); self.flowLayout74 = nil; end;
+        if self.treinoint ~= nil then self.treinoint:destroy(); self.treinoint = nil; end;
         if self.rectangle5 ~= nil then self.rectangle5:destroy(); self.rectangle5 = nil; end;
         if self.flowLayout73 ~= nil then self.flowLayout73:destroy(); self.flowLayout73 = nil; end;
+        if self.button1 ~= nil then self.button1:destroy(); self.button1 = nil; end;
         if self.flowLayout78 ~= nil then self.flowLayout78:destroy(); self.flowLayout78 = nil; end;
-        if self.edit26 ~= nil then self.edit26:destroy(); self.edit26 = nil; end;
         if self.flowLayout16 ~= nil then self.flowLayout16:destroy(); self.flowLayout16 = nil; end;
-        if self.edit34 ~= nil then self.edit34:destroy(); self.edit34 = nil; end;
         if self.edit11 ~= nil then self.edit11:destroy(); self.edit11 = nil; end;
-        if self.edit19 ~= nil then self.edit19:destroy(); self.edit19 = nil; end;
         if self.flowLayout64 ~= nil then self.flowLayout64:destroy(); self.flowLayout64 = nil; end;
         if self.popupaba10 ~= nil then self.popupaba10:destroy(); self.popupaba10 = nil; end;
         if self.flowLayout44 ~= nil then self.flowLayout44:destroy(); self.flowLayout44 = nil; end;
         if self.edit5 ~= nil then self.edit5:destroy(); self.edit5 = nil; end;
+        if self.nivelfor ~= nil then self.nivelfor:destroy(); self.nivelfor = nil; end;
+        if self.basecon ~= nil then self.basecon:destroy(); self.basecon = nil; end;
         if self.flowLayout30 ~= nil then self.flowLayout30:destroy(); self.flowLayout30 = nil; end;
         if self.scrollBox9 ~= nil then self.scrollBox9:destroy(); self.scrollBox9 = nil; end;
         if self.flowLayout52 ~= nil then self.flowLayout52:destroy(); self.flowLayout52 = nil; end;
         if self.scrollBox2 ~= nil then self.scrollBox2:destroy(); self.scrollBox2 = nil; end;
         if self.flowLayout58 ~= nil then self.flowLayout58:destroy(); self.flowLayout58 = nil; end;
-        if self.edit68 ~= nil then self.edit68:destroy(); self.edit68 = nil; end;
+        if self.basecar ~= nil then self.basecar:destroy(); self.basecar = nil; end;
         if self.flowLayout39 ~= nil then self.flowLayout39:destroy(); self.flowLayout39 = nil; end;
         if self.editaba3 ~= nil then self.editaba3:destroy(); self.editaba3 = nil; end;
-        if self.edit69 ~= nil then self.edit69:destroy(); self.edit69 = nil; end;
         if self.flowLayout23 ~= nil then self.flowLayout23:destroy(); self.flowLayout23 = nil; end;
         if self.abaVaziaaba10 ~= nil then self.abaVaziaaba10:destroy(); self.abaVaziaaba10 = nil; end;
         if self.edit10 ~= nil then self.edit10:destroy(); self.edit10 = nil; end;
         if self.edit16 ~= nil then self.edit16:destroy(); self.edit16 = nil; end;
-        if self.edit31 ~= nil then self.edit31:destroy(); self.edit31 = nil; end;
         if self.flowLayout29 ~= nil then self.flowLayout29:destroy(); self.flowLayout29 = nil; end;
+        if self.racaint ~= nil then self.racaint:destroy(); self.racaint = nil; end;
         if self.edit1 ~= nil then self.edit1:destroy(); self.edit1 = nil; end;
-        if self.edit52 ~= nil then self.edit52:destroy(); self.edit52 = nil; end;
+        if self.racacar ~= nil then self.racacar:destroy(); self.racacar = nil; end;
         if self.rectangle7 ~= nil then self.rectangle7:destroy(); self.rectangle7 = nil; end;
         if self.okButtonaba8 ~= nil then self.okButtonaba8:destroy(); self.okButtonaba8 = nil; end;
         if self.okButtonaba5 ~= nil then self.okButtonaba5:destroy(); self.okButtonaba5 = nil; end;
-        if self.edit58 ~= nil then self.edit58:destroy(); self.edit58 = nil; end;
         if self.flowLayout33 ~= nil then self.flowLayout33:destroy(); self.flowLayout33 = nil; end;
         if self.flowLayout46 ~= nil then self.flowLayout46:destroy(); self.flowLayout46 = nil; end;
-        if self.edit66 ~= nil then self.edit66:destroy(); self.edit66 = nil; end;
         if self.flowLayout35 ~= nil then self.flowLayout35:destroy(); self.flowLayout35 = nil; end;
         if self.editaba9 ~= nil then self.editaba9:destroy(); self.editaba9 = nil; end;
+        if self.extrafor ~= nil then self.extrafor:destroy(); self.extrafor = nil; end;
         if self.editaba5 ~= nil then self.editaba5:destroy(); self.editaba5 = nil; end;
-        if self.edit23 ~= nil then self.edit23:destroy(); self.edit23 = nil; end;
         if self.flowLayout63 ~= nil then self.flowLayout63:destroy(); self.flowLayout63 = nil; end;
         if self.flowLayout68 ~= nil then self.flowLayout68:destroy(); self.flowLayout68 = nil; end;
+        if self.dataLink3 ~= nil then self.dataLink3:destroy(); self.dataLink3 = nil; end;
         if self.flowLayout49 ~= nil then self.flowLayout49:destroy(); self.flowLayout49 = nil; end;
         if self.flowLayout69 ~= nil then self.flowLayout69:destroy(); self.flowLayout69 = nil; end;
         if self.flowLayout14 ~= nil then self.flowLayout14:destroy(); self.flowLayout14 = nil; end;
         if self.rectangle2 ~= nil then self.rectangle2:destroy(); self.rectangle2 = nil; end;
         if self.rectangle6 ~= nil then self.rectangle6:destroy(); self.rectangle6 = nil; end;
         if self.flowLayout31 ~= nil then self.flowLayout31:destroy(); self.flowLayout31 = nil; end;
-        if self.edit40 ~= nil then self.edit40:destroy(); self.edit40 = nil; end;
+        if self.multiplicadorfor ~= nil then self.multiplicadorfor:destroy(); self.multiplicadorfor = nil; end;
+        if self.racafor ~= nil then self.racafor:destroy(); self.racafor = nil; end;
         if self.flowLayout40 ~= nil then self.flowLayout40:destroy(); self.flowLayout40 = nil; end;
+        if self.dataLink2 ~= nil then self.dataLink2:destroy(); self.dataLink2 = nil; end;
+        if self.dataLink6 ~= nil then self.dataLink6:destroy(); self.dataLink6 = nil; end;
         if self.horzLine1 ~= nil then self.horzLine1:destroy(); self.horzLine1 = nil; end;
         if self.abaVaziaaba4 ~= nil then self.abaVaziaaba4:destroy(); self.abaVaziaaba4 = nil; end;
-        if self.edit38 ~= nil then self.edit38:destroy(); self.edit38 = nil; end;
         if self.okButtonaba1 ~= nil then self.okButtonaba1:destroy(); self.okButtonaba1 = nil; end;
-        if self.edit67 ~= nil then self.edit67:destroy(); self.edit67 = nil; end;
-        if self.abaVaziaaba6 ~= nil then self.abaVaziaaba6:destroy(); self.abaVaziaaba6 = nil; end;
+        if self.treinofor ~= nil then self.treinofor:destroy(); self.treinofor = nil; end;
+        if self.classefor ~= nil then self.classefor:destroy(); self.classefor = nil; end;
         if self.abaAtributos ~= nil then self.abaAtributos:destroy(); self.abaAtributos = nil; end;
+        if self.abaVaziaaba6 ~= nil then self.abaVaziaaba6:destroy(); self.abaVaziaaba6 = nil; end;
         if self.editaba10 ~= nil then self.editaba10:destroy(); self.editaba10 = nil; end;
         if self.richEdit1 ~= nil then self.richEdit1:destroy(); self.richEdit1 = nil; end;
+        if self.classecar ~= nil then self.classecar:destroy(); self.classecar = nil; end;
         if self.abaVaziaaba7 ~= nil then self.abaVaziaaba7:destroy(); self.abaVaziaaba7 = nil; end;
         if self.scrollBox3 ~= nil then self.scrollBox3:destroy(); self.scrollBox3 = nil; end;
         if self.horzLine3 ~= nil then self.horzLine3:destroy(); self.horzLine3 = nil; end;
@@ -2147,26 +2522,26 @@ local function constructNew_frmFichaPlanes()
         if self.pgcPrincipal ~= nil then self.pgcPrincipal:destroy(); self.pgcPrincipal = nil; end;
         if self.edit6 ~= nil then self.edit6:destroy(); self.edit6 = nil; end;
         if self.richEdit3 ~= nil then self.richEdit3:destroy(); self.richEdit3 = nil; end;
+        if self.totalint ~= nil then self.totalint:destroy(); self.totalint = nil; end;
         if self.flowLayout60 ~= nil then self.flowLayout60:destroy(); self.flowLayout60 = nil; end;
         if self.edit3 ~= nil then self.edit3:destroy(); self.edit3 = nil; end;
+        if self.racadex ~= nil then self.racadex:destroy(); self.racadex = nil; end;
         if self.popupaba7 ~= nil then self.popupaba7:destroy(); self.popupaba7 = nil; end;
-        if self.edit49 ~= nil then self.edit49:destroy(); self.edit49 = nil; end;
         if self.popupaba9 ~= nil then self.popupaba9:destroy(); self.popupaba9 = nil; end;
         if self.flowLayout71 ~= nil then self.flowLayout71:destroy(); self.flowLayout71 = nil; end;
-        if self.edit27 ~= nil then self.edit27:destroy(); self.edit27 = nil; end;
-        if self.scrollBox5 ~= nil then self.scrollBox5:destroy(); self.scrollBox5 = nil; end;
+        if self.outrodex ~= nil then self.outrodex:destroy(); self.outrodex = nil; end;
+        if self.totalsab ~= nil then self.totalsab:destroy(); self.totalsab = nil; end;
+        if self.multiplicadordex ~= nil then self.multiplicadordex:destroy(); self.multiplicadordex = nil; end;
         if self.richEdit2 ~= nil then self.richEdit2:destroy(); self.richEdit2 = nil; end;
-        if self.edit62 ~= nil then self.edit62:destroy(); self.edit62 = nil; end;
+        if self.scrollBox5 ~= nil then self.scrollBox5:destroy(); self.scrollBox5 = nil; end;
         if self.richEdit8 ~= nil then self.richEdit8:destroy(); self.richEdit8 = nil; end;
-        if self.edit18 ~= nil then self.edit18:destroy(); self.edit18 = nil; end;
-        if self.edit25 ~= nil then self.edit25:destroy(); self.edit25 = nil; end;
         if self.scrollBox1 ~= nil then self.scrollBox1:destroy(); self.scrollBox1 = nil; end;
+        if self.nivelint ~= nil then self.nivelint:destroy(); self.nivelint = nil; end;
         if self.flowLayout8 ~= nil then self.flowLayout8:destroy(); self.flowLayout8 = nil; end;
-        if self.edit60 ~= nil then self.edit60:destroy(); self.edit60 = nil; end;
         if self.flowLayout70 ~= nil then self.flowLayout70:destroy(); self.flowLayout70 = nil; end;
         if self.flowLayout48 ~= nil then self.flowLayout48:destroy(); self.flowLayout48 = nil; end;
         if self.rectangle11 ~= nil then self.rectangle11:destroy(); self.rectangle11 = nil; end;
-        if self.edit46 ~= nil then self.edit46:destroy(); self.edit46 = nil; end;
+        if self.totalfor ~= nil then self.totalfor:destroy(); self.totalfor = nil; end;
         if self.abaVaziaaba5 ~= nil then self.abaVaziaaba5:destroy(); self.abaVaziaaba5 = nil; end;
         if self.flowLayout32 ~= nil then self.flowLayout32:destroy(); self.flowLayout32 = nil; end;
         if self.rectangle9 ~= nil then self.rectangle9:destroy(); self.rectangle9 = nil; end;
@@ -2178,92 +2553,97 @@ local function constructNew_frmFichaPlanes()
         if self.edit7 ~= nil then self.edit7:destroy(); self.edit7 = nil; end;
         if self.scrollBox11 ~= nil then self.scrollBox11:destroy(); self.scrollBox11 = nil; end;
         if self.okButtonaba4 ~= nil then self.okButtonaba4:destroy(); self.okButtonaba4 = nil; end;
-        if self.edit12 ~= nil then self.edit12:destroy(); self.edit12 = nil; end;
         if self.flowLayout18 ~= nil then self.flowLayout18:destroy(); self.flowLayout18 = nil; end;
-        if self.edit35 ~= nil then self.edit35:destroy(); self.edit35 = nil; end;
+        if self.edit12 ~= nil then self.edit12:destroy(); self.edit12 = nil; end;
         if self.abaVaziaaba2 ~= nil then self.abaVaziaaba2:destroy(); self.abaVaziaaba2 = nil; end;
+        if self.treinocar ~= nil then self.treinocar:destroy(); self.treinocar = nil; end;
+        if self.outroint ~= nil then self.outroint:destroy(); self.outroint = nil; end;
         if self.flowLayout51 ~= nil then self.flowLayout51:destroy(); self.flowLayout51 = nil; end;
         if self.flowLayout15 ~= nil then self.flowLayout15:destroy(); self.flowLayout15 = nil; end;
         if self.flowLayout12 ~= nil then self.flowLayout12:destroy(); self.flowLayout12 = nil; end;
-        if self.edit57 ~= nil then self.edit57:destroy(); self.edit57 = nil; end;
-        if self.flowLayout41 ~= nil then self.flowLayout41:destroy(); self.flowLayout41 = nil; end;
         if self.flowLayout62 ~= nil then self.flowLayout62:destroy(); self.flowLayout62 = nil; end;
-        if self.edit54 ~= nil then self.edit54:destroy(); self.edit54 = nil; end;
-        if self.edit63 ~= nil then self.edit63:destroy(); self.edit63 = nil; end;
+        if self.flowLayout41 ~= nil then self.flowLayout41:destroy(); self.flowLayout41 = nil; end;
+        if self.racasab ~= nil then self.racasab:destroy(); self.racasab = nil; end;
+        if self.niveldex ~= nil then self.niveldex:destroy(); self.niveldex = nil; end;
+        if self.basesab ~= nil then self.basesab:destroy(); self.basesab = nil; end;
+        if self.multiplicadorcon ~= nil then self.multiplicadorcon:destroy(); self.multiplicadorcon = nil; end;
+        if self.dataLink5 ~= nil then self.dataLink5:destroy(); self.dataLink5 = nil; end;
         if self.horzLine2 ~= nil then self.horzLine2:destroy(); self.horzLine2 = nil; end;
         if self.popupaba8 ~= nil then self.popupaba8:destroy(); self.popupaba8 = nil; end;
         if self.rectangle10 ~= nil then self.rectangle10:destroy(); self.rectangle10 = nil; end;
         if self.flowLayout61 ~= nil then self.flowLayout61:destroy(); self.flowLayout61 = nil; end;
         if self.rectangle1 ~= nil then self.rectangle1:destroy(); self.rectangle1 = nil; end;
-        if self.edit50 ~= nil then self.edit50:destroy(); self.edit50 = nil; end;
-        if self.edit61 ~= nil then self.edit61:destroy(); self.edit61 = nil; end;
         if self.flowLayout55 ~= nil then self.flowLayout55:destroy(); self.flowLayout55 = nil; end;
         if self.richEdit4 ~= nil then self.richEdit4:destroy(); self.richEdit4 = nil; end;
-        if self.edit24 ~= nil then self.edit24:destroy(); self.edit24 = nil; end;
-        if self.edit59 ~= nil then self.edit59:destroy(); self.edit59 = nil; end;
+        if self.totalcar ~= nil then self.totalcar:destroy(); self.totalcar = nil; end;
         if self.edit14 ~= nil then self.edit14:destroy(); self.edit14 = nil; end;
         if self.flowLayout79 ~= nil then self.flowLayout79:destroy(); self.flowLayout79 = nil; end;
         if self.popupaba5 ~= nil then self.popupaba5:destroy(); self.popupaba5 = nil; end;
         if self.edit4 ~= nil then self.edit4:destroy(); self.edit4 = nil; end;
-        if self.edit44 ~= nil then self.edit44:destroy(); self.edit44 = nil; end;
+        if self.nivelcon ~= nil then self.nivelcon:destroy(); self.nivelcon = nil; end;
         if self.horzLine8 ~= nil then self.horzLine8:destroy(); self.horzLine8 = nil; end;
         if self.popupaba1 ~= nil then self.popupaba1:destroy(); self.popupaba1 = nil; end;
         if self.flowLayout20 ~= nil then self.flowLayout20:destroy(); self.flowLayout20 = nil; end;
         if self.editaba4 ~= nil then self.editaba4:destroy(); self.editaba4 = nil; end;
         if self.abaVaziaaba8 ~= nil then self.abaVaziaaba8:destroy(); self.abaVaziaaba8 = nil; end;
+        if self.multiplicadorint ~= nil then self.multiplicadorint:destroy(); self.multiplicadorint = nil; end;
         if self.editaba6 ~= nil then self.editaba6:destroy(); self.editaba6 = nil; end;
         if self.okButtonaba3 ~= nil then self.okButtonaba3:destroy(); self.okButtonaba3 = nil; end;
         if self.horzLine5 ~= nil then self.horzLine5:destroy(); self.horzLine5 = nil; end;
         if self.flowLayout25 ~= nil then self.flowLayout25:destroy(); self.flowLayout25 = nil; end;
         if self.flowLayout26 ~= nil then self.flowLayout26:destroy(); self.flowLayout26 = nil; end;
+        if self.nivelsab ~= nil then self.nivelsab:destroy(); self.nivelsab = nil; end;
         if self.flowLayout80 ~= nil then self.flowLayout80:destroy(); self.flowLayout80 = nil; end;
-        if self.okButtonaba9 ~= nil then self.okButtonaba9:destroy(); self.okButtonaba9 = nil; end;
         if self.flowLayout54 ~= nil then self.flowLayout54:destroy(); self.flowLayout54 = nil; end;
-        if self.edit45 ~= nil then self.edit45:destroy(); self.edit45 = nil; end;
+        if self.okButtonaba9 ~= nil then self.okButtonaba9:destroy(); self.okButtonaba9 = nil; end;
+        if self.extradex ~= nil then self.extradex:destroy(); self.extradex = nil; end;
         if self.flowLayout7 ~= nil then self.flowLayout7:destroy(); self.flowLayout7 = nil; end;
         if self.edit8 ~= nil then self.edit8:destroy(); self.edit8 = nil; end;
-        if self.edit53 ~= nil then self.edit53:destroy(); self.edit53 = nil; end;
+        if self.basefor ~= nil then self.basefor:destroy(); self.basefor = nil; end;
         if self.okButtonaba6 ~= nil then self.okButtonaba6:destroy(); self.okButtonaba6 = nil; end;
         if self.okButtonaba2 ~= nil then self.okButtonaba2:destroy(); self.okButtonaba2 = nil; end;
         if self.flowLayout9 ~= nil then self.flowLayout9:destroy(); self.flowLayout9 = nil; end;
-        if self.flowLayout50 ~= nil then self.flowLayout50:destroy(); self.flowLayout50 = nil; end;
+        if self.extracon ~= nil then self.extracon:destroy(); self.extracon = nil; end;
         if self.flowLayout10 ~= nil then self.flowLayout10:destroy(); self.flowLayout10 = nil; end;
         if self.edit2 ~= nil then self.edit2:destroy(); self.edit2 = nil; end;
+        if self.flowLayout50 ~= nil then self.flowLayout50:destroy(); self.flowLayout50 = nil; end;
         if self.rectangle8 ~= nil then self.rectangle8:destroy(); self.rectangle8 = nil; end;
         if self.flowLayout17 ~= nil then self.flowLayout17:destroy(); self.flowLayout17 = nil; end;
+        if self.outrofor ~= nil then self.outrofor:destroy(); self.outrofor = nil; end;
         if self.flowLayout53 ~= nil then self.flowLayout53:destroy(); self.flowLayout53 = nil; end;
-        if self.edit30 ~= nil then self.edit30:destroy(); self.edit30 = nil; end;
-        if self.edit21 ~= nil then self.edit21:destroy(); self.edit21 = nil; end;
-        if self.edit56 ~= nil then self.edit56:destroy(); self.edit56 = nil; end;
-        if self.abaVaziaaba3 ~= nil then self.abaVaziaaba3:destroy(); self.abaVaziaaba3 = nil; end;
         if self.horzLine9 ~= nil then self.horzLine9:destroy(); self.horzLine9 = nil; end;
+        if self.abaVaziaaba3 ~= nil then self.abaVaziaaba3:destroy(); self.abaVaziaaba3 = nil; end;
         if self.flowLayout42 ~= nil then self.flowLayout42:destroy(); self.flowLayout42 = nil; end;
         if self.flowLayout21 ~= nil then self.flowLayout21:destroy(); self.flowLayout21 = nil; end;
         if self.editaba8 ~= nil then self.editaba8:destroy(); self.editaba8 = nil; end;
         if self.okButtonaba7 ~= nil then self.okButtonaba7:destroy(); self.okButtonaba7 = nil; end;
-        if self.edit55 ~= nil then self.edit55:destroy(); self.edit55 = nil; end;
+        if self.treinocon ~= nil then self.treinocon:destroy(); self.treinocon = nil; end;
         if self.flowLayout27 ~= nil then self.flowLayout27:destroy(); self.flowLayout27 = nil; end;
-        if self.edit43 ~= nil then self.edit43:destroy(); self.edit43 = nil; end;
         if self.flowLayout11 ~= nil then self.flowLayout11:destroy(); self.flowLayout11 = nil; end;
+        if self.extrasab ~= nil then self.extrasab:destroy(); self.extrasab = nil; end;
         if self.okButtonaba10 ~= nil then self.okButtonaba10:destroy(); self.okButtonaba10 = nil; end;
-        if self.edit65 ~= nil then self.edit65:destroy(); self.edit65 = nil; end;
         if self.flowLayout4 ~= nil then self.flowLayout4:destroy(); self.flowLayout4 = nil; end;
         if self.edit13 ~= nil then self.edit13:destroy(); self.edit13 = nil; end;
-        if self.edit39 ~= nil then self.edit39:destroy(); self.edit39 = nil; end;
+        if self.dataLink1 ~= nil then self.dataLink1:destroy(); self.dataLink1 = nil; end;
         if self.popupaba2 ~= nil then self.popupaba2:destroy(); self.popupaba2 = nil; end;
         if self.scrollBox10 ~= nil then self.scrollBox10:destroy(); self.scrollBox10 = nil; end;
+        if self.classeint ~= nil then self.classeint:destroy(); self.classeint = nil; end;
+        if self.totalcon ~= nil then self.totalcon:destroy(); self.totalcon = nil; end;
+        if self.totaldex ~= nil then self.totaldex:destroy(); self.totaldex = nil; end;
+        if self.extraint ~= nil then self.extraint:destroy(); self.extraint = nil; end;
         if self.editaba1 ~= nil then self.editaba1:destroy(); self.editaba1 = nil; end;
         if self.rectangle3 ~= nil then self.rectangle3:destroy(); self.rectangle3 = nil; end;
-        if self.edit37 ~= nil then self.edit37:destroy(); self.edit37 = nil; end;
+        if self.nivelcar ~= nil then self.nivelcar:destroy(); self.nivelcar = nil; end;
         if self.flowLayout2 ~= nil then self.flowLayout2:destroy(); self.flowLayout2 = nil; end;
         if self.flowLayout66 ~= nil then self.flowLayout66:destroy(); self.flowLayout66 = nil; end;
-        if self.edit17 ~= nil then self.edit17:destroy(); self.edit17 = nil; end;
+        if self.treinosab ~= nil then self.treinosab:destroy(); self.treinosab = nil; end;
         if self.flowLayout34 ~= nil then self.flowLayout34:destroy(); self.flowLayout34 = nil; end;
         if self.flowLayout45 ~= nil then self.flowLayout45:destroy(); self.flowLayout45 = nil; end;
-        if self.edit51 ~= nil then self.edit51:destroy(); self.edit51 = nil; end;
-        if self.edit48 ~= nil then self.edit48:destroy(); self.edit48 = nil; end;
         if self.scrollBox6 ~= nil then self.scrollBox6:destroy(); self.scrollBox6 = nil; end;
+        if self.basedex ~= nil then self.basedex:destroy(); self.basedex = nil; end;
         if self.flowLayout56 ~= nil then self.flowLayout56:destroy(); self.flowLayout56 = nil; end;
+        if self.classedex ~= nil then self.classedex:destroy(); self.classedex = nil; end;
+        if self.racacon ~= nil then self.racacon:destroy(); self.racacon = nil; end;
         if self.richEdit7 ~= nil then self.richEdit7:destroy(); self.richEdit7 = nil; end;
         if self.edit15 ~= nil then self.edit15:destroy(); self.edit15 = nil; end;
         if self.popupaba4 ~= nil then self.popupaba4:destroy(); self.popupaba4 = nil; end;
@@ -2272,25 +2652,27 @@ local function constructNew_frmFichaPlanes()
         if self.horzLine4 ~= nil then self.horzLine4:destroy(); self.horzLine4 = nil; end;
         if self.flowLayout38 ~= nil then self.flowLayout38:destroy(); self.flowLayout38 = nil; end;
         if self.popupaba3 ~= nil then self.popupaba3:destroy(); self.popupaba3 = nil; end;
-        if self.edit70 ~= nil then self.edit70:destroy(); self.edit70 = nil; end;
         if self.richEdit5 ~= nil then self.richEdit5:destroy(); self.richEdit5 = nil; end;
-        if self.flowLayout75 ~= nil then self.flowLayout75:destroy(); self.flowLayout75 = nil; end;
-        if self.flowLayout28 ~= nil then self.flowLayout28:destroy(); self.flowLayout28 = nil; end;
         if self.popupaba6 ~= nil then self.popupaba6:destroy(); self.popupaba6 = nil; end;
-        if self.edit42 ~= nil then self.edit42:destroy(); self.edit42 = nil; end;
-        if self.edit22 ~= nil then self.edit22:destroy(); self.edit22 = nil; end;
+        if self.multiplicadorsab ~= nil then self.multiplicadorsab:destroy(); self.multiplicadorsab = nil; end;
+        if self.flowLayout28 ~= nil then self.flowLayout28:destroy(); self.flowLayout28 = nil; end;
+        if self.flowLayout75 ~= nil then self.flowLayout75:destroy(); self.flowLayout75 = nil; end;
+        if self.outrocon ~= nil then self.outrocon:destroy(); self.outrocon = nil; end;
+        if self.classecon ~= nil then self.classecon:destroy(); self.classecon = nil; end;
         if self.flowLayout81 ~= nil then self.flowLayout81:destroy(); self.flowLayout81 = nil; end;
+        if self.classesab ~= nil then self.classesab:destroy(); self.classesab = nil; end;
+        if self.extracar ~= nil then self.extracar:destroy(); self.extracar = nil; end;
         if self.scrollBox4 ~= nil then self.scrollBox4:destroy(); self.scrollBox4 = nil; end;
         if self.rectangle4 ~= nil then self.rectangle4:destroy(); self.rectangle4 = nil; end;
         if self.flowLayout59 ~= nil then self.flowLayout59:destroy(); self.flowLayout59 = nil; end;
         if self.abaVaziaaba9 ~= nil then self.abaVaziaaba9:destroy(); self.abaVaziaaba9 = nil; end;
         if self.editaba7 ~= nil then self.editaba7:destroy(); self.editaba7 = nil; end;
-        if self.edit32 ~= nil then self.edit32:destroy(); self.edit32 = nil; end;
+        if self.outrosab ~= nil then self.outrosab:destroy(); self.outrosab = nil; end;
         if self.horzLine6 ~= nil then self.horzLine6:destroy(); self.horzLine6 = nil; end;
+        if self.multiplicadorcar ~= nil then self.multiplicadorcar:destroy(); self.multiplicadorcar = nil; end;
         if self.flowLayout82 ~= nil then self.flowLayout82:destroy(); self.flowLayout82 = nil; end;
         if self.richEdit9 ~= nil then self.richEdit9:destroy(); self.richEdit9 = nil; end;
         if self.flowLayout72 ~= nil then self.flowLayout72:destroy(); self.flowLayout72 = nil; end;
-        if self.edit20 ~= nil then self.edit20:destroy(); self.edit20 = nil; end;
         self:_oldLFMDestroy();
     end;
 
