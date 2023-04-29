@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <group>
     <import file="tabelaAtributos.xml"/>
+    <import file="tabelaAtributosDestreza.xml"/>
+    <import file="templates.xml"/>
 
     <template name="abaAtributos">
         <tab name="abaAtributos" title="Atributos">
             <rectangle align="client" color="#40000000" xradius="10" yradius="10">
                 <scrollBox align="client">
                     <flowLayout align="client" maxControlsPerLine="1" autoHeight="true" horzAlign="center">
+                        <button text="Botão Teste" onClick="alert(sheet.totalcon..' : '..sheet.basecon..' : '..sheet.multiplicadorcon)"/>
                         <tabelaAtributos/>
+                        <tabelaAtributosDestreza/>
                     </flowLayout>
                 </scrollBox>
             </rectangle>

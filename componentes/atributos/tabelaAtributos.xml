@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <group>
-
     <style>
         .Campo {
             width: 96;
@@ -34,7 +33,6 @@
             <linha text="Carisma" atributo="car"/>
             <linha text="Inteligência" atributo="int"/>
             <linha text="Sabedoria" atributo="sab"/>
-            <button text="Botão Teste" onClick="alert(sheet.totalcon..' : '..sheet.basecon..' : '..sheet.multiplicadorcon)"/>
 
         </flowLayout>
 
@@ -94,26 +92,11 @@
                     elseif base >= 200 then
                         self.base$(atributo).fontColor = 'yellow'
                     else
-                        self.base$(atributo).fontCOlor = 'white'
+                        self.base$(atributo).fontColor = 'white'
                     end
                 end
 
             </event>
-
         </dataLink>
     </template>
-
-    <template name="campo">
-        <flowLayout class="Campo">
-            <edit text="$(text)" fontStyle="bold"/>
-        </flowLayout>
-    </template>
-
-    <template name="valor">
-        <flowLayout class="Campo">
-            <edit name="$(field)" type="number" field="$(field)" min="0"
-            readOnly="$(readOnly or 'false')" canFocus="$(canFocus or 'true')"/>
-        </flowLayout>
-    </template>
-
 </group>

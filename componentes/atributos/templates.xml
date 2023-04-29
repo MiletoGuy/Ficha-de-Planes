@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<group>
+    <template name="campo">
+        <flowLayout class="Campo">
+            <edit text="$(text)" fontStyle="bold"/>
+        </flowLayout>
+    </template>
+
+    <template name="valor">
+        <flowLayout class="Campo">
+            <edit name="$(field)" type="number" field="$(field)" min="0" fontColor="$(fontColor or 'white')"
+            readOnly="$(readOnly or 'false')" canFocus="$(canFocus or 'true')"/>
+        </flowLayout>
+    </template>
+</group>

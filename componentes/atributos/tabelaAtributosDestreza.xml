@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<group>
+
+    <template name="tabelaAtributosDestreza">
+        <flowLayout maxWidth="1500" autoHeight="true" minWidth="1000" minScaledWidth="500" horzAlign="center" maxControlsPerLine="9">
+
+            <titulosDasColunasx/>
+            <linhax atributo="Acerto"/>
+            <linhax atributo="Mira"/>
+            <linhax atributo="Bloqueio"/>
+            <linhax atributo="Esquiva"/>
+
+        </flowLayout>
+    </template>
+
+    <template name="titulosDasColunasx">
+        <campo/>
+        <campo text="Destreza"/>
+        <campo text="Classe"/>
+        <campo text="Base"/>
+        <campo text="Multiplicador"/>
+        <campo text="Arma"/>
+        <campo text="Armadura"/>
+        <campo text="Extra"/>
+        <campo text="Total"/>
+    </template>
+
+    <template name="linhax">
+        <campo text="$(atributo)"/>
+        <valor field="destreza$(atributo)"/>
+        <valor field="classe$(atributo)"/>
+        <valor readOnly="true" canFocus="false" field="base$(atributo)"  fontColor="lime"/>
+        <valor field="multiplicador$(atributo)"/>
+        <valor field="arma$(atributo)"/>
+        <valor field="armadura$(atributo)"/>>
+        <valor field="extra$(atributo)"/>
+        <valor readOnly="true" canFocus="false" field="total$(atributo)"  fontColor="lime"/>
+
+        <dataLink fields="{'destreza$(atributo)', 'classe$(atributo)', 'base$(atributo)', 'multiplicador$(atributo)', 'arma$(atributo)',
+                           'armadura$(atributo)', 'extra$(atributo)', 'total$(atributo)'}">
+            <event name="onChange">
+                local destreza = tonumber(sheet.destreza$(atributo)) or 0
+                local classe = tonumber(sheet.classe$(atributo)) or 0
+                local multiplicador = tonumber(sheet.multiplicador$(atributo)) or 0
+                local arma = tonumber(sheet.arma$(atributo)) or 0
+                local armadura = tonumber(sheet.armadura$(atributo)) or 0
+                local extra = tonumber(sheet.extra$(atributo)) or 0
+                local base = destreza + classe
+
+                sheet.base$(atributo) = base
+                sheet.total$(atributo) = math.floor(base * (1 + (multiplicador/100))) + arma + armadura + extra
+            </event>
+        </dataLink>
+    </template>
+</group>
