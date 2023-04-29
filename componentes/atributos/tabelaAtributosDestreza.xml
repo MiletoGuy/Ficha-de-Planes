@@ -2,7 +2,7 @@
 <group>
 
     <template name="tabelaAtributosDestreza">
-        <flowLayout maxWidth="1500" autoHeight="true" minWidth="1000" minScaledWidth="500" horzAlign="center" maxControlsPerLine="9">
+        <flowLayout maxWidth="1500" autoHeight="true" minWidth="936" minScaledWidth="234" horzAlign="center" maxControlsPerLine="9">
 
             <titulosDasColunasx/>
             <linhax atributo="Acerto"/>

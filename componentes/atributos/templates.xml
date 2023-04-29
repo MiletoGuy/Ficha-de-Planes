@@ -1,5 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <group>
+    <style>
+        .Campo {
+            width: 100;
+            margins:{top=2,bottom=2,left=2,right=2};
+        }
+
+        .Campo label {
+            align: client;
+            horzTextAlign: center;
+        }
+
+        edit {
+            align: client;
+        }
+
+        .Campo edit {
+            readOnly: true;
+            canFocus: false;
+            horzTextAlign: center;
+        }
+    </style>
+
     <template name="campo">
         <flowLayout class="Campo">
             <edit text="$(text)" fontStyle="bold"/>
@@ -12,4 +34,5 @@
             readOnly="$(readOnly or 'false')" canFocus="$(canFocus or 'true')"/>
         </flowLayout>
     </template>
+    
 </group>

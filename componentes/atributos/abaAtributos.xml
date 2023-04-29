@@ -9,12 +9,25 @@
             <rectangle align="client" color="#40000000" xradius="10" yradius="10">
                 <scrollBox align="client">
                     <flowLayout align="client" maxControlsPerLine="1" autoHeight="true" horzAlign="center">
-                        <button text="Botão Teste" onClick="alert(sheet.totalcon..' : '..sheet.basecon..' : '..sheet.multiplicadorcon)"/>
-                        <tabelaAtributos/>
-                        <tabelaAtributosDestreza/>
+
+                        <button name="botao1" text="Botao1" onClick="alert(self.tabelaAtributos.width..' : '..self.tabelaAtributos.height)"/>
+                        <button text="Botao2" onClick="alert(self.popupAtributos.width..' : '..self.popupAtributos.height)"/>
+                        <button text="Botao3" onClick="self.popupAtributos:show()"/>
+
+                        <rectangle name="r" color="blue" height="10" width="10"/>
+
+
+                        <flowPart minWidth="1050" minScaledWidth="265" maxWidth="1050">
+                            <popup name="popupAtributos" align="client">
+                                <tabelaAtributos/>
+                            </popup>
+                        </flowPart>
+
                     </flowLayout>
                 </scrollBox>
             </rectangle>
         </tab>
     </template>
+
+
 </group>
