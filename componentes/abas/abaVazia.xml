@@ -2,7 +2,7 @@
 <group>
     <template name="abaVazia">
         <tab name="abaVazia$(field)" title="$(nome)" 
-            onDblClick="self.popup$(field):show('bottomCenter',self.aba$(field))
+            onDblClick="self.popup$(field):show('mouse')
                         self.edit$(field):setFocus();">
             <rectangle align="client" color="#40000000" xradius="10" yradius="10">
                 <scrollBox align="client">
@@ -13,7 +13,7 @@
 
         <popup name="popup$(field)" width="150" height="50" backOpacity="0">
             <flowLayout width="150" height="50" padding="{top=5,bottom=5,left=5,right=5}" maxControlsPerLine="2">
-                 <edit align="top" name="edit$(field)" field="edit$(field)" fontSize="10" transparent="true"
+                 <edit align="top" name="edit$(field)" field="edit$(field)" fontSize="12" transparent="true"
                   vertTextAlign="center" width="100"
                   onKeyDown="
                         if event.keyCode == 13 then

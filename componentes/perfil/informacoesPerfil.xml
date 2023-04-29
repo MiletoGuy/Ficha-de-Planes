@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<group>
+
+    <template name="informacoesPerfil">
+
+        <flowLayout minWidth="1000" minScaledWidth="200" autoHeight="true" maxControlsPerLine="2">
+            <campoDoPerfil legenda="NOME DO PERSONAGEM" field="nome"/>
+            <campoDoPerfil legenda="CLASSE" field="classe"/>
+            <campoDoPerfil legenda="RAÇA" field="raca"/>
+            <campoDoPerfil legenda="IDADE" field="idade"/>
+            <campoDoPerfil legenda="SEXO" field="sexo"/>
+            <campoDoPerfil legenda="NACIONALIDADE" field="nacionalidade"/>
+            <campoDoPerfil legenda="PROFISSÃO" field="profissao"/>
+            <campoDoPerfil legenda="DIVINDADE" field="divindade"/>
+        </flowLayout>
+
+    </template>
+
+
+</group>

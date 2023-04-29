@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <group>
 
-    <template name="tabelaAtributosDestreza">
-        <flowLayout maxWidth="1500" autoHeight="true" minWidth="936" minScaledWidth="234" horzAlign="center" maxControlsPerLine="9">
+    <popup name="popupAtributosDestreza" width="950" height="270">
+        <flowLayout align="client" maxWidth="1500" autoHeight="true" minWidth="936" minScaledWidth="234" horzAlign="center" maxControlsPerLine="9" name="tabelaAtributosDestreza">
 
             <titulosDasColunasx/>
             <linhax atributo="Acerto"/>
@@ -11,7 +11,7 @@
             <linhax atributo="Esquiva"/>
 
         </flowLayout>
-    </template>
+    </popup>
 
     <template name="titulosDasColunasx">
         <campo/>
@@ -32,7 +32,7 @@
         <valor readOnly="true" canFocus="false" field="base$(atributo)"  fontColor="lime"/>
         <valor field="multiplicador$(atributo)"/>
         <valor field="arma$(atributo)"/>
-        <valor field="armadura$(atributo)"/>>
+        <valor field="armadura$(atributo)"/>
         <valor field="extra$(atributo)"/>
         <valor readOnly="true" canFocus="false" field="total$(atributo)"  fontColor="lime"/>
 

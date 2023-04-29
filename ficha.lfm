@@ -2,11 +2,11 @@
 <form formType="sheetTemplate" dataType="FICHA_PLANES" title="Ficha de Jogador [Planes]" name="frmFichaPlanes"
       theme="dark">
 
-    <import file="./componentes/abaVazia.xml"/>
-    <import file="./componentes/atributos/abaAtributos.xml"/>
+    <import file="./componentes/abas/abaVazia.xml"/>
+    <import file="./componentes/abas/abaPerfil.xml"/>
 
     <tabControl align="client" name="pgcPrincipal">
-        <abaAtributos field="aba11"/>
+        <abaPerfil/>
         <abaVazia nome="Perfil" field="aba1"/>
         <abaVazia nome="Habilidades" field="aba2"/>
         <abaVazia nome="Inventário" field="aba3"/>

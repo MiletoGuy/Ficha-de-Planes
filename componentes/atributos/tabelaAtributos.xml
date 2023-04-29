@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <group>
-    <template name="tabelaAtributos">
+    <popup name="popupAtributos" width="1050" height="380">
 
         <flowLayout align="client" autoHeight="true" minWidth="1040" minScaledWidth="260" horzAlign="center" maxControlsPerLine="10" name="tabelaAtributos">
 
@@ -14,7 +14,7 @@
 
         </flowLayout>
 
-    </template>
+    </popup>
 
     <template name="titulosDasColunas">
         <campo/>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<group>
+    <import file="../atributos/templates.xml"/>
+    <import file="../atributos/tabelaAtributos.xml"/>
+    <import file="../atributos/tabelaAtributosDestreza.xml"/>
+    <import file="../perfil/templates.xml"/>
+    <import file="../perfil/informacoesPerfil.xml"/>
+
+    <template name="abaPerfil">
+        <tab name="abaPerfil" title="Perfil">
+            <rectangle align="client" color="#40000000" xradius="10" yradius="10">
+                <scrollBox align="client">
+                    <flowLayout align="client" horzAlign="center" maxControlsPerLine="3">
+                        <imagemDoPersonagem/>
+                        <informacoesPerfil/>
+                    </flowLayout>
+                </scrollBox>
+            </rectangle>
+        </tab>
+    </template>
+
+</group>
