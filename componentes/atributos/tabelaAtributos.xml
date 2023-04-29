@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <group>
-
     <style>
         .Campo {
             width: 96;
@@ -21,8 +20,6 @@
             canFocus: false;
             horzTextAlign: center;
         }
-
-        
     </style>
 
     <template name="tabelaAtributos">
@@ -30,14 +27,15 @@
         <flowLayout maxWidth="1500" autoHeight="true" minWidth="1000" minScaledWidth="500" horzAlign="center" maxControlsPerLine="10">
 
             <titulosDasColunas/>
-            <linha text="Constituição"/>
-            <linha text="Força"/>
-            <linha text="Destreza"/>
-            <linha text="Carisma"/>
-            <linha text="Inteligência"/>
-            <linha text="Sabedoria"/>
+            <linha text="Constituição" atributo="con"/>
+            <linha text="Força" atributo="for"/>
+            <linha text="Destreza" atributo="dex"/>
+            <linha text="Carisma" atributo="car"/>
+            <linha text="Inteligência" atributo="int"/>
+            <linha text="Sabedoria" atributo="sab"/>
 
         </flowLayout>
+
     </template>
 
     <template name="titulosDasColunas">
@@ -55,27 +53,50 @@
 
     <template name="linha">
         <campo text="$(text)"/>
-        <valor/>
-        <valor/>
-        <valor/>
-        <valor/>
-        <valor/>
-        <valor readOnly="true" canFocus="false"/>
-        <valor/>
-        <valor/>
-        <valor readOnly="true" canFocus="false"/>
-    </template>
+        <valor field="nivel$(atributo)"/>
+        <valor field="classe$(atributo)"/>
+        <valor field="raca$(atributo)"/>
+        <valor field="treino$(atributo)"/>
+        <valor field="outro$(atributo)"/>
+        <valor readOnly="true" canFocus="false" field="base$(atributo)"/>
+        <valor field="multiplicador$(atributo)"/>
+        <valor field="extra$(atributo)"/>
+        <valor readOnly="true" canFocus="false" field="total$(atributo)"/>
 
-    <template name="campo">
-        <flowLayout class="Campo">
-            <edit text="$(text)"/>
-        </flowLayout>
-    </template>
+        <dataLink fields="{'nivel$(atributo)', 'classe$(atributo)', 'raca$(atributo)', 'treino$(atributo)', 'outro$(atributo)',
+                           'base$(atributo)', 'multiplicador$(atributo)', 'extra$(atributo)', 'total$(atributo)'}">
+            <event name="onChange">
+                local nivel = tonumber(sheet.nivel$(atributo)) or 0
+                local classe = tonumber(sheet.classe$(atributo)) or 0
+                local raca = tonumber(sheet.raca$(atributo)) or 0
+                local treino = tonumber(sheet.treino$(atributo)) or 0
+                local outro = tonumber(sheet.outro$(atributo)) or 0
+                local multiplicador = tonumber(sheet.multiplicador$(atributo)) or 0
+                local extra = tonumber(sheet.extra$(atributo)) or 0
+                local base = nivel + classe + raca + treino + outro
 
-    <template name="valor">
-        <flowLayout class="Campo">
-            <edit type="number" readOnly="$(readOnly or 'false')" canFocus="$(canFocus or 'true')"/>
-        </flowLayout>
-    </template>
+                sheet.base$(atributo) = base
+                sheet.total$(atributo) = math.floor(base * (1 + (multiplicador/100))) + extra
 
+                if '$(atributo)' ~= 'car' and '$(atributo)' ~= 'sab' then
+                    if base >= 800 then 
+                        self.base$(atributo).fontColor = 'red'
+                    elseif base >= 400 then
+                        self.base$(atributo).fontColor = 'yellow'
+                    else
+                        self.base$(atributo).fontCOlor = 'white'
+                    end
+                else
+                    if base >= 400 then
+                        self.base$(atributo).fontColor = 'red'
+                    elseif base >= 200 then
+                        self.base$(atributo).fontColor = 'yellow'
+                    else
+                        self.base$(atributo).fontColor = 'white'
+                    end
+                end
+
+            </event>
+        </dataLink>
+    </template>
 </group>
