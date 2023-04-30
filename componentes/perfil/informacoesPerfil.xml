@@ -3,10 +3,12 @@
 
     <template name="informacoesPerfil">
 
-        <flowLayout minWidth="1000" minScaledWidth="200" autoHeight="true" maxControlsPerLine="2">
+        <flowLayout minWidth="600" minScaledWidth="200" autoHeight="true" maxControlsPerLine="2">
             <campoDoPerfil legenda="NOME DO PERSONAGEM" field="nome"/>
-            <campoDoPerfil legenda="CLASSE" field="classe"/>
             <campoDoPerfil legenda="RAÇA" field="raca"/>
+            <campoDoPerfil legenda="PESO" field="peso"/>
+            <campoDoPerfil legenda="CLASSE" field="classe"/>
+            <campoDoPerfil legenda="ALTURA" field="altura"/>
             <campoDoPerfil legenda="IDADE" field="idade"/>
             <campoDoPerfil legenda="SEXO" field="sexo"/>
             <campoDoPerfil legenda="NACIONALIDADE" field="nacionalidade"/>
@@ -16,5 +18,29 @@
 
     </template>
 
+        <template name="campoDoPerfil">
+        <flowPart minWidth="300" minScaledWidth="100" height="36" margins="{right=2,left=2}">
+            <edit align="top" height="22" transparent="true" fontSize="13" field="$(field)">
+                <horzLine align="bottom" strokeColor="white"/>
+            </edit>
+            <label text="$(legenda)" align="bottom" fontSize="10"/>
+        </flowPart>
+    </template>
 
+    <template name="imagemDoPersonagem">
+        <flowPart minWidth="300" minScaledWidth="100" height="300" margins="{right=10,left=10}">
+            <rectangle align="client" color="black" cornerType="innerLine" xradius="25" yradius="25" name="fundoDaImagem"/>
+            <image margins="{top=10,bottom=10,right=10,left=10}" align="client" animate="true" 
+                   field="imagemDoPersonagem" editable="true" style="autoFit" onMenu="self.popupMenuImagem:show('mouse')"/>
+        </flowPart>
+    </template>
+
+    <popup name="popupMenuImagem" height="160" width="100" backOpacity="0" drawContainer="false">
+            <rectangle align="client" color="black" strokeColor="white" strokeSize="1">
+                <label align="top" height="20" text="Cor do Fundo" horzTextAlign="center" fontSize="12"/>
+                <comboBox align="top" top="20" height="20" margins="{right=2,left=2}" fontSize="12" field="corDoFundo" value="black"
+                values="{'black','silver','#212121','white','#404040'}" items="{'Preto','Cinza Claro','Cinza Escuro','Branco','Transparente'}"
+                onChange="self.fundoDaImagem.color = sheet.corDoFundo"/>
+            </rectangle>
+    </popup>
 </group>

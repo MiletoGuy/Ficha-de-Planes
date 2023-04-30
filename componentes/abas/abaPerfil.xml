@@ -3,20 +3,47 @@
     <import file="../atributos/templates.xml"/>
     <import file="../atributos/tabelaAtributos.xml"/>
     <import file="../atributos/tabelaAtributosDestreza.xml"/>
-    <import file="../perfil/templates.xml"/>
     <import file="../perfil/informacoesPerfil.xml"/>
+    <import file="../perfil/caixasDeNiveis.xml"/>
+    <import file="../perfil/caixasAtributos.xml"/>
 
-    <template name="abaPerfil">
-        <tab name="abaPerfil" title="Perfil">
-            <rectangle align="client" color="#40000000" xradius="10" yradius="10">
-                <scrollBox align="client">
-                    <flowLayout align="client" horzAlign="center" maxControlsPerLine="3">
-                        <imagemDoPersonagem/>
-                        <informacoesPerfil/>
+    <style>
+        .LayoutDoPerfil {
+            maxWidth: 1600;
+            minWidth: 300;
+            autoHeight: true;
+            horzAlign: center;
+            maxControlsPerLine: 3;
+            lineSpacing: 10;
+        }
+    </style>
+
+    <rectangle align="client" color="#40000000">
+        <scrollBox align="client">
+            <flowLayout align="top" lineSpacing="10" margins="{top=10,right=10,left=10}" horzAlign="center" autoHeight="true" maxControlsPerLine="1">
+                <flowLayout class="LayoutDoPerfil">
+                    <imagemDoPersonagem/>
+                    <informacoesPerfil/>
+                    <flowLayout minWidth="120" minScaledWidth="200" autoHeight="true" maxControlsPerLine="1" lineSpacing="10">
+                        <caixasDeNiveis text="Classe" field="Classe"/>
+                        <caixasDeNiveis text="Profissão" field="Profissao"/>
                     </flowLayout>
-                </scrollBox>
-            </rectangle>
-        </tab>
-    </template>
-
+                </flowLayout>
+                <flowLayout class="LayoutDoPerfil">
+                    <caixaDeAtributo name="con" text="Constituição"/>
+                    <caixaDeAtributo name="for" text="Força"/>
+                    <caixaDeAtributo name="dex" text="Destreza"/>
+                    <caixaDeAtributo name="car" text="Carisma"/>
+                    <caixaDeAtributo name="int" text="Inteligência"/>
+                    <caixaDeAtributo name="sab" text="Sabedoria"/>
+                </flowLayout>
+                <flowLayout class="LayoutDoPerfil" maxControlsPerLine="4">
+                    <caixaDeAtributoDestreza name="Acerto"/>
+                    <caixaDeAtributoDestreza name="Mira"/>
+                    <caixaDeAtributoDestreza name="Esquiva"/>
+                    <caixaDeAtributoDestreza name="Bloqueio"/>
+                </flowLayout>
+            </flowLayout>
+        </scrollBox>
+    </rectangle>
 </group>

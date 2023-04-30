@@ -3,10 +3,13 @@
       theme="dark">
 
     <import file="./componentes/abas/abaVazia.xml"/>
-    <import file="./componentes/abas/abaPerfil.xml"/>
 
     <tabControl align="client" name="pgcPrincipal">
-        <abaPerfil/>
+
+        <tab title="Perfil">
+            <import file="./componentes/abas/abaPerfil.xml"/>
+        </tab>
+
         <abaVazia nome="Perfil" field="aba1"/>
         <abaVazia nome="Habilidades" field="aba2"/>
         <abaVazia nome="Inventário" field="aba3"/>

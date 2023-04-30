@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<group>
+
+    <style>
+        .CaixasDeNivel {
+            minWidth: 100;
+            height: 100;
+            margins: {right=10,left=10};
+        }
+
+        .CaixasDeNivel rectangle{
+            align: client;
+            color: black;
+            cornerType: bevel;
+            xradius: 25;
+            yradius: 25;
+            top: 100;
+            strokeColor: silver;
+            strokeSize: 1;
+        }
+
+        .CaixasDeNivel label {
+            fontSize: 12;
+            horzTextAlign: center;
+            fontStyle: bold;
+        }
+
+        .Nivel {
+            fontSize: 36;
+            align: client;
+        }
+
+        .BarraXp {
+            align: bottom;
+            value: 0;
+            colorMode: hl;
+            height: 7;
+            hitTest: true;
+            margins: {right=15,left=15};
+            cursor: handPoint;
+        }
+    </style>
+    
+    <template name="caixasDeNiveis">
+        <flowPart class="CaixasDeNivel">
+            <rectangle>
+                <label align="top" text="Nível"/>
+                <label name="nivel$(field)" class="Nivel" text="1"/>
+                <label align="bottom" text="$(text)"/>
+                <progressBar name="barraXp$(field)" field="xpAtual$(field)" fieldMax="xpMax$(field)" class="BarraXp" value="0" max="100"
+                onDblClick="self.popupExperiencia$(field):show('bottomCenter',self.barraXp$(field))
+                            self.xpRecebido$(field):setFocus()"/>
+            </rectangle>
+        </flowPart>
+        <popup name="popupExperiencia$(field)" width="160" height="30" backOpacity="0" drawContainer="false">
+            <rectangle align="client" color="black" strokeColor="white" strokeSize="1" padding="{left=5,right=5}">
+                <label width="110" height="20" text="Adicionar Experiência:" fontSize="11" left="5"/>
+                <edit name="xpRecebido$(field)" width="35" height="20" transparent="true" field="addXp$(field)" margins="{left=105}" fontSize="11" vertTextAlign="center" type="number"
+                      onKeyDown="
+                            if event.keyCode == 13 then
+                                local atual = self.xpAtual$(field) or 0
+                                local recebido = self.addXp$(field) or 0
+                                self.xpAtual$(field) = atual + recebido
+                                self.addXp$(field) = nil
+                            end
+                      "/>
+            </rectangle>
+        </popup>
+
+    </template>
+
+
+</group>

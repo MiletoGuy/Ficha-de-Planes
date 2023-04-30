@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<group>
+
+    <style>
+
+        .CaixaDeAtributo {
+            width: 100;
+            height: 100;
+            margins: {right=10,left=10};
+            color: black;
+            cornerType: bevel;
+            xradius: 15;
+            yradius: 15;
+            strokeColor: silver;
+            strokeSize: 1;
+        }
+
+        .CaixaDeAtributo label {
+            horzTextAlign: center;
+            fontStyle: bold;
+        }
+
+        .IconesVantagens rectangle {
+            width: 10;
+            height: 10;
+            color: black;
+            cornerType: bevel;
+            xradius: 5;
+            yradius: 5;
+            margins: {left=4,right=4,top=20};
+            strokeColor: white;
+            strokeSize: 1;
+        }
+
+    </style>
+
+    <template name="caixaDeAtributo">
+            <rectangle class="CaixaDeAtributo" onMenu="self.popupAtributos:show()">
+                <flowLayout align="client" maxControlsPerLine="1" horzAlign="center">
+                    <label text="$(text)" margins="{top=5}"/>
+                    <label name="$(name)Mod" text="+0" fontSize="38" margins="{top=15}"/>
+                    <iconesVantagens name="$(name)"/>
+                </flowLayout>
+            </rectangle>
+
+            <dataLink field="total$(name)">
+                <event name="onChange">
+                    self.$(name)Mod.text = tostring('+'..math.floor(sheet.total$(name)/10))
+                </event>
+            </dataLink>
+    </template>
+
+    <template name="iconesVantagens"> 
+        <flowPart width="100">
+            <flowLayout align="client" horzAlign="center" class="IconesVantagens" margins="{right=7}">
+                <rectangle name="$(name)Vantagem1"/>
+                <rectangle name="$(name)Vantagem3"/>
+                <rectangle name="$(name)Vantagem5"/>
+                <rectangle name="$(name)Vantagem4"/>
+                <rectangle name="$(name)Vantagem2"/>
+            </flowLayout>
+        </flowPart>
+
+         <dataLink field="base$(name)">
+            <event name="onChange">
+                local base = sheet.base$(name)
+
+                if base >= 400 then
+                    self.$(name)Vantagem1.color = 'white'
+                    self.$(name)Vantagem2.color = 'white'
+                    self.$(name)Vantagem3.color = 'white'
+                    self.$(name)Vantagem4.color = 'white'
+                elseif base >= 300 then
+                    self.$(name)Vantagem1.color = 'white'
+                    self.$(name)Vantagem2.color = 'white'
+                    self.$(name)Vantagem3.color = 'white'
+                    self.$(name)Vantagem4.color = 'black'
+                elseif base >= 200 then
+                    self.$(name)Vantagem1.color = 'white'
+                    self.$(name)Vantagem2.color = 'white'
+                    self.$(name)Vantagem3.color = 'black'
+                    self.$(name)Vantagem4.color = 'black'
+                elseif base >= 100 then
+                    self.$(name)Vantagem1.color = 'white'
+                    self.$(name)Vantagem2.color = 'black'
+                    self.$(name)Vantagem3.color = 'black'
+                    self.$(name)Vantagem4.color = 'black'
+                else
+                    self.$(name)Vantagem1.color = 'black'
+                    self.$(name)Vantagem2.color = 'black'
+                    self.$(name)Vantagem3.color = 'black'
+                    self.$(name)Vantagem4.color = 'black'
+                end       
+            </event>
+        </dataLink>
+    </template>
+
+    <template name="caixaDeAtributoDestreza">
+            <rectangle class="CaixaDeAtributo" onMenu="self.popupAtributosDestreza:show()" color="#808080" strokeColor="black" strokeSize="2">
+                <flowLayout align="client" maxControlsPerLine="1" horzAlign="center">
+                    <label text="$(name)" margins="{top=5}" fontColor="black"/>
+                    <label name="$(name)Mod" text="+0" fontSize="38" margins="{top=15}" fontColor="black"/>
+                </flowLayout>
+            </rectangle>
+
+            <dataLink field="total$(name)">
+                <event name="onChange">
+                    self.$(name)Mod.text = tostring('+'..math.floor(sheet.total$(name)/10))
+                </event>
+            </dataLink>
+    </template>
+
+</group>
