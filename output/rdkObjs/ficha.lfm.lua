@@ -4658,31 +4658,20 @@ local function constructNew_frmFichaPlanes()
             local base = sheet.basecon
             
                             if base >= 400 then
-                                self.conVantagem1.color = 'white'
-                                self.conVantagem2.color = 'white'
-                                self.conVantagem3.color = 'white'
-                                self.conVantagem4.color = 'white'
+                                color1, color2, color3, color4 = 'white', 'white', 'white', 'white'
                             elseif base >= 300 then
-                                self.conVantagem1.color = 'white'
-                                self.conVantagem2.color = 'white'
-                                self.conVantagem3.color = 'white'
-                                self.conVantagem4.color = 'black'
+                                color1, color2, color3, color4 = 'white', 'white', 'white', 'black'
                             elseif base >= 200 then
-                                self.conVantagem1.color = 'white'
-                                self.conVantagem2.color = 'white'
-                                self.conVantagem3.color = 'black'
-                                self.conVantagem4.color = 'black'
+                                color1, color2, color3, color4 = 'white', 'white', 'black', 'black'
                             elseif base >= 100 then
-                                self.conVantagem1.color = 'white'
-                                self.conVantagem2.color = 'black'
-                                self.conVantagem3.color = 'black'
-                                self.conVantagem4.color = 'black'
+                                color1, color2, color3, color4 = 'white', 'black', 'black', 'black'
                             else
-                                self.conVantagem1.color = 'black'
-                                self.conVantagem2.color = 'black'
-                                self.conVantagem3.color = 'black'
-                                self.conVantagem4.color = 'black'
+                                color1, color2, color3, color4 = 'black', 'black', 'black', 'black'
                             end
+                            self.conVantagem1.color = color1
+                            self.conVantagem2.color = color2
+                            self.conVantagem3.color = color3
+                            self.conVantagem4.color = color4
         end, obj);
 
     obj._e_event18 = obj.dataLink12:addEventListener("onChange",
@@ -4700,31 +4689,20 @@ local function constructNew_frmFichaPlanes()
             local base = sheet.basefor
             
                             if base >= 400 then
-                                self.forVantagem1.color = 'white'
-                                self.forVantagem2.color = 'white'
-                                self.forVantagem3.color = 'white'
-                                self.forVantagem4.color = 'white'
+                                color1, color2, color3, color4 = 'white', 'white', 'white', 'white'
                             elseif base >= 300 then
-                                self.forVantagem1.color = 'white'
-                                self.forVantagem2.color = 'white'
-                                self.forVantagem3.color = 'white'
-                                self.forVantagem4.color = 'black'
+                                color1, color2, color3, color4 = 'white', 'white', 'white', 'black'
                             elseif base >= 200 then
-                                self.forVantagem1.color = 'white'
-                                self.forVantagem2.color = 'white'
-                                self.forVantagem3.color = 'black'
-                                self.forVantagem4.color = 'black'
+                                color1, color2, color3, color4 = 'white', 'white', 'black', 'black'
                             elseif base >= 100 then
-                                self.forVantagem1.color = 'white'
-                                self.forVantagem2.color = 'black'
-                                self.forVantagem3.color = 'black'
-                                self.forVantagem4.color = 'black'
+                                color1, color2, color3, color4 = 'white', 'black', 'black', 'black'
                             else
-                                self.forVantagem1.color = 'black'
-                                self.forVantagem2.color = 'black'
-                                self.forVantagem3.color = 'black'
-                                self.forVantagem4.color = 'black'
+                                color1, color2, color3, color4 = 'black', 'black', 'black', 'black'
                             end
+                            self.forVantagem1.color = color1
+                            self.forVantagem2.color = color2
+                            self.forVantagem3.color = color3
+                            self.forVantagem4.color = color4
         end, obj);
 
     obj._e_event21 = obj.dataLink14:addEventListener("onChange",
@@ -4742,31 +4720,20 @@ local function constructNew_frmFichaPlanes()
             local base = sheet.basedex
             
                             if base >= 400 then
-                                self.dexVantagem1.color = 'white'
-                                self.dexVantagem2.color = 'white'
-                                self.dexVantagem3.color = 'white'
-                                self.dexVantagem4.color = 'white'
+                                color1, color2, color3, color4 = 'white', 'white', 'white', 'white'
                             elseif base >= 300 then
-                                self.dexVantagem1.color = 'white'
-                                self.dexVantagem2.color = 'white'
-                                self.dexVantagem3.color = 'white'
-                                self.dexVantagem4.color = 'black'
+                                color1, color2, color3, color4 = 'white', 'white', 'white', 'black'
                             elseif base >= 200 then
-                                self.dexVantagem1.color = 'white'
-                                self.dexVantagem2.color = 'white'
-                                self.dexVantagem3.color = 'black'
-                                self.dexVantagem4.color = 'black'
+                                color1, color2, color3, color4 = 'white', 'white', 'black', 'black'
                             elseif base >= 100 then
-                                self.dexVantagem1.color = 'white'
-                                self.dexVantagem2.color = 'black'
-                                self.dexVantagem3.color = 'black'
-                                self.dexVantagem4.color = 'black'
+                                color1, color2, color3, color4 = 'white', 'black', 'black', 'black'
                             else
-                                self.dexVantagem1.color = 'black'
-                                self.dexVantagem2.color = 'black'
-                                self.dexVantagem3.color = 'black'
-                                self.dexVantagem4.color = 'black'
+                                color1, color2, color3, color4 = 'black', 'black', 'black', 'black'
                             end
+                            self.dexVantagem1.color = color1
+                            self.dexVantagem2.color = color2
+                            self.dexVantagem3.color = color3
+                            self.dexVantagem4.color = color4
         end, obj);
 
     obj._e_event24 = obj.dataLink16:addEventListener("onChange",
@@ -4784,31 +4751,20 @@ local function constructNew_frmFichaPlanes()
             local base = sheet.basecar
             
                             if base >= 400 then
-                                self.carVantagem1.color = 'white'
-                                self.carVantagem2.color = 'white'
-                                self.carVantagem3.color = 'white'
-                                self.carVantagem4.color = 'white'
+                                color1, color2, color3, color4 = 'white', 'white', 'white', 'white'
                             elseif base >= 300 then
-                                self.carVantagem1.color = 'white'
-                                self.carVantagem2.color = 'white'
-                                self.carVantagem3.color = 'white'
-                                self.carVantagem4.color = 'black'
+                                color1, color2, color3, color4 = 'white', 'white', 'white', 'black'
                             elseif base >= 200 then
-                                self.carVantagem1.color = 'white'
-                                self.carVantagem2.color = 'white'
-                                self.carVantagem3.color = 'black'
-                                self.carVantagem4.color = 'black'
+                                color1, color2, color3, color4 = 'white', 'white', 'black', 'black'
                             elseif base >= 100 then
-                                self.carVantagem1.color = 'white'
-                                self.carVantagem2.color = 'black'
-                                self.carVantagem3.color = 'black'
-                                self.carVantagem4.color = 'black'
+                                color1, color2, color3, color4 = 'white', 'black', 'black', 'black'
                             else
-                                self.carVantagem1.color = 'black'
-                                self.carVantagem2.color = 'black'
-                                self.carVantagem3.color = 'black'
-                                self.carVantagem4.color = 'black'
+                                color1, color2, color3, color4 = 'black', 'black', 'black', 'black'
                             end
+                            self.carVantagem1.color = color1
+                            self.carVantagem2.color = color2
+                            self.carVantagem3.color = color3
+                            self.carVantagem4.color = color4
         end, obj);
 
     obj._e_event27 = obj.dataLink18:addEventListener("onChange",
@@ -4826,31 +4782,20 @@ local function constructNew_frmFichaPlanes()
             local base = sheet.baseint
             
                             if base >= 400 then
-                                self.intVantagem1.color = 'white'
-                                self.intVantagem2.color = 'white'
-                                self.intVantagem3.color = 'white'
-                                self.intVantagem4.color = 'white'
+                                color1, color2, color3, color4 = 'white', 'white', 'white', 'white'
                             elseif base >= 300 then
-                                self.intVantagem1.color = 'white'
-                                self.intVantagem2.color = 'white'
-                                self.intVantagem3.color = 'white'
-                                self.intVantagem4.color = 'black'
+                                color1, color2, color3, color4 = 'white', 'white', 'white', 'black'
                             elseif base >= 200 then
-                                self.intVantagem1.color = 'white'
-                                self.intVantagem2.color = 'white'
-                                self.intVantagem3.color = 'black'
-                                self.intVantagem4.color = 'black'
+                                color1, color2, color3, color4 = 'white', 'white', 'black', 'black'
                             elseif base >= 100 then
-                                self.intVantagem1.color = 'white'
-                                self.intVantagem2.color = 'black'
-                                self.intVantagem3.color = 'black'
-                                self.intVantagem4.color = 'black'
+                                color1, color2, color3, color4 = 'white', 'black', 'black', 'black'
                             else
-                                self.intVantagem1.color = 'black'
-                                self.intVantagem2.color = 'black'
-                                self.intVantagem3.color = 'black'
-                                self.intVantagem4.color = 'black'
+                                color1, color2, color3, color4 = 'black', 'black', 'black', 'black'
                             end
+                            self.intVantagem1.color = color1
+                            self.intVantagem2.color = color2
+                            self.intVantagem3.color = color3
+                            self.intVantagem4.color = color4
         end, obj);
 
     obj._e_event30 = obj.dataLink20:addEventListener("onChange",
@@ -4868,31 +4813,20 @@ local function constructNew_frmFichaPlanes()
             local base = sheet.basesab
             
                             if base >= 400 then
-                                self.sabVantagem1.color = 'white'
-                                self.sabVantagem2.color = 'white'
-                                self.sabVantagem3.color = 'white'
-                                self.sabVantagem4.color = 'white'
+                                color1, color2, color3, color4 = 'white', 'white', 'white', 'white'
                             elseif base >= 300 then
-                                self.sabVantagem1.color = 'white'
-                                self.sabVantagem2.color = 'white'
-                                self.sabVantagem3.color = 'white'
-                                self.sabVantagem4.color = 'black'
+                                color1, color2, color3, color4 = 'white', 'white', 'white', 'black'
                             elseif base >= 200 then
-                                self.sabVantagem1.color = 'white'
-                                self.sabVantagem2.color = 'white'
-                                self.sabVantagem3.color = 'black'
-                                self.sabVantagem4.color = 'black'
+                                color1, color2, color3, color4 = 'white', 'white', 'black', 'black'
                             elseif base >= 100 then
-                                self.sabVantagem1.color = 'white'
-                                self.sabVantagem2.color = 'black'
-                                self.sabVantagem3.color = 'black'
-                                self.sabVantagem4.color = 'black'
+                                color1, color2, color3, color4 = 'white', 'black', 'black', 'black'
                             else
-                                self.sabVantagem1.color = 'black'
-                                self.sabVantagem2.color = 'black'
-                                self.sabVantagem3.color = 'black'
-                                self.sabVantagem4.color = 'black'
+                                color1, color2, color3, color4 = 'black', 'black', 'black', 'black'
                             end
+                            self.sabVantagem1.color = color1
+                            self.sabVantagem2.color = color2
+                            self.sabVantagem3.color = color3
+                            self.sabVantagem4.color = color4
         end, obj);
 
     obj._e_event33 = obj.dataLink22:addEventListener("onChange",
@@ -5264,515 +5198,515 @@ local function constructNew_frmFichaPlanes()
           self:setNodeDatabase(nil);
         end;
 
-        if self.baseint ~= nil then self.baseint:destroy(); self.baseint = nil; end;
-        if self.nivelClasse ~= nil then self.nivelClasse:destroy(); self.nivelClasse = nil; end;
-        if self.label14 ~= nil then self.label14:destroy(); self.label14 = nil; end;
-        if self.flowLayout24 ~= nil then self.flowLayout24:destroy(); self.flowLayout24 = nil; end;
-        if self.horzLine11 ~= nil then self.horzLine11:destroy(); self.horzLine11 = nil; end;
-        if self.popupMenuImagem ~= nil then self.popupMenuImagem:destroy(); self.popupMenuImagem = nil; end;
-        if self.horzLine7 ~= nil then self.horzLine7:destroy(); self.horzLine7 = nil; end;
-        if self.flowLayout65 ~= nil then self.flowLayout65:destroy(); self.flowLayout65 = nil; end;
-        if self.edit36 ~= nil then self.edit36:destroy(); self.edit36 = nil; end;
-        if self.edit9 ~= nil then self.edit9:destroy(); self.edit9 = nil; end;
-        if self.edit33 ~= nil then self.edit33:destroy(); self.edit33 = nil; end;
-        if self.flowLayout47 ~= nil then self.flowLayout47:destroy(); self.flowLayout47 = nil; end;
-        if self.edit29 ~= nil then self.edit29:destroy(); self.edit29 = nil; end;
-        if self.extraEsquiva ~= nil then self.extraEsquiva:destroy(); self.extraEsquiva = nil; end;
-        if self.flowLayout19 ~= nil then self.flowLayout19:destroy(); self.flowLayout19 = nil; end;
-        if self.flowLayout1 ~= nil then self.flowLayout1:destroy(); self.flowLayout1 = nil; end;
-        if self.flowPart13 ~= nil then self.flowPart13:destroy(); self.flowPart13 = nil; end;
-        if self.forVantagem5 ~= nil then self.forVantagem5:destroy(); self.forVantagem5 = nil; end;
-        if self.richEdit10 ~= nil then self.richEdit10:destroy(); self.richEdit10 = nil; end;
-        if self.flowLayout117 ~= nil then self.flowLayout117:destroy(); self.flowLayout117 = nil; end;
-        if self.flowLayout67 ~= nil then self.flowLayout67:destroy(); self.flowLayout67 = nil; end;
-        if self.flowPart1 ~= nil then self.flowPart1:destroy(); self.flowPart1 = nil; end;
-        if self.flowLayout43 ~= nil then self.flowLayout43:destroy(); self.flowLayout43 = nil; end;
-        if self.flowLayout89 ~= nil then self.flowLayout89:destroy(); self.flowLayout89 = nil; end;
-        if self.flowLayout121 ~= nil then self.flowLayout121:destroy(); self.flowLayout121 = nil; end;
-        if self.dataLink18 ~= nil then self.dataLink18:destroy(); self.dataLink18 = nil; end;
-        if self.rectangle16 ~= nil then self.rectangle16:destroy(); self.rectangle16 = nil; end;
-        if self.flowLayout100 ~= nil then self.flowLayout100:destroy(); self.flowLayout100 = nil; end;
-        if self.flowLayout112 ~= nil then self.flowLayout112:destroy(); self.flowLayout112 = nil; end;
-        if self.horzLine14 ~= nil then self.horzLine14:destroy(); self.horzLine14 = nil; end;
-        if self.forMod ~= nil then self.forMod:destroy(); self.forMod = nil; end;
-        if self.destrezaMira ~= nil then self.destrezaMira:destroy(); self.destrezaMira = nil; end;
-        if self.rectangle5 ~= nil then self.rectangle5:destroy(); self.rectangle5 = nil; end;
-        if self.flowPart19 ~= nil then self.flowPart19:destroy(); self.flowPart19 = nil; end;
-        if self.flowLayout129 ~= nil then self.flowLayout129:destroy(); self.flowLayout129 = nil; end;
-        if self.horzLine19 ~= nil then self.horzLine19:destroy(); self.horzLine19 = nil; end;
-        if self.label8 ~= nil then self.label8:destroy(); self.label8 = nil; end;
-        if self.flowLayout16 ~= nil then self.flowLayout16:destroy(); self.flowLayout16 = nil; end;
-        if self.edit11 ~= nil then self.edit11:destroy(); self.edit11 = nil; end;
-        if self.image1 ~= nil then self.image1:destroy(); self.image1 = nil; end;
-        if self.rectangle17 ~= nil then self.rectangle17:destroy(); self.rectangle17 = nil; end;
-        if self.flowLayout44 ~= nil then self.flowLayout44:destroy(); self.flowLayout44 = nil; end;
-        if self.nivelfor ~= nil then self.nivelfor:destroy(); self.nivelfor = nil; end;
-        if self.flowLayout30 ~= nil then self.flowLayout30:destroy(); self.flowLayout30 = nil; end;
-        if self.flowLayout87 ~= nil then self.flowLayout87:destroy(); self.flowLayout87 = nil; end;
-        if self.flowLayout110 ~= nil then self.flowLayout110:destroy(); self.flowLayout110 = nil; end;
-        if self.dataLink9 ~= nil then self.dataLink9:destroy(); self.dataLink9 = nil; end;
-        if self.label15 ~= nil then self.label15:destroy(); self.label15 = nil; end;
-        if self.scrollBox9 ~= nil then self.scrollBox9:destroy(); self.scrollBox9 = nil; end;
-        if self.flowLayout90 ~= nil then self.flowLayout90:destroy(); self.flowLayout90 = nil; end;
-        if self.flowLayout23 ~= nil then self.flowLayout23:destroy(); self.flowLayout23 = nil; end;
-        if self.flowLayout141 ~= nil then self.flowLayout141:destroy(); self.flowLayout141 = nil; end;
-        if self.edit16 ~= nil then self.edit16:destroy(); self.edit16 = nil; end;
-        if self.racacar ~= nil then self.racacar:destroy(); self.racacar = nil; end;
-        if self.label1 ~= nil then self.label1:destroy(); self.label1 = nil; end;
-        if self.rectangle7 ~= nil then self.rectangle7:destroy(); self.rectangle7 = nil; end;
-        if self.okButtonaba8 ~= nil then self.okButtonaba8:destroy(); self.okButtonaba8 = nil; end;
-        if self.armaEsquiva ~= nil then self.armaEsquiva:destroy(); self.armaEsquiva = nil; end;
-        if self.okButtonaba5 ~= nil then self.okButtonaba5:destroy(); self.okButtonaba5 = nil; end;
-        if self.flowLayout33 ~= nil then self.flowLayout33:destroy(); self.flowLayout33 = nil; end;
-        if self.dataLink20 ~= nil then self.dataLink20:destroy(); self.dataLink20 = nil; end;
-        if self.flowLayout138 ~= nil then self.flowLayout138:destroy(); self.flowLayout138 = nil; end;
-        if self.flowLayout86 ~= nil then self.flowLayout86:destroy(); self.flowLayout86 = nil; end;
-        if self.editaba9 ~= nil then self.editaba9:destroy(); self.editaba9 = nil; end;
-        if self.editaba5 ~= nil then self.editaba5:destroy(); self.editaba5 = nil; end;
-        if self.flowLayout109 ~= nil then self.flowLayout109:destroy(); self.flowLayout109 = nil; end;
-        if self.flowLayout68 ~= nil then self.flowLayout68:destroy(); self.flowLayout68 = nil; end;
-        if self.dataLink3 ~= nil then self.dataLink3:destroy(); self.dataLink3 = nil; end;
-        if self.dataLink7 ~= nil then self.dataLink7:destroy(); self.dataLink7 = nil; end;
-        if self.flowLayout14 ~= nil then self.flowLayout14:destroy(); self.flowLayout14 = nil; end;
-        if self.rectangle2 ~= nil then self.rectangle2:destroy(); self.rectangle2 = nil; end;
-        if self.rectangle23 ~= nil then self.rectangle23:destroy(); self.rectangle23 = nil; end;
-        if self.flowLayout118 ~= nil then self.flowLayout118:destroy(); self.flowLayout118 = nil; end;
-        if self.flowLayout31 ~= nil then self.flowLayout31:destroy(); self.flowLayout31 = nil; end;
-        if self.multiplicadorfor ~= nil then self.multiplicadorfor:destroy(); self.multiplicadorfor = nil; end;
-        if self.racafor ~= nil then self.racafor:destroy(); self.racafor = nil; end;
-        if self.dataLink6 ~= nil then self.dataLink6:destroy(); self.dataLink6 = nil; end;
-        if self.flowPart6 ~= nil then self.flowPart6:destroy(); self.flowPart6 = nil; end;
-        if self.barraXpProfissao ~= nil then self.barraXpProfissao:destroy(); self.barraXpProfissao = nil; end;
-        if self.conMod ~= nil then self.conMod:destroy(); self.conMod = nil; end;
-        if self.label19 ~= nil then self.label19:destroy(); self.label19 = nil; end;
-        if self.AcertoMod ~= nil then self.AcertoMod:destroy(); self.AcertoMod = nil; end;
-        if self.dexVantagem5 ~= nil then self.dexVantagem5:destroy(); self.dexVantagem5 = nil; end;
-        if self.okButtonaba1 ~= nil then self.okButtonaba1:destroy(); self.okButtonaba1 = nil; end;
-        if self.treinofor ~= nil then self.treinofor:destroy(); self.treinofor = nil; end;
-        if self.rectangle12 ~= nil then self.rectangle12:destroy(); self.rectangle12 = nil; end;
-        if self.destrezaEsquiva ~= nil then self.destrezaEsquiva:destroy(); self.destrezaEsquiva = nil; end;
-        if self.classecar ~= nil then self.classecar:destroy(); self.classecar = nil; end;
-        if self.horzLine3 ~= nil then self.horzLine3:destroy(); self.horzLine3 = nil; end;
-        if self.flowLayout76 ~= nil then self.flowLayout76:destroy(); self.flowLayout76 = nil; end;
-        if self.rectangle18 ~= nil then self.rectangle18:destroy(); self.rectangle18 = nil; end;
-        if self.rectangle14 ~= nil then self.rectangle14:destroy(); self.rectangle14 = nil; end;
-        if self.extraMira ~= nil then self.extraMira:destroy(); self.extraMira = nil; end;
-        if self.richEdit3 ~= nil then self.richEdit3:destroy(); self.richEdit3 = nil; end;
-        if self.flowLayout120 ~= nil then self.flowLayout120:destroy(); self.flowLayout120 = nil; end;
-        if self.sabVantagem1 ~= nil then self.sabVantagem1:destroy(); self.sabVantagem1 = nil; end;
-        if self.flowLayout125 ~= nil then self.flowLayout125:destroy(); self.flowLayout125 = nil; end;
-        if self.label2 ~= nil then self.label2:destroy(); self.label2 = nil; end;
-        if self.racadex ~= nil then self.racadex:destroy(); self.racadex = nil; end;
-        if self.flowLayout71 ~= nil then self.flowLayout71:destroy(); self.flowLayout71 = nil; end;
-        if self.intVantagem2 ~= nil then self.intVantagem2:destroy(); self.intVantagem2 = nil; end;
-        if self.outrodex ~= nil then self.outrodex:destroy(); self.outrodex = nil; end;
-        if self.edit27 ~= nil then self.edit27:destroy(); self.edit27 = nil; end;
-        if self.multiplicadordex ~= nil then self.multiplicadordex:destroy(); self.multiplicadordex = nil; end;
-        if self.richEdit2 ~= nil then self.richEdit2:destroy(); self.richEdit2 = nil; end;
-        if self.scrollBox5 ~= nil then self.scrollBox5:destroy(); self.scrollBox5 = nil; end;
-        if self.flowLayout85 ~= nil then self.flowLayout85:destroy(); self.flowLayout85 = nil; end;
-        if self.sabVantagem5 ~= nil then self.sabVantagem5:destroy(); self.sabVantagem5 = nil; end;
-        if self.richEdit8 ~= nil then self.richEdit8:destroy(); self.richEdit8 = nil; end;
-        if self.flowLayout137 ~= nil then self.flowLayout137:destroy(); self.flowLayout137 = nil; end;
-        if self.nivelint ~= nil then self.nivelint:destroy(); self.nivelint = nil; end;
-        if self.flowPart15 ~= nil then self.flowPart15:destroy(); self.flowPart15 = nil; end;
-        if self.flowLayout8 ~= nil then self.flowLayout8:destroy(); self.flowLayout8 = nil; end;
-        if self.flowLayout144 ~= nil then self.flowLayout144:destroy(); self.flowLayout144 = nil; end;
-        if self.popupAtributosDestreza ~= nil then self.popupAtributosDestreza:destroy(); self.popupAtributosDestreza = nil; end;
-        if self.flowPart8 ~= nil then self.flowPart8:destroy(); self.flowPart8 = nil; end;
-        if self.totalfor ~= nil then self.totalfor:destroy(); self.totalfor = nil; end;
-        if self.baseMira ~= nil then self.baseMira:destroy(); self.baseMira = nil; end;
-        if self.flowLayout32 ~= nil then self.flowLayout32:destroy(); self.flowLayout32 = nil; end;
-        if self.flowPart10 ~= nil then self.flowPart10:destroy(); self.flowPart10 = nil; end;
-        if self.abaVaziaaba5 ~= nil then self.abaVaziaaba5:destroy(); self.abaVaziaaba5 = nil; end;
-        if self.rectangle9 ~= nil then self.rectangle9:destroy(); self.rectangle9 = nil; end;
-        if self.carMod ~= nil then self.carMod:destroy(); self.carMod = nil; end;
-        if self.scrollBox7 ~= nil then self.scrollBox7:destroy(); self.scrollBox7 = nil; end;
-        if self.scrollBox11 ~= nil then self.scrollBox11:destroy(); self.scrollBox11 = nil; end;
-        if self.flowLayout18 ~= nil then self.flowLayout18:destroy(); self.flowLayout18 = nil; end;
-        if self.flowLayout124 ~= nil then self.flowLayout124:destroy(); self.flowLayout124 = nil; end;
-        if self.multiplicadorBloqueio ~= nil then self.multiplicadorBloqueio:destroy(); self.multiplicadorBloqueio = nil; end;
-        if self.armaMira ~= nil then self.armaMira:destroy(); self.armaMira = nil; end;
-        if self.treinocar ~= nil then self.treinocar:destroy(); self.treinocar = nil; end;
-        if self.basesab ~= nil then self.basesab:destroy(); self.basesab = nil; end;
-        if self.flowLayout51 ~= nil then self.flowLayout51:destroy(); self.flowLayout51 = nil; end;
-        if self.flowLayout15 ~= nil then self.flowLayout15:destroy(); self.flowLayout15 = nil; end;
-        if self.flowLayout12 ~= nil then self.flowLayout12:destroy(); self.flowLayout12 = nil; end;
-        if self.flowLayout62 ~= nil then self.flowLayout62:destroy(); self.flowLayout62 = nil; end;
-        if self.dataLink10 ~= nil then self.dataLink10:destroy(); self.dataLink10 = nil; end;
-        if self.extraAcerto ~= nil then self.extraAcerto:destroy(); self.extraAcerto = nil; end;
-        if self.label23 ~= nil then self.label23:destroy(); self.label23 = nil; end;
-        if self.flowPart18 ~= nil then self.flowPart18:destroy(); self.flowPart18 = nil; end;
-        if self.flowLayout131 ~= nil then self.flowLayout131:destroy(); self.flowLayout131 = nil; end;
-        if self.dataLink5 ~= nil then self.dataLink5:destroy(); self.dataLink5 = nil; end;
-        if self.horzLine2 ~= nil then self.horzLine2:destroy(); self.horzLine2 = nil; end;
-        if self.rectangle10 ~= nil then self.rectangle10:destroy(); self.rectangle10 = nil; end;
-        if self.label24 ~= nil then self.label24:destroy(); self.label24 = nil; end;
-        if self.popupaba8 ~= nil then self.popupaba8:destroy(); self.popupaba8 = nil; end;
-        if self.flowLayout61 ~= nil then self.flowLayout61:destroy(); self.flowLayout61 = nil; end;
-        if self.flowLayout107 ~= nil then self.flowLayout107:destroy(); self.flowLayout107 = nil; end;
-        if self.richEdit4 ~= nil then self.richEdit4:destroy(); self.richEdit4 = nil; end;
-        if self.edit24 ~= nil then self.edit24:destroy(); self.edit24 = nil; end;
-        if self.dexMod ~= nil then self.dexMod:destroy(); self.dexMod = nil; end;
-        if self.edit14 ~= nil then self.edit14:destroy(); self.edit14 = nil; end;
-        if self.popupaba5 ~= nil then self.popupaba5:destroy(); self.popupaba5 = nil; end;
-        if self.dataLink8 ~= nil then self.dataLink8:destroy(); self.dataLink8 = nil; end;
-        if self.edit4 ~= nil then self.edit4:destroy(); self.edit4 = nil; end;
-        if self.nivelcon ~= nil then self.nivelcon:destroy(); self.nivelcon = nil; end;
-        if self.label6 ~= nil then self.label6:destroy(); self.label6 = nil; end;
-        if self.sabMod ~= nil then self.sabMod:destroy(); self.sabMod = nil; end;
-        if self.flowLayout123 ~= nil then self.flowLayout123:destroy(); self.flowLayout123 = nil; end;
-        if self.flowLayout20 ~= nil then self.flowLayout20:destroy(); self.flowLayout20 = nil; end;
-        if self.editaba4 ~= nil then self.editaba4:destroy(); self.editaba4 = nil; end;
-        if self.multiplicadorint ~= nil then self.multiplicadorint:destroy(); self.multiplicadorint = nil; end;
-        if self.MiraMod ~= nil then self.MiraMod:destroy(); self.MiraMod = nil; end;
-        if self.okButtonaba3 ~= nil then self.okButtonaba3:destroy(); self.okButtonaba3 = nil; end;
-        if self.horzLine5 ~= nil then self.horzLine5:destroy(); self.horzLine5 = nil; end;
-        if self.flowLayout25 ~= nil then self.flowLayout25:destroy(); self.flowLayout25 = nil; end;
-        if self.flowLayout26 ~= nil then self.flowLayout26:destroy(); self.flowLayout26 = nil; end;
-        if self.intVantagem3 ~= nil then self.intVantagem3:destroy(); self.intVantagem3 = nil; end;
-        if self.tabelaAtributos ~= nil then self.tabelaAtributos:destroy(); self.tabelaAtributos = nil; end;
-        if self.flowLayout54 ~= nil then self.flowLayout54:destroy(); self.flowLayout54 = nil; end;
-        if self.okButtonaba9 ~= nil then self.okButtonaba9:destroy(); self.okButtonaba9 = nil; end;
-        if self.flowLayout7 ~= nil then self.flowLayout7:destroy(); self.flowLayout7 = nil; end;
-        if self.edit8 ~= nil then self.edit8:destroy(); self.edit8 = nil; end;
-        if self.basefor ~= nil then self.basefor:destroy(); self.basefor = nil; end;
-        if self.popupExperienciaClasse ~= nil then self.popupExperienciaClasse:destroy(); self.popupExperienciaClasse = nil; end;
-        if self.flowPart4 ~= nil then self.flowPart4:destroy(); self.flowPart4 = nil; end;
-        if self.flowLayout83 ~= nil then self.flowLayout83:destroy(); self.flowLayout83 = nil; end;
-        if self.flowLayout115 ~= nil then self.flowLayout115:destroy(); self.flowLayout115 = nil; end;
-        if self.okButtonaba2 ~= nil then self.okButtonaba2:destroy(); self.okButtonaba2 = nil; end;
-        if self.flowLayout10 ~= nil then self.flowLayout10:destroy(); self.flowLayout10 = nil; end;
-        if self.edit2 ~= nil then self.edit2:destroy(); self.edit2 = nil; end;
-        if self.carVantagem4 ~= nil then self.carVantagem4:destroy(); self.carVantagem4 = nil; end;
-        if self.okButtonaba6 ~= nil then self.okButtonaba6:destroy(); self.okButtonaba6 = nil; end;
-        if self.flowLayout53 ~= nil then self.flowLayout53:destroy(); self.flowLayout53 = nil; end;
-        if self.flowLayout96 ~= nil then self.flowLayout96:destroy(); self.flowLayout96 = nil; end;
-        if self.horzLine9 ~= nil then self.horzLine9:destroy(); self.horzLine9 = nil; end;
-        if self.edit21 ~= nil then self.edit21:destroy(); self.edit21 = nil; end;
-        if self.abaVaziaaba3 ~= nil then self.abaVaziaaba3:destroy(); self.abaVaziaaba3 = nil; end;
-        if self.totalMira ~= nil then self.totalMira:destroy(); self.totalMira = nil; end;
-        if self.dexVantagem3 ~= nil then self.dexVantagem3:destroy(); self.dexVantagem3 = nil; end;
-        if self.editaba8 ~= nil then self.editaba8:destroy(); self.editaba8 = nil; end;
-        if self.treinocon ~= nil then self.treinocon:destroy(); self.treinocon = nil; end;
-        if self.flowLayout27 ~= nil then self.flowLayout27:destroy(); self.flowLayout27 = nil; end;
-        if self.rectangle20 ~= nil then self.rectangle20:destroy(); self.rectangle20 = nil; end;
-        if self.flowLayout4 ~= nil then self.flowLayout4:destroy(); self.flowLayout4 = nil; end;
-        if self.flowLayout136 ~= nil then self.flowLayout136:destroy(); self.flowLayout136 = nil; end;
-        if self.edit13 ~= nil then self.edit13:destroy(); self.edit13 = nil; end;
-        if self.dataLink24 ~= nil then self.dataLink24:destroy(); self.dataLink24 = nil; end;
-        if self.extraBloqueio ~= nil then self.extraBloqueio:destroy(); self.extraBloqueio = nil; end;
-        if self.BloqueioMod ~= nil then self.BloqueioMod:destroy(); self.BloqueioMod = nil; end;
-        if self.flowLayout84 ~= nil then self.flowLayout84:destroy(); self.flowLayout84 = nil; end;
-        if self.dataLink22 ~= nil then self.dataLink22:destroy(); self.dataLink22 = nil; end;
-        if self.scrollBox10 ~= nil then self.scrollBox10:destroy(); self.scrollBox10 = nil; end;
-        if self.horzLine20 ~= nil then self.horzLine20:destroy(); self.horzLine20 = nil; end;
-        if self.classeint ~= nil then self.classeint:destroy(); self.classeint = nil; end;
-        if self.totalcon ~= nil then self.totalcon:destroy(); self.totalcon = nil; end;
-        if self.extraint ~= nil then self.extraint:destroy(); self.extraint = nil; end;
-        if self.editaba1 ~= nil then self.editaba1:destroy(); self.editaba1 = nil; end;
-        if self.edit37 ~= nil then self.edit37:destroy(); self.edit37 = nil; end;
-        if self.flowLayout2 ~= nil then self.flowLayout2:destroy(); self.flowLayout2 = nil; end;
-        if self.flowLayout66 ~= nil then self.flowLayout66:destroy(); self.flowLayout66 = nil; end;
-        if self.armaduraAcerto ~= nil then self.armaduraAcerto:destroy(); self.armaduraAcerto = nil; end;
-        if self.flowLayout106 ~= nil then self.flowLayout106:destroy(); self.flowLayout106 = nil; end;
-        if self.flowLayout132 ~= nil then self.flowLayout132:destroy(); self.flowLayout132 = nil; end;
-        if self.treinosab ~= nil then self.treinosab:destroy(); self.treinosab = nil; end;
-        if self.edit17 ~= nil then self.edit17:destroy(); self.edit17 = nil; end;
-        if self.label10 ~= nil then self.label10:destroy(); self.label10 = nil; end;
-        if self.flowLayout45 ~= nil then self.flowLayout45:destroy(); self.flowLayout45 = nil; end;
-        if self.flowLayout127 ~= nil then self.flowLayout127:destroy(); self.flowLayout127 = nil; end;
-        if self.flowLayout56 ~= nil then self.flowLayout56:destroy(); self.flowLayout56 = nil; end;
-        if self.flowPart3 ~= nil then self.flowPart3:destroy(); self.flowPart3 = nil; end;
-        if self.racacon ~= nil then self.racacon:destroy(); self.racacon = nil; end;
-        if self.richEdit7 ~= nil then self.richEdit7:destroy(); self.richEdit7 = nil; end;
-        if self.edit15 ~= nil then self.edit15:destroy(); self.edit15 = nil; end;
-        if self.label11 ~= nil then self.label11:destroy(); self.label11 = nil; end;
-        if self.label3 ~= nil then self.label3:destroy(); self.label3 = nil; end;
-        if self.label20 ~= nil then self.label20:destroy(); self.label20 = nil; end;
-        if self.classeAcerto ~= nil then self.classeAcerto:destroy(); self.classeAcerto = nil; end;
-        if self.sabVantagem4 ~= nil then self.sabVantagem4:destroy(); self.sabVantagem4 = nil; end;
-        if self.flowLayout36 ~= nil then self.flowLayout36:destroy(); self.flowLayout36 = nil; end;
-        if self.carVantagem3 ~= nil then self.carVantagem3:destroy(); self.carVantagem3 = nil; end;
-        if self.horzLine4 ~= nil then self.horzLine4:destroy(); self.horzLine4 = nil; end;
-        if self.flowLayout38 ~= nil then self.flowLayout38:destroy(); self.flowLayout38 = nil; end;
-        if self.popupaba3 ~= nil then self.popupaba3:destroy(); self.popupaba3 = nil; end;
-        if self.popupaba6 ~= nil then self.popupaba6:destroy(); self.popupaba6 = nil; end;
-        if self.label7 ~= nil then self.label7:destroy(); self.label7 = nil; end;
-        if self.multiplicadorsab ~= nil then self.multiplicadorsab:destroy(); self.multiplicadorsab = nil; end;
-        if self.flowLayout75 ~= nil then self.flowLayout75:destroy(); self.flowLayout75 = nil; end;
-        if self.outrocon ~= nil then self.outrocon:destroy(); self.outrocon = nil; end;
-        if self.flowLayout81 ~= nil then self.flowLayout81:destroy(); self.flowLayout81 = nil; end;
-        if self.classesab ~= nil then self.classesab:destroy(); self.classesab = nil; end;
-        if self.barraXpClasse ~= nil then self.barraXpClasse:destroy(); self.barraXpClasse = nil; end;
-        if self.scrollBox4 ~= nil then self.scrollBox4:destroy(); self.scrollBox4 = nil; end;
-        if self.rectangle4 ~= nil then self.rectangle4:destroy(); self.rectangle4 = nil; end;
-        if self.flowLayout59 ~= nil then self.flowLayout59:destroy(); self.flowLayout59 = nil; end;
-        if self.flowLayout105 ~= nil then self.flowLayout105:destroy(); self.flowLayout105 = nil; end;
-        if self.edit32 ~= nil then self.edit32:destroy(); self.edit32 = nil; end;
-        if self.tab1 ~= nil then self.tab1:destroy(); self.tab1 = nil; end;
-        if self.horzLine6 ~= nil then self.horzLine6:destroy(); self.horzLine6 = nil; end;
-        if self.flowLayout82 ~= nil then self.flowLayout82:destroy(); self.flowLayout82 = nil; end;
-        if self.flowLayout142 ~= nil then self.flowLayout142:destroy(); self.flowLayout142 = nil; end;
-        if self.intVantagem5 ~= nil then self.intVantagem5:destroy(); self.intVantagem5 = nil; end;
-        if self.dataLink12 ~= nil then self.dataLink12:destroy(); self.dataLink12 = nil; end;
-        if self.flowLayout37 ~= nil then self.flowLayout37:destroy(); self.flowLayout37 = nil; end;
-        if self.forVantagem4 ~= nil then self.forVantagem4:destroy(); self.forVantagem4 = nil; end;
-        if self.dexVantagem2 ~= nil then self.dexVantagem2:destroy(); self.dexVantagem2 = nil; end;
-        if self.flowLayout22 ~= nil then self.flowLayout22:destroy(); self.flowLayout22 = nil; end;
-        if self.treinodex ~= nil then self.treinodex:destroy(); self.treinodex = nil; end;
-        if self.armaduraMira ~= nil then self.armaduraMira:destroy(); self.armaduraMira = nil; end;
-        if self.destrezaAcerto ~= nil then self.destrezaAcerto:destroy(); self.destrezaAcerto = nil; end;
-        if self.classeBloqueio ~= nil then self.classeBloqueio:destroy(); self.classeBloqueio = nil; end;
-        if self.dataLink4 ~= nil then self.dataLink4:destroy(); self.dataLink4 = nil; end;
-        if self.flowLayout116 ~= nil then self.flowLayout116:destroy(); self.flowLayout116 = nil; end;
-        if self.flowLayout126 ~= nil then self.flowLayout126:destroy(); self.flowLayout126 = nil; end;
-        if self.outrocar ~= nil then self.outrocar:destroy(); self.outrocar = nil; end;
-        if self.flowLayout147 ~= nil then self.flowLayout147:destroy(); self.flowLayout147 = nil; end;
-        if self.edit28 ~= nil then self.edit28:destroy(); self.edit28 = nil; end;
-        if self.flowLayout13 ~= nil then self.flowLayout13:destroy(); self.flowLayout13 = nil; end;
-        if self.xpRecebidoProfissao ~= nil then self.xpRecebidoProfissao:destroy(); self.xpRecebidoProfissao = nil; end;
-        if self.sabVantagem2 ~= nil then self.sabVantagem2:destroy(); self.sabVantagem2 = nil; end;
-        if self.baseAcerto ~= nil then self.baseAcerto:destroy(); self.baseAcerto = nil; end;
-        if self.flowLayout111 ~= nil then self.flowLayout111:destroy(); self.flowLayout111 = nil; end;
-        if self.horzLine10 ~= nil then self.horzLine10:destroy(); self.horzLine10 = nil; end;
-        if self.conVantagem4 ~= nil then self.conVantagem4:destroy(); self.conVantagem4 = nil; end;
-        if self.flowLayout5 ~= nil then self.flowLayout5:destroy(); self.flowLayout5 = nil; end;
-        if self.label22 ~= nil then self.label22:destroy(); self.label22 = nil; end;
-        if self.dataLink21 ~= nil then self.dataLink21:destroy(); self.dataLink21 = nil; end;
-        if self.label13 ~= nil then self.label13:destroy(); self.label13 = nil; end;
-        if self.flowLayout97 ~= nil then self.flowLayout97:destroy(); self.flowLayout97 = nil; end;
-        if self.label27 ~= nil then self.label27:destroy(); self.label27 = nil; end;
-        if self.editaba2 ~= nil then self.editaba2:destroy(); self.editaba2 = nil; end;
-        if self.abaVaziaaba1 ~= nil then self.abaVaziaaba1:destroy(); self.abaVaziaaba1 = nil; end;
-        if self.carVantagem2 ~= nil then self.carVantagem2:destroy(); self.carVantagem2 = nil; end;
-        if self.dataLink23 ~= nil then self.dataLink23:destroy(); self.dataLink23 = nil; end;
-        if self.flowLayout74 ~= nil then self.flowLayout74:destroy(); self.flowLayout74 = nil; end;
-        if self.treinoint ~= nil then self.treinoint:destroy(); self.treinoint = nil; end;
-        if self.flowLayout73 ~= nil then self.flowLayout73:destroy(); self.flowLayout73 = nil; end;
-        if self.flowPart16 ~= nil then self.flowPart16:destroy(); self.flowPart16 = nil; end;
-        if self.flowLayout78 ~= nil then self.flowLayout78:destroy(); self.flowLayout78 = nil; end;
-        if self.edit26 ~= nil then self.edit26:destroy(); self.edit26 = nil; end;
-        if self.flowLayout130 ~= nil then self.flowLayout130:destroy(); self.flowLayout130 = nil; end;
-        if self.edit34 ~= nil then self.edit34:destroy(); self.edit34 = nil; end;
-        if self.flowLayout64 ~= nil then self.flowLayout64:destroy(); self.flowLayout64 = nil; end;
-        if self.edit19 ~= nil then self.edit19:destroy(); self.edit19 = nil; end;
-        if self.popupaba10 ~= nil then self.popupaba10:destroy(); self.popupaba10 = nil; end;
-        if self.flowLayout98 ~= nil then self.flowLayout98:destroy(); self.flowLayout98 = nil; end;
-        if self.edit5 ~= nil then self.edit5:destroy(); self.edit5 = nil; end;
-        if self.basecon ~= nil then self.basecon:destroy(); self.basecon = nil; end;
         if self.flowLayout103 ~= nil then self.flowLayout103:destroy(); self.flowLayout103 = nil; end;
-        if self.flowLayout52 ~= nil then self.flowLayout52:destroy(); self.flowLayout52 = nil; end;
-        if self.scrollBox2 ~= nil then self.scrollBox2:destroy(); self.scrollBox2 = nil; end;
-        if self.rectangle15 ~= nil then self.rectangle15:destroy(); self.rectangle15 = nil; end;
-        if self.flowLayout58 ~= nil then self.flowLayout58:destroy(); self.flowLayout58 = nil; end;
-        if self.label12 ~= nil then self.label12:destroy(); self.label12 = nil; end;
-        if self.forVantagem1 ~= nil then self.forVantagem1:destroy(); self.forVantagem1 = nil; end;
-        if self.basecar ~= nil then self.basecar:destroy(); self.basecar = nil; end;
-        if self.flowLayout39 ~= nil then self.flowLayout39:destroy(); self.flowLayout39 = nil; end;
-        if self.flowLayout119 ~= nil then self.flowLayout119:destroy(); self.flowLayout119 = nil; end;
-        if self.editaba3 ~= nil then self.editaba3:destroy(); self.editaba3 = nil; end;
-        if self.carVantagem1 ~= nil then self.carVantagem1:destroy(); self.carVantagem1 = nil; end;
-        if self.abaVaziaaba10 ~= nil then self.abaVaziaaba10:destroy(); self.abaVaziaaba10 = nil; end;
-        if self.label16 ~= nil then self.label16:destroy(); self.label16 = nil; end;
-        if self.edit10 ~= nil then self.edit10:destroy(); self.edit10 = nil; end;
-        if self.flowLayout29 ~= nil then self.flowLayout29:destroy(); self.flowLayout29 = nil; end;
-        if self.racaint ~= nil then self.racaint:destroy(); self.racaint = nil; end;
-        if self.edit1 ~= nil then self.edit1:destroy(); self.edit1 = nil; end;
-        if self.edit31 ~= nil then self.edit31:destroy(); self.edit31 = nil; end;
-        if self.totalAcerto ~= nil then self.totalAcerto:destroy(); self.totalAcerto = nil; end;
-        if self.intMod ~= nil then self.intMod:destroy(); self.intMod = nil; end;
-        if self.armaduraBloqueio ~= nil then self.armaduraBloqueio:destroy(); self.armaduraBloqueio = nil; end;
-        if self.rectangle26 ~= nil then self.rectangle26:destroy(); self.rectangle26 = nil; end;
-        if self.multiplicadorAcerto ~= nil then self.multiplicadorAcerto:destroy(); self.multiplicadorAcerto = nil; end;
-        if self.classeEsquiva ~= nil then self.classeEsquiva:destroy(); self.classeEsquiva = nil; end;
-        if self.dataLink16 ~= nil then self.dataLink16:destroy(); self.dataLink16 = nil; end;
-        if self.baseBloqueio ~= nil then self.baseBloqueio:destroy(); self.baseBloqueio = nil; end;
-        if self.flowLayout88 ~= nil then self.flowLayout88:destroy(); self.flowLayout88 = nil; end;
-        if self.conVantagem5 ~= nil then self.conVantagem5:destroy(); self.conVantagem5 = nil; end;
-        if self.flowLayout46 ~= nil then self.flowLayout46:destroy(); self.flowLayout46 = nil; end;
-        if self.comboBox1 ~= nil then self.comboBox1:destroy(); self.comboBox1 = nil; end;
-        if self.flowPart5 ~= nil then self.flowPart5:destroy(); self.flowPart5 = nil; end;
-        if self.flowPart9 ~= nil then self.flowPart9:destroy(); self.flowPart9 = nil; end;
-        if self.flowLayout35 ~= nil then self.flowLayout35:destroy(); self.flowLayout35 = nil; end;
-        if self.dexVantagem4 ~= nil then self.dexVantagem4:destroy(); self.dexVantagem4 = nil; end;
-        if self.extrafor ~= nil then self.extrafor:destroy(); self.extrafor = nil; end;
-        if self.edit23 ~= nil then self.edit23:destroy(); self.edit23 = nil; end;
-        if self.flowLayout63 ~= nil then self.flowLayout63:destroy(); self.flowLayout63 = nil; end;
-        if self.flowLayout49 ~= nil then self.flowLayout49:destroy(); self.flowLayout49 = nil; end;
-        if self.flowLayout69 ~= nil then self.flowLayout69:destroy(); self.flowLayout69 = nil; end;
-        if self.rectangle6 ~= nil then self.rectangle6:destroy(); self.rectangle6 = nil; end;
-        if self.label21 ~= nil then self.label21:destroy(); self.label21 = nil; end;
-        if self.flowLayout40 ~= nil then self.flowLayout40:destroy(); self.flowLayout40 = nil; end;
-        if self.dataLink2 ~= nil then self.dataLink2:destroy(); self.dataLink2 = nil; end;
-        if self.horzLine1 ~= nil then self.horzLine1:destroy(); self.horzLine1 = nil; end;
-        if self.abaVaziaaba4 ~= nil then self.abaVaziaaba4:destroy(); self.abaVaziaaba4 = nil; end;
-        if self.edit38 ~= nil then self.edit38:destroy(); self.edit38 = nil; end;
-        if self.dataLink15 ~= nil then self.dataLink15:destroy(); self.dataLink15 = nil; end;
-        if self.classefor ~= nil then self.classefor:destroy(); self.classefor = nil; end;
-        if self.abaVaziaaba6 ~= nil then self.abaVaziaaba6:destroy(); self.abaVaziaaba6 = nil; end;
-        if self.baseEsquiva ~= nil then self.baseEsquiva:destroy(); self.baseEsquiva = nil; end;
-        if self.editaba10 ~= nil then self.editaba10:destroy(); self.editaba10 = nil; end;
-        if self.richEdit1 ~= nil then self.richEdit1:destroy(); self.richEdit1 = nil; end;
-        if self.destrezaBloqueio ~= nil then self.destrezaBloqueio:destroy(); self.destrezaBloqueio = nil; end;
-        if self.abaVaziaaba7 ~= nil then self.abaVaziaaba7:destroy(); self.abaVaziaaba7 = nil; end;
-        if self.scrollBox3 ~= nil then self.scrollBox3:destroy(); self.scrollBox3 = nil; end;
-        if self.horzLine16 ~= nil then self.horzLine16:destroy(); self.horzLine16 = nil; end;
-        if self.flowLayout6 ~= nil then self.flowLayout6:destroy(); self.flowLayout6 = nil; end;
-        if self.flowLayout122 ~= nil then self.flowLayout122:destroy(); self.flowLayout122 = nil; end;
-        if self.pgcPrincipal ~= nil then self.pgcPrincipal:destroy(); self.pgcPrincipal = nil; end;
-        if self.edit6 ~= nil then self.edit6:destroy(); self.edit6 = nil; end;
-        if self.totalint ~= nil then self.totalint:destroy(); self.totalint = nil; end;
-        if self.flowLayout60 ~= nil then self.flowLayout60:destroy(); self.flowLayout60 = nil; end;
-        if self.label18 ~= nil then self.label18:destroy(); self.label18 = nil; end;
-        if self.flowLayout145 ~= nil then self.flowLayout145:destroy(); self.flowLayout145 = nil; end;
-        if self.edit3 ~= nil then self.edit3:destroy(); self.edit3 = nil; end;
-        if self.carVantagem5 ~= nil then self.carVantagem5:destroy(); self.carVantagem5 = nil; end;
-        if self.popupaba7 ~= nil then self.popupaba7:destroy(); self.popupaba7 = nil; end;
-        if self.popupaba9 ~= nil then self.popupaba9:destroy(); self.popupaba9 = nil; end;
-        if self.totalEsquiva ~= nil then self.totalEsquiva:destroy(); self.totalEsquiva = nil; end;
-        if self.armaduraEsquiva ~= nil then self.armaduraEsquiva:destroy(); self.armaduraEsquiva = nil; end;
-        if self.totalsab ~= nil then self.totalsab:destroy(); self.totalsab = nil; end;
-        if self.conVantagem1 ~= nil then self.conVantagem1:destroy(); self.conVantagem1 = nil; end;
-        if self.edit18 ~= nil then self.edit18:destroy(); self.edit18 = nil; end;
-        if self.edit25 ~= nil then self.edit25:destroy(); self.edit25 = nil; end;
-        if self.scrollBox1 ~= nil then self.scrollBox1:destroy(); self.scrollBox1 = nil; end;
-        if self.dataLink25 ~= nil then self.dataLink25:destroy(); self.dataLink25 = nil; end;
-        if self.flowLayout146 ~= nil then self.flowLayout146:destroy(); self.flowLayout146 = nil; end;
-        if self.flowLayout70 ~= nil then self.flowLayout70:destroy(); self.flowLayout70 = nil; end;
-        if self.multiplicadorEsquiva ~= nil then self.multiplicadorEsquiva:destroy(); self.multiplicadorEsquiva = nil; end;
-        if self.forVantagem2 ~= nil then self.forVantagem2:destroy(); self.forVantagem2 = nil; end;
-        if self.flowLayout48 ~= nil then self.flowLayout48:destroy(); self.flowLayout48 = nil; end;
-        if self.flowLayout102 ~= nil then self.flowLayout102:destroy(); self.flowLayout102 = nil; end;
-        if self.rectangle11 ~= nil then self.rectangle11:destroy(); self.rectangle11 = nil; end;
-        if self.flowPart14 ~= nil then self.flowPart14:destroy(); self.flowPart14 = nil; end;
-        if self.flowLayout133 ~= nil then self.flowLayout133:destroy(); self.flowLayout133 = nil; end;
-        if self.scrollBox8 ~= nil then self.scrollBox8:destroy(); self.scrollBox8 = nil; end;
-        if self.flowLayout3 ~= nil then self.flowLayout3:destroy(); self.flowLayout3 = nil; end;
-        if self.intVantagem1 ~= nil then self.intVantagem1:destroy(); self.intVantagem1 = nil; end;
-        if self.flowLayout57 ~= nil then self.flowLayout57:destroy(); self.flowLayout57 = nil; end;
-        if self.flowLayout77 ~= nil then self.flowLayout77:destroy(); self.flowLayout77 = nil; end;
-        if self.edit7 ~= nil then self.edit7:destroy(); self.edit7 = nil; end;
-        if self.flowPart7 ~= nil then self.flowPart7:destroy(); self.flowPart7 = nil; end;
-        if self.okButtonaba4 ~= nil then self.okButtonaba4:destroy(); self.okButtonaba4 = nil; end;
-        if self.edit12 ~= nil then self.edit12:destroy(); self.edit12 = nil; end;
-        if self.flowLayout113 ~= nil then self.flowLayout113:destroy(); self.flowLayout113 = nil; end;
-        if self.rectangle21 ~= nil then self.rectangle21:destroy(); self.rectangle21 = nil; end;
-        if self.edit35 ~= nil then self.edit35:destroy(); self.edit35 = nil; end;
-        if self.label26 ~= nil then self.label26:destroy(); self.label26 = nil; end;
-        if self.abaVaziaaba2 ~= nil then self.abaVaziaaba2:destroy(); self.abaVaziaaba2 = nil; end;
-        if self.outroint ~= nil then self.outroint:destroy(); self.outroint = nil; end;
-        if self.dataLink13 ~= nil then self.dataLink13:destroy(); self.dataLink13 = nil; end;
-        if self.racasab ~= nil then self.racasab:destroy(); self.racasab = nil; end;
-        if self.multiplicadorMira ~= nil then self.multiplicadorMira:destroy(); self.multiplicadorMira = nil; end;
-        if self.popupAtributos ~= nil then self.popupAtributos:destroy(); self.popupAtributos = nil; end;
-        if self.flowLayout41 ~= nil then self.flowLayout41:destroy(); self.flowLayout41 = nil; end;
-        if self.niveldex ~= nil then self.niveldex:destroy(); self.niveldex = nil; end;
-        if self.flowPart2 ~= nil then self.flowPart2:destroy(); self.flowPart2 = nil; end;
-        if self.multiplicadorcon ~= nil then self.multiplicadorcon:destroy(); self.multiplicadorcon = nil; end;
-        if self.rectangle19 ~= nil then self.rectangle19:destroy(); self.rectangle19 = nil; end;
-        if self.rectangle22 ~= nil then self.rectangle22:destroy(); self.rectangle22 = nil; end;
-        if self.rectangle1 ~= nil then self.rectangle1:destroy(); self.rectangle1 = nil; end;
-        if self.horzLine17 ~= nil then self.horzLine17:destroy(); self.horzLine17 = nil; end;
-        if self.flowLayout55 ~= nil then self.flowLayout55:destroy(); self.flowLayout55 = nil; end;
-        if self.totalcar ~= nil then self.totalcar:destroy(); self.totalcar = nil; end;
-        if self.conVantagem2 ~= nil then self.conVantagem2:destroy(); self.conVantagem2 = nil; end;
-        if self.flowLayout79 ~= nil then self.flowLayout79:destroy(); self.flowLayout79 = nil; end;
-        if self.classeMira ~= nil then self.classeMira:destroy(); self.classeMira = nil; end;
-        if self.horzLine8 ~= nil then self.horzLine8:destroy(); self.horzLine8 = nil; end;
-        if self.dataLink14 ~= nil then self.dataLink14:destroy(); self.dataLink14 = nil; end;
-        if self.label4 ~= nil then self.label4:destroy(); self.label4 = nil; end;
-        if self.flowLayout108 ~= nil then self.flowLayout108:destroy(); self.flowLayout108 = nil; end;
-        if self.flowLayout92 ~= nil then self.flowLayout92:destroy(); self.flowLayout92 = nil; end;
-        if self.flowLayout104 ~= nil then self.flowLayout104:destroy(); self.flowLayout104 = nil; end;
-        if self.popupaba1 ~= nil then self.popupaba1:destroy(); self.popupaba1 = nil; end;
-        if self.abaVaziaaba8 ~= nil then self.abaVaziaaba8:destroy(); self.abaVaziaaba8 = nil; end;
-        if self.rectangle25 ~= nil then self.rectangle25:destroy(); self.rectangle25 = nil; end;
-        if self.flowPart12 ~= nil then self.flowPart12:destroy(); self.flowPart12 = nil; end;
-        if self.editaba6 ~= nil then self.editaba6:destroy(); self.editaba6 = nil; end;
-        if self.dataLink19 ~= nil then self.dataLink19:destroy(); self.dataLink19 = nil; end;
-        if self.flowLayout80 ~= nil then self.flowLayout80:destroy(); self.flowLayout80 = nil; end;
-        if self.flowLayout135 ~= nil then self.flowLayout135:destroy(); self.flowLayout135 = nil; end;
-        if self.nivelsab ~= nil then self.nivelsab:destroy(); self.nivelsab = nil; end;
-        if self.extradex ~= nil then self.extradex:destroy(); self.extradex = nil; end;
-        if self.flowLayout9 ~= nil then self.flowLayout9:destroy(); self.flowLayout9 = nil; end;
-        if self.extracon ~= nil then self.extracon:destroy(); self.extracon = nil; end;
-        if self.flowLayout50 ~= nil then self.flowLayout50:destroy(); self.flowLayout50 = nil; end;
-        if self.dataLink17 ~= nil then self.dataLink17:destroy(); self.dataLink17 = nil; end;
-        if self.label9 ~= nil then self.label9:destroy(); self.label9 = nil; end;
-        if self.rectangle8 ~= nil then self.rectangle8:destroy(); self.rectangle8 = nil; end;
-        if self.flowLayout17 ~= nil then self.flowLayout17:destroy(); self.flowLayout17 = nil; end;
-        if self.outrofor ~= nil then self.outrofor:destroy(); self.outrofor = nil; end;
-        if self.sabVantagem3 ~= nil then self.sabVantagem3:destroy(); self.sabVantagem3 = nil; end;
-        if self.flowLayout128 ~= nil then self.flowLayout128:destroy(); self.flowLayout128 = nil; end;
-        if self.edit30 ~= nil then self.edit30:destroy(); self.edit30 = nil; end;
-        if self.horzLine12 ~= nil then self.horzLine12:destroy(); self.horzLine12 = nil; end;
-        if self.flowLayout42 ~= nil then self.flowLayout42:destroy(); self.flowLayout42 = nil; end;
-        if self.flowLayout21 ~= nil then self.flowLayout21:destroy(); self.flowLayout21 = nil; end;
-        if self.xpRecebidoClasse ~= nil then self.xpRecebidoClasse:destroy(); self.xpRecebidoClasse = nil; end;
-        if self.EsquivaMod ~= nil then self.EsquivaMod:destroy(); self.EsquivaMod = nil; end;
-        if self.okButtonaba7 ~= nil then self.okButtonaba7:destroy(); self.okButtonaba7 = nil; end;
-        if self.armaAcerto ~= nil then self.armaAcerto:destroy(); self.armaAcerto = nil; end;
-        if self.flowLayout91 ~= nil then self.flowLayout91:destroy(); self.flowLayout91 = nil; end;
-        if self.flowLayout11 ~= nil then self.flowLayout11:destroy(); self.flowLayout11 = nil; end;
-        if self.extrasab ~= nil then self.extrasab:destroy(); self.extrasab = nil; end;
-        if self.flowLayout101 ~= nil then self.flowLayout101:destroy(); self.flowLayout101 = nil; end;
-        if self.tabelaAtributosDestreza ~= nil then self.tabelaAtributosDestreza:destroy(); self.tabelaAtributosDestreza = nil; end;
-        if self.armaBloqueio ~= nil then self.armaBloqueio:destroy(); self.armaBloqueio = nil; end;
-        if self.flowLayout114 ~= nil then self.flowLayout114:destroy(); self.flowLayout114 = nil; end;
-        if self.label17 ~= nil then self.label17:destroy(); self.label17 = nil; end;
-        if self.okButtonaba10 ~= nil then self.okButtonaba10:destroy(); self.okButtonaba10 = nil; end;
-        if self.edit39 ~= nil then self.edit39:destroy(); self.edit39 = nil; end;
-        if self.horzLine18 ~= nil then self.horzLine18:destroy(); self.horzLine18 = nil; end;
-        if self.flowLayout94 ~= nil then self.flowLayout94:destroy(); self.flowLayout94 = nil; end;
-        if self.flowPart11 ~= nil then self.flowPart11:destroy(); self.flowPart11 = nil; end;
-        if self.dataLink1 ~= nil then self.dataLink1:destroy(); self.dataLink1 = nil; end;
-        if self.popupaba2 ~= nil then self.popupaba2:destroy(); self.popupaba2 = nil; end;
-        if self.flowLayout95 ~= nil then self.flowLayout95:destroy(); self.flowLayout95 = nil; end;
-        if self.popupExperienciaProfissao ~= nil then self.popupExperienciaProfissao:destroy(); self.popupExperienciaProfissao = nil; end;
-        if self.totaldex ~= nil then self.totaldex:destroy(); self.totaldex = nil; end;
-        if self.rectangle3 ~= nil then self.rectangle3:destroy(); self.rectangle3 = nil; end;
-        if self.dataLink26 ~= nil then self.dataLink26:destroy(); self.dataLink26 = nil; end;
-        if self.horzLine15 ~= nil then self.horzLine15:destroy(); self.horzLine15 = nil; end;
-        if self.nivelcar ~= nil then self.nivelcar:destroy(); self.nivelcar = nil; end;
-        if self.fundoDaImagem ~= nil then self.fundoDaImagem:destroy(); self.fundoDaImagem = nil; end;
-        if self.dexVantagem1 ~= nil then self.dexVantagem1:destroy(); self.dexVantagem1 = nil; end;
-        if self.flowLayout34 ~= nil then self.flowLayout34:destroy(); self.flowLayout34 = nil; end;
-        if self.flowPart17 ~= nil then self.flowPart17:destroy(); self.flowPart17 = nil; end;
-        if self.flowLayout134 ~= nil then self.flowLayout134:destroy(); self.flowLayout134 = nil; end;
-        if self.flowLayout143 ~= nil then self.flowLayout143:destroy(); self.flowLayout143 = nil; end;
+        if self.scrollBox10 ~= nil then self.scrollBox10:destroy(); self.scrollBox10 = nil; end;
         if self.nivelProfissao ~= nil then self.nivelProfissao:destroy(); self.nivelProfissao = nil; end;
-        if self.basedex ~= nil then self.basedex:destroy(); self.basedex = nil; end;
-        if self.scrollBox6 ~= nil then self.scrollBox6:destroy(); self.scrollBox6 = nil; end;
-        if self.classedex ~= nil then self.classedex:destroy(); self.classedex = nil; end;
+        if self.flowPart2 ~= nil then self.flowPart2:destroy(); self.flowPart2 = nil; end;
+        if self.nivelcar ~= nil then self.nivelcar:destroy(); self.nivelcar = nil; end;
+        if self.extraBloqueio ~= nil then self.extraBloqueio:destroy(); self.extraBloqueio = nil; end;
+        if self.flowLayout108 ~= nil then self.flowLayout108:destroy(); self.flowLayout108 = nil; end;
+        if self.flowPart7 ~= nil then self.flowPart7:destroy(); self.flowPart7 = nil; end;
+        if self.classefor ~= nil then self.classefor:destroy(); self.classefor = nil; end;
+        if self.flowLayout45 ~= nil then self.flowLayout45:destroy(); self.flowLayout45 = nil; end;
+        if self.totaldex ~= nil then self.totaldex:destroy(); self.totaldex = nil; end;
+        if self.flowLayout124 ~= nil then self.flowLayout124:destroy(); self.flowLayout124 = nil; end;
+        if self.edit27 ~= nil then self.edit27:destroy(); self.edit27 = nil; end;
+        if self.totalMira ~= nil then self.totalMira:destroy(); self.totalMira = nil; end;
+        if self.forVantagem5 ~= nil then self.forVantagem5:destroy(); self.forVantagem5 = nil; end;
+        if self.popupAtributosDestreza ~= nil then self.popupAtributosDestreza:destroy(); self.popupAtributosDestreza = nil; end;
+        if self.armaduraEsquiva ~= nil then self.armaduraEsquiva:destroy(); self.armaduraEsquiva = nil; end;
+        if self.horzLine9 ~= nil then self.horzLine9:destroy(); self.horzLine9 = nil; end;
+        if self.flowLayout121 ~= nil then self.flowLayout121:destroy(); self.flowLayout121 = nil; end;
+        if self.edit9 ~= nil then self.edit9:destroy(); self.edit9 = nil; end;
         if self.intVantagem4 ~= nil then self.intVantagem4:destroy(); self.intVantagem4 = nil; end;
-        if self.popupaba4 ~= nil then self.popupaba4:destroy(); self.popupaba4 = nil; end;
-        if self.richEdit6 ~= nil then self.richEdit6:destroy(); self.richEdit6 = nil; end;
-        if self.flowLayout99 ~= nil then self.flowLayout99:destroy(); self.flowLayout99 = nil; end;
-        if self.forVantagem3 ~= nil then self.forVantagem3:destroy(); self.forVantagem3 = nil; end;
-        if self.label25 ~= nil then self.label25:destroy(); self.label25 = nil; end;
-        if self.richEdit5 ~= nil then self.richEdit5:destroy(); self.richEdit5 = nil; end;
-        if self.flowLayout28 ~= nil then self.flowLayout28:destroy(); self.flowLayout28 = nil; end;
-        if self.classecon ~= nil then self.classecon:destroy(); self.classecon = nil; end;
-        if self.edit22 ~= nil then self.edit22:destroy(); self.edit22 = nil; end;
-        if self.flowLayout139 ~= nil then self.flowLayout139:destroy(); self.flowLayout139 = nil; end;
-        if self.label5 ~= nil then self.label5:destroy(); self.label5 = nil; end;
-        if self.extracar ~= nil then self.extracar:destroy(); self.extracar = nil; end;
-        if self.horzLine13 ~= nil then self.horzLine13:destroy(); self.horzLine13 = nil; end;
-        if self.totalBloqueio ~= nil then self.totalBloqueio:destroy(); self.totalBloqueio = nil; end;
-        if self.dataLink11 ~= nil then self.dataLink11:destroy(); self.dataLink11 = nil; end;
-        if self.rectangle13 ~= nil then self.rectangle13:destroy(); self.rectangle13 = nil; end;
-        if self.editaba7 ~= nil then self.editaba7:destroy(); self.editaba7 = nil; end;
-        if self.abaVaziaaba9 ~= nil then self.abaVaziaaba9:destroy(); self.abaVaziaaba9 = nil; end;
-        if self.outrosab ~= nil then self.outrosab:destroy(); self.outrosab = nil; end;
-        if self.multiplicadorcar ~= nil then self.multiplicadorcar:destroy(); self.multiplicadorcar = nil; end;
-        if self.flowLayout93 ~= nil then self.flowLayout93:destroy(); self.flowLayout93 = nil; end;
+        if self.flowLayout69 ~= nil then self.flowLayout69:destroy(); self.flowLayout69 = nil; end;
+        if self.flowLayout97 ~= nil then self.flowLayout97:destroy(); self.flowLayout97 = nil; end;
+        if self.extraEsquiva ~= nil then self.extraEsquiva:destroy(); self.extraEsquiva = nil; end;
+        if self.extracon ~= nil then self.extracon:destroy(); self.extracon = nil; end;
+        if self.richEdit10 ~= nil then self.richEdit10:destroy(); self.richEdit10 = nil; end;
+        if self.extraAcerto ~= nil then self.extraAcerto:destroy(); self.extraAcerto = nil; end;
+        if self.horzLine6 ~= nil then self.horzLine6:destroy(); self.horzLine6 = nil; end;
+        if self.intVantagem3 ~= nil then self.intVantagem3:destroy(); self.intVantagem3 = nil; end;
+        if self.dataLink5 ~= nil then self.dataLink5:destroy(); self.dataLink5 = nil; end;
+        if self.xpRecebidoProfissao ~= nil then self.xpRecebidoProfissao:destroy(); self.xpRecebidoProfissao = nil; end;
+        if self.treinoint ~= nil then self.treinoint:destroy(); self.treinoint = nil; end;
+        if self.horzLine3 ~= nil then self.horzLine3:destroy(); self.horzLine3 = nil; end;
+        if self.edit3 ~= nil then self.edit3:destroy(); self.edit3 = nil; end;
+        if self.dexMod ~= nil then self.dexMod:destroy(); self.dexMod = nil; end;
+        if self.flowLayout67 ~= nil then self.flowLayout67:destroy(); self.flowLayout67 = nil; end;
+        if self.sabVantagem4 ~= nil then self.sabVantagem4:destroy(); self.sabVantagem4 = nil; end;
+        if self.flowPart10 ~= nil then self.flowPart10:destroy(); self.flowPart10 = nil; end;
+        if self.tab1 ~= nil then self.tab1:destroy(); self.tab1 = nil; end;
+        if self.edit6 ~= nil then self.edit6:destroy(); self.edit6 = nil; end;
+        if self.sabVantagem1 ~= nil then self.sabVantagem1:destroy(); self.sabVantagem1 = nil; end;
+        if self.flowLayout6 ~= nil then self.flowLayout6:destroy(); self.flowLayout6 = nil; end;
+        if self.image1 ~= nil then self.image1:destroy(); self.image1 = nil; end;
+        if self.dexVantagem1 ~= nil then self.dexVantagem1:destroy(); self.dexVantagem1 = nil; end;
+        if self.flowPart17 ~= nil then self.flowPart17:destroy(); self.flowPart17 = nil; end;
+        if self.flowLayout52 ~= nil then self.flowLayout52:destroy(); self.flowLayout52 = nil; end;
+        if self.label9 ~= nil then self.label9:destroy(); self.label9 = nil; end;
+        if self.extrafor ~= nil then self.extrafor:destroy(); self.extrafor = nil; end;
+        if self.nivelcon ~= nil then self.nivelcon:destroy(); self.nivelcon = nil; end;
+        if self.flowLayout57 ~= nil then self.flowLayout57:destroy(); self.flowLayout57 = nil; end;
+        if self.flowLayout14 ~= nil then self.flowLayout14:destroy(); self.flowLayout14 = nil; end;
+        if self.edit31 ~= nil then self.edit31:destroy(); self.edit31 = nil; end;
+        if self.carVantagem5 ~= nil then self.carVantagem5:destroy(); self.carVantagem5 = nil; end;
+        if self.flowLayout8 ~= nil then self.flowLayout8:destroy(); self.flowLayout8 = nil; end;
+        if self.classeint ~= nil then self.classeint:destroy(); self.classeint = nil; end;
         if self.conVantagem3 ~= nil then self.conVantagem3:destroy(); self.conVantagem3 = nil; end;
-        if self.richEdit9 ~= nil then self.richEdit9:destroy(); self.richEdit9 = nil; end;
-        if self.flowLayout140 ~= nil then self.flowLayout140:destroy(); self.flowLayout140 = nil; end;
-        if self.rectangle24 ~= nil then self.rectangle24:destroy(); self.rectangle24 = nil; end;
-        if self.flowLayout72 ~= nil then self.flowLayout72:destroy(); self.flowLayout72 = nil; end;
+        if self.horzLine16 ~= nil then self.horzLine16:destroy(); self.horzLine16 = nil; end;
+        if self.label7 ~= nil then self.label7:destroy(); self.label7 = nil; end;
+        if self.flowLayout11 ~= nil then self.flowLayout11:destroy(); self.flowLayout11 = nil; end;
+        if self.classeBloqueio ~= nil then self.classeBloqueio:destroy(); self.classeBloqueio = nil; end;
+        if self.richEdit1 ~= nil then self.richEdit1:destroy(); self.richEdit1 = nil; end;
+        if self.barraXpClasse ~= nil then self.barraXpClasse:destroy(); self.barraXpClasse = nil; end;
+        if self.okButtonaba9 ~= nil then self.okButtonaba9:destroy(); self.okButtonaba9 = nil; end;
+        if self.edit10 ~= nil then self.edit10:destroy(); self.edit10 = nil; end;
+        if self.pgcPrincipal ~= nil then self.pgcPrincipal:destroy(); self.pgcPrincipal = nil; end;
+        if self.richEdit4 ~= nil then self.richEdit4:destroy(); self.richEdit4 = nil; end;
+        if self.okButtonaba4 ~= nil then self.okButtonaba4:destroy(); self.okButtonaba4 = nil; end;
+        if self.flowLayout70 ~= nil then self.flowLayout70:destroy(); self.flowLayout70 = nil; end;
+        if self.label11 ~= nil then self.label11:destroy(); self.label11 = nil; end;
+        if self.rectangle8 ~= nil then self.rectangle8:destroy(); self.rectangle8 = nil; end;
+        if self.edit15 ~= nil then self.edit15:destroy(); self.edit15 = nil; end;
+        if self.label25 ~= nil then self.label25:destroy(); self.label25 = nil; end;
+        if self.treinodex ~= nil then self.treinodex:destroy(); self.treinodex = nil; end;
+        if self.horzLine18 ~= nil then self.horzLine18:destroy(); self.horzLine18 = nil; end;
+        if self.racacar ~= nil then self.racacar:destroy(); self.racacar = nil; end;
+        if self.okButtonaba3 ~= nil then self.okButtonaba3:destroy(); self.okButtonaba3 = nil; end;
+        if self.flowLayout28 ~= nil then self.flowLayout28:destroy(); self.flowLayout28 = nil; end;
+        if self.flowLayout36 ~= nil then self.flowLayout36:destroy(); self.flowLayout36 = nil; end;
+        if self.flowLayout75 ~= nil then self.flowLayout75:destroy(); self.flowLayout75 = nil; end;
+        if self.rectangle5 ~= nil then self.rectangle5:destroy(); self.rectangle5 = nil; end;
+        if self.dataLink24 ~= nil then self.dataLink24:destroy(); self.dataLink24 = nil; end;
+        if self.flowLayout136 ~= nil then self.flowLayout136:destroy(); self.flowLayout136 = nil; end;
+        if self.editaba7 ~= nil then self.editaba7:destroy(); self.editaba7 = nil; end;
+        if self.popupExperienciaClasse ~= nil then self.popupExperienciaClasse:destroy(); self.popupExperienciaClasse = nil; end;
+        if self.flowLayout84 ~= nil then self.flowLayout84:destroy(); self.flowLayout84 = nil; end;
+        if self.basecon ~= nil then self.basecon:destroy(); self.basecon = nil; end;
+        if self.flowLayout141 ~= nil then self.flowLayout141:destroy(); self.flowLayout141 = nil; end;
+        if self.flowLayout23 ~= nil then self.flowLayout23:destroy(); self.flowLayout23 = nil; end;
+        if self.flowLayout33 ~= nil then self.flowLayout33:destroy(); self.flowLayout33 = nil; end;
+        if self.armaAcerto ~= nil then self.armaAcerto:destroy(); self.armaAcerto = nil; end;
+        if self.rectangle2 ~= nil then self.rectangle2:destroy(); self.rectangle2 = nil; end;
+        if self.scrollBox1 ~= nil then self.scrollBox1:destroy(); self.scrollBox1 = nil; end;
+        if self.flowLayout131 ~= nil then self.flowLayout131:destroy(); self.flowLayout131 = nil; end;
+        if self.flowLayout83 ~= nil then self.flowLayout83:destroy(); self.flowLayout83 = nil; end;
+        if self.flowLayout146 ~= nil then self.flowLayout146:destroy(); self.flowLayout146 = nil; end;
+        if self.classeMira ~= nil then self.classeMira:destroy(); self.classeMira = nil; end;
+        if self.dataLink15 ~= nil then self.dataLink15:destroy(); self.dataLink15 = nil; end;
+        if self.popupaba1 ~= nil then self.popupaba1:destroy(); self.popupaba1 = nil; end;
+        if self.abaVaziaaba4 ~= nil then self.abaVaziaaba4:destroy(); self.abaVaziaaba4 = nil; end;
+        if self.popupAtributos ~= nil then self.popupAtributos:destroy(); self.popupAtributos = nil; end;
+        if self.rectangle17 ~= nil then self.rectangle17:destroy(); self.rectangle17 = nil; end;
+        if self.flowLayout116 ~= nil then self.flowLayout116:destroy(); self.flowLayout116 = nil; end;
+        if self.flowLayout100 ~= nil then self.flowLayout100:destroy(); self.flowLayout100 = nil; end;
+        if self.dataLink12 ~= nil then self.dataLink12:destroy(); self.dataLink12 = nil; end;
+        if self.flowLayout39 ~= nil then self.flowLayout39:destroy(); self.flowLayout39 = nil; end;
+        if self.multiplicadorfor ~= nil then self.multiplicadorfor:destroy(); self.multiplicadorfor = nil; end;
+        if self.nivelClasse ~= nil then self.nivelClasse:destroy(); self.nivelClasse = nil; end;
+        if self.rectangle12 ~= nil then self.rectangle12:destroy(); self.rectangle12 = nil; end;
+        if self.rectangle20 ~= nil then self.rectangle20:destroy(); self.rectangle20 = nil; end;
+        if self.flowPart4 ~= nil then self.flowPart4:destroy(); self.flowPart4 = nil; end;
+        if self.intMod ~= nil then self.intMod:destroy(); self.intMod = nil; end;
+        if self.rectangle19 ~= nil then self.rectangle19:destroy(); self.rectangle19 = nil; end;
+        if self.baseBloqueio ~= nil then self.baseBloqueio:destroy(); self.baseBloqueio = nil; end;
+        if self.flowLayout40 ~= nil then self.flowLayout40:destroy(); self.flowLayout40 = nil; end;
+        if self.flowPart9 ~= nil then self.flowPart9:destroy(); self.flowPart9 = nil; end;
+        if self.edit22 ~= nil then self.edit22:destroy(); self.edit22 = nil; end;
+        if self.MiraMod ~= nil then self.MiraMod:destroy(); self.MiraMod = nil; end;
+        if self.flowLayout47 ~= nil then self.flowLayout47:destroy(); self.flowLayout47 = nil; end;
+        if self.racafor ~= nil then self.racafor:destroy(); self.racafor = nil; end;
+        if self.flowLayout122 ~= nil then self.flowLayout122:destroy(); self.flowLayout122 = nil; end;
+        if self.edit25 ~= nil then self.edit25:destroy(); self.edit25 = nil; end;
+        if self.armaduraMira ~= nil then self.armaduraMira:destroy(); self.armaduraMira = nil; end;
+        if self.flowLayout94 ~= nil then self.flowLayout94:destroy(); self.flowLayout94 = nil; end;
+        if self.destrezaBloqueio ~= nil then self.destrezaBloqueio:destroy(); self.destrezaBloqueio = nil; end;
+        if self.xpRecebidoClasse ~= nil then self.xpRecebidoClasse:destroy(); self.xpRecebidoClasse = nil; end;
+        if self.extraMira ~= nil then self.extraMira:destroy(); self.extraMira = nil; end;
+        if self.edit28 ~= nil then self.edit28:destroy(); self.edit28 = nil; end;
+        if self.flowLayout91 ~= nil then self.flowLayout91:destroy(); self.flowLayout91 = nil; end;
+        if self.outrocar ~= nil then self.outrocar:destroy(); self.outrocar = nil; end;
+        if self.forVantagem2 ~= nil then self.forVantagem2:destroy(); self.forVantagem2 = nil; end;
+        if self.flowPart18 ~= nil then self.flowPart18:destroy(); self.flowPart18 = nil; end;
+        if self.flowLayout128 ~= nil then self.flowLayout128:destroy(); self.flowLayout128 = nil; end;
+        if self.flowLayout62 ~= nil then self.flowLayout62:destroy(); self.flowLayout62 = nil; end;
+        if self.dataLink7 ~= nil then self.dataLink7:destroy(); self.dataLink7 = nil; end;
+        if self.sabMod ~= nil then self.sabMod:destroy(); self.sabMod = nil; end;
+        if self.extracar ~= nil then self.extracar:destroy(); self.extracar = nil; end;
+        if self.edit5 ~= nil then self.edit5:destroy(); self.edit5 = nil; end;
+        if self.sabVantagem2 ~= nil then self.sabVantagem2:destroy(); self.sabVantagem2 = nil; end;
+        if self.flowLayout65 ~= nil then self.flowLayout65:destroy(); self.flowLayout65 = nil; end;
+        if self.dataLink2 ~= nil then self.dataLink2:destroy(); self.dataLink2 = nil; end;
+        if self.flowLayout5 ~= nil then self.flowLayout5:destroy(); self.flowLayout5 = nil; end;
+        if self.AcertoMod ~= nil then self.AcertoMod:destroy(); self.AcertoMod = nil; end;
+        if self.flowPart12 ~= nil then self.flowPart12:destroy(); self.flowPart12 = nil; end;
+        if self.dexVantagem4 ~= nil then self.dexVantagem4:destroy(); self.dexVantagem4 = nil; end;
+        if self.edit39 ~= nil then self.edit39:destroy(); self.edit39 = nil; end;
+        if self.dataLink9 ~= nil then self.dataLink9:destroy(); self.dataLink9 = nil; end;
+        if self.flowLayout54 ~= nil then self.flowLayout54:destroy(); self.flowLayout54 = nil; end;
+        if self.edit32 ~= nil then self.edit32:destroy(); self.edit32 = nil; end;
+        if self.racadex ~= nil then self.racadex:destroy(); self.racadex = nil; end;
+        if self.armaduraAcerto ~= nil then self.armaduraAcerto:destroy(); self.armaduraAcerto = nil; end;
+        if self.edit18 ~= nil then self.edit18:destroy(); self.edit18 = nil; end;
+        if self.flowLayout59 ~= nil then self.flowLayout59:destroy(); self.flowLayout59 = nil; end;
+        if self.flowLayout16 ~= nil then self.flowLayout16:destroy(); self.flowLayout16 = nil; end;
+        if self.label2 ~= nil then self.label2:destroy(); self.label2 = nil; end;
+        if self.horzLine15 ~= nil then self.horzLine15:destroy(); self.horzLine15 = nil; end;
+        if self.nivelsab ~= nil then self.nivelsab:destroy(); self.nivelsab = nil; end;
+        if self.edit37 ~= nil then self.edit37:destroy(); self.edit37 = nil; end;
+        if self.carVantagem3 ~= nil then self.carVantagem3:destroy(); self.carVantagem3 = nil; end;
+        if self.label19 ~= nil then self.label19:destroy(); self.label19 = nil; end;
+        if self.horzLine10 ~= nil then self.horzLine10:destroy(); self.horzLine10 = nil; end;
+        if self.label5 ~= nil then self.label5:destroy(); self.label5 = nil; end;
+        if self.flowLayout13 ~= nil then self.flowLayout13:destroy(); self.flowLayout13 = nil; end;
+        if self.totalAcerto ~= nil then self.totalAcerto:destroy(); self.totalAcerto = nil; end;
+        if self.richEdit3 ~= nil then self.richEdit3:destroy(); self.richEdit3 = nil; end;
+        if self.label12 ~= nil then self.label12:destroy(); self.label12 = nil; end;
+        if self.label20 ~= nil then self.label20:destroy(); self.label20 = nil; end;
+        if self.edit12 ~= nil then self.edit12:destroy(); self.edit12 = nil; end;
+        if self.flowLayout18 ~= nil then self.flowLayout18:destroy(); self.flowLayout18 = nil; end;
+        if self.richEdit6 ~= nil then self.richEdit6:destroy(); self.richEdit6 = nil; end;
+        if self.conMod ~= nil then self.conMod:destroy(); self.conMod = nil; end;
+        if self.okButtonaba6 ~= nil then self.okButtonaba6:destroy(); self.okButtonaba6 = nil; end;
+        if self.flowLayout76 ~= nil then self.flowLayout76:destroy(); self.flowLayout76 = nil; end;
+        if self.armaMira ~= nil then self.armaMira:destroy(); self.armaMira = nil; end;
+        if self.label17 ~= nil then self.label17:destroy(); self.label17 = nil; end;
+        if self.edit17 ~= nil then self.edit17:destroy(); self.edit17 = nil; end;
+        if self.label27 ~= nil then self.label27:destroy(); self.label27 = nil; end;
+        if self.flowLayout139 ~= nil then self.flowLayout139:destroy(); self.flowLayout139 = nil; end;
+        if self.editaba2 ~= nil then self.editaba2:destroy(); self.editaba2 = nil; end;
+        if self.scrollBox9 ~= nil then self.scrollBox9:destroy(); self.scrollBox9 = nil; end;
+        if self.popupaba10 ~= nil then self.popupaba10:destroy(); self.popupaba10 = nil; end;
+        if self.popupExperienciaProfissao ~= nil then self.popupExperienciaProfissao:destroy(); self.popupExperienciaProfissao = nil; end;
+        if self.flowLayout26 ~= nil then self.flowLayout26:destroy(); self.flowLayout26 = nil; end;
+        if self.flowLayout34 ~= nil then self.flowLayout34:destroy(); self.flowLayout34 = nil; end;
+        if self.rectangle7 ~= nil then self.rectangle7:destroy(); self.rectangle7 = nil; end;
+        if self.treinocon ~= nil then self.treinocon:destroy(); self.treinocon = nil; end;
+        if self.dataLink22 ~= nil then self.dataLink22:destroy(); self.dataLink22 = nil; end;
+        if self.flowLayout134 ~= nil then self.flowLayout134:destroy(); self.flowLayout134 = nil; end;
+        if self.scrollBox4 ~= nil then self.scrollBox4:destroy(); self.scrollBox4 = nil; end;
+        if self.editaba5 ~= nil then self.editaba5:destroy(); self.editaba5 = nil; end;
+        if self.popupaba9 ~= nil then self.popupaba9:destroy(); self.popupaba9 = nil; end;
+        if self.multiplicadorsab ~= nil then self.multiplicadorsab:destroy(); self.multiplicadorsab = nil; end;
+        if self.flowLayout86 ~= nil then self.flowLayout86:destroy(); self.flowLayout86 = nil; end;
+        if self.flowLayout143 ~= nil then self.flowLayout143:destroy(); self.flowLayout143 = nil; end;
+        if self.flowLayout21 ~= nil then self.flowLayout21:destroy(); self.flowLayout21 = nil; end;
+        if self.flowLayout31 ~= nil then self.flowLayout31:destroy(); self.flowLayout31 = nil; end;
+        if self.scrollBox3 ~= nil then self.scrollBox3:destroy(); self.scrollBox3 = nil; end;
+        if self.abaVaziaaba1 ~= nil then self.abaVaziaaba1:destroy(); self.abaVaziaaba1 = nil; end;
+        if self.popupaba4 ~= nil then self.popupaba4:destroy(); self.popupaba4 = nil; end;
+        if self.editaba8 ~= nil then self.editaba8:destroy(); self.editaba8 = nil; end;
+        if self.classecon ~= nil then self.classecon:destroy(); self.classecon = nil; end;
+        if self.flowLayout115 ~= nil then self.flowLayout115:destroy(); self.flowLayout115 = nil; end;
+        if self.flowLayout105 ~= nil then self.flowLayout105:destroy(); self.flowLayout105 = nil; end;
+        if self.dataLink17 ~= nil then self.dataLink17:destroy(); self.dataLink17 = nil; end;
+        if self.BloqueioMod ~= nil then self.BloqueioMod:destroy(); self.BloqueioMod = nil; end;
+        if self.popupaba3 ~= nil then self.popupaba3:destroy(); self.popupaba3 = nil; end;
+        if self.abaVaziaaba6 ~= nil then self.abaVaziaaba6:destroy(); self.abaVaziaaba6 = nil; end;
+        if self.rectangle25 ~= nil then self.rectangle25:destroy(); self.rectangle25 = nil; end;
+        if self.rectangle11 ~= nil then self.rectangle11:destroy(); self.rectangle11 = nil; end;
+        if self.flowLayout88 ~= nil then self.flowLayout88:destroy(); self.flowLayout88 = nil; end;
+        if self.flowLayout102 ~= nil then self.flowLayout102:destroy(); self.flowLayout102 = nil; end;
+        if self.flowLayout110 ~= nil then self.flowLayout110:destroy(); self.flowLayout110 = nil; end;
+        if self.flowLayout48 ~= nil then self.flowLayout48:destroy(); self.flowLayout48 = nil; end;
+        if self.flowPart1 ~= nil then self.flowPart1:destroy(); self.flowPart1 = nil; end;
+        if self.totalcon ~= nil then self.totalcon:destroy(); self.totalcon = nil; end;
+        if self.dataLink19 ~= nil then self.dataLink19:destroy(); self.dataLink19 = nil; end;
+        if self.flowPart6 ~= nil then self.flowPart6:destroy(); self.flowPart6 = nil; end;
+        if self.baseEsquiva ~= nil then self.baseEsquiva:destroy(); self.baseEsquiva = nil; end;
+        if self.flowLayout42 ~= nil then self.flowLayout42:destroy(); self.flowLayout42 = nil; end;
+        if self.nivelint ~= nil then self.nivelint:destroy(); self.nivelint = nil; end;
+        if self.flowLayout127 ~= nil then self.flowLayout127:destroy(); self.flowLayout127 = nil; end;
         if self.edit20 ~= nil then self.edit20:destroy(); self.edit20 = nil; end;
+        if self.flowLayout99 ~= nil then self.flowLayout99:destroy(); self.flowLayout99 = nil; end;
+        if self.horzLine8 ~= nil then self.horzLine8:destroy(); self.horzLine8 = nil; end;
+        if self.flowLayout120 ~= nil then self.flowLayout120:destroy(); self.flowLayout120 = nil; end;
+        if self.intVantagem5 ~= nil then self.intVantagem5:destroy(); self.intVantagem5 = nil; end;
+        if self.flowLayout96 ~= nil then self.flowLayout96:destroy(); self.flowLayout96 = nil; end;
+        if self.forVantagem1 ~= nil then self.forVantagem1:destroy(); self.forVantagem1 = nil; end;
+        if self.horzLine5 ~= nil then self.horzLine5:destroy(); self.horzLine5 = nil; end;
+        if self.flowLayout93 ~= nil then self.flowLayout93:destroy(); self.flowLayout93 = nil; end;
+        if self.horzLine2 ~= nil then self.horzLine2:destroy(); self.horzLine2 = nil; end;
+        if self.flowLayout60 ~= nil then self.flowLayout60:destroy(); self.flowLayout60 = nil; end;
+        if self.dataLink1 ~= nil then self.dataLink1:destroy(); self.dataLink1 = nil; end;
+        if self.outrosab ~= nil then self.outrosab:destroy(); self.outrosab = nil; end;
+        if self.flowPart11 ~= nil then self.flowPart11:destroy(); self.flowPart11 = nil; end;
+        if self.basefor ~= nil then self.basefor:destroy(); self.basefor = nil; end;
+        if self.edit7 ~= nil then self.edit7:destroy(); self.edit7 = nil; end;
+        if self.classeAcerto ~= nil then self.classeAcerto:destroy(); self.classeAcerto = nil; end;
+        if self.flowLayout7 ~= nil then self.flowLayout7:destroy(); self.flowLayout7 = nil; end;
+        if self.flowPart14 ~= nil then self.flowPart14:destroy(); self.flowPart14 = nil; end;
+        if self.dexVantagem2 ~= nil then self.dexVantagem2:destroy(); self.dexVantagem2 = nil; end;
+        if self.outrodex ~= nil then self.outrodex:destroy(); self.outrodex = nil; end;
+        if self.flowLayout51 ~= nil then self.flowLayout51:destroy(); self.flowLayout51 = nil; end;
+        if self.flowLayout2 ~= nil then self.flowLayout2:destroy(); self.flowLayout2 = nil; end;
+        if self.conVantagem5 ~= nil then self.conVantagem5:destroy(); self.conVantagem5 = nil; end;
+        if self.outrofor ~= nil then self.outrofor:destroy(); self.outrofor = nil; end;
+        if self.flowLayout56 ~= nil then self.flowLayout56:destroy(); self.flowLayout56 = nil; end;
+        if self.edit30 ~= nil then self.edit30:destroy(); self.edit30 = nil; end;
+        if self.carVantagem4 ~= nil then self.carVantagem4:destroy(); self.carVantagem4 = nil; end;
+        if self.flowLayout9 ~= nil then self.flowLayout9:destroy(); self.flowLayout9 = nil; end;
+        if self.conVantagem2 ~= nil then self.conVantagem2:destroy(); self.conVantagem2 = nil; end;
+        if self.horzLine17 ~= nil then self.horzLine17:destroy(); self.horzLine17 = nil; end;
+        if self.flowLayout10 ~= nil then self.flowLayout10:destroy(); self.flowLayout10 = nil; end;
+        if self.extrasab ~= nil then self.extrasab:destroy(); self.extrasab = nil; end;
+        if self.edit35 ~= nil then self.edit35:destroy(); self.edit35 = nil; end;
+        if self.carVantagem1 ~= nil then self.carVantagem1:destroy(); self.carVantagem1 = nil; end;
+        if self.horzLine12 ~= nil then self.horzLine12:destroy(); self.horzLine12 = nil; end;
+        if self.tabelaAtributosDestreza ~= nil then self.tabelaAtributosDestreza:destroy(); self.tabelaAtributosDestreza = nil; end;
+        if self.richEdit5 ~= nil then self.richEdit5:destroy(); self.richEdit5 = nil; end;
+        if self.okButtonaba5 ~= nil then self.okButtonaba5:destroy(); self.okButtonaba5 = nil; end;
+        if self.flowLayout73 ~= nil then self.flowLayout73:destroy(); self.flowLayout73 = nil; end;
+        if self.label10 ~= nil then self.label10:destroy(); self.label10 = nil; end;
+        if self.label22 ~= nil then self.label22:destroy(); self.label22 = nil; end;
+        if self.edit14 ~= nil then self.edit14:destroy(); self.edit14 = nil; end;
+        if self.armaBloqueio ~= nil then self.armaBloqueio:destroy(); self.armaBloqueio = nil; end;
+        if self.racacon ~= nil then self.racacon:destroy(); self.racacon = nil; end;
+        if self.horzLine19 ~= nil then self.horzLine19:destroy(); self.horzLine19 = nil; end;
+        if self.richEdit8 ~= nil then self.richEdit8:destroy(); self.richEdit8 = nil; end;
+        if self.flowLayout29 ~= nil then self.flowLayout29:destroy(); self.flowLayout29 = nil; end;
+        if self.flowLayout74 ~= nil then self.flowLayout74:destroy(); self.flowLayout74 = nil; end;
+        if self.popupMenuImagem ~= nil then self.popupMenuImagem:destroy(); self.popupMenuImagem = nil; end;
+        if self.basedex ~= nil then self.basedex:destroy(); self.basedex = nil; end;
+        if self.rectangle4 ~= nil then self.rectangle4:destroy(); self.rectangle4 = nil; end;
+        if self.baseint ~= nil then self.baseint:destroy(); self.baseint = nil; end;
+        if self.label15 ~= nil then self.label15:destroy(); self.label15 = nil; end;
+        if self.EsquivaMod ~= nil then self.EsquivaMod:destroy(); self.EsquivaMod = nil; end;
+        if self.dataLink25 ~= nil then self.dataLink25:destroy(); self.dataLink25 = nil; end;
+        if self.flowLayout137 ~= nil then self.flowLayout137:destroy(); self.flowLayout137 = nil; end;
+        if self.flowLayout85 ~= nil then self.flowLayout85:destroy(); self.flowLayout85 = nil; end;
+        if self.flowLayout140 ~= nil then self.flowLayout140:destroy(); self.flowLayout140 = nil; end;
+        if self.abaVaziaaba9 ~= nil then self.abaVaziaaba9:destroy(); self.abaVaziaaba9 = nil; end;
+        if self.flowLayout24 ~= nil then self.flowLayout24:destroy(); self.flowLayout24 = nil; end;
+        if self.flowLayout32 ~= nil then self.flowLayout32:destroy(); self.flowLayout32 = nil; end;
+        if self.flowLayout79 ~= nil then self.flowLayout79:destroy(); self.flowLayout79 = nil; end;
+        if self.rectangle1 ~= nil then self.rectangle1:destroy(); self.rectangle1 = nil; end;
+        if self.dataLink20 ~= nil then self.dataLink20:destroy(); self.dataLink20 = nil; end;
+        if self.flowLayout132 ~= nil then self.flowLayout132:destroy(); self.flowLayout132 = nil; end;
+        if self.scrollBox6 ~= nil then self.scrollBox6:destroy(); self.scrollBox6 = nil; end;
+        if self.flowLayout80 ~= nil then self.flowLayout80:destroy(); self.flowLayout80 = nil; end;
+        if self.flowLayout118 ~= nil then self.flowLayout118:destroy(); self.flowLayout118 = nil; end;
+        if self.flowLayout145 ~= nil then self.flowLayout145:destroy(); self.flowLayout145 = nil; end;
+        if self.dataLink14 ~= nil then self.dataLink14:destroy(); self.dataLink14 = nil; end;
+        if self.abaVaziaaba3 ~= nil then self.abaVaziaaba3:destroy(); self.abaVaziaaba3 = nil; end;
+        if self.popupaba6 ~= nil then self.popupaba6:destroy(); self.popupaba6 = nil; end;
+        if self.basecar ~= nil then self.basecar:destroy(); self.basecar = nil; end;
+        if self.multiplicadorint ~= nil then self.multiplicadorint:destroy(); self.multiplicadorint = nil; end;
+        if self.flowLayout117 ~= nil then self.flowLayout117:destroy(); self.flowLayout117 = nil; end;
+        if self.flowLayout107 ~= nil then self.flowLayout107:destroy(); self.flowLayout107 = nil; end;
+        if self.rectangle14 ~= nil then self.rectangle14:destroy(); self.rectangle14 = nil; end;
+        if self.dataLink11 ~= nil then self.dataLink11:destroy(); self.dataLink11 = nil; end;
+        if self.flowLayout38 ~= nil then self.flowLayout38:destroy(); self.flowLayout38 = nil; end;
+        if self.rectangle26 ~= nil then self.rectangle26:destroy(); self.rectangle26 = nil; end;
+        if self.okButtonaba10 ~= nil then self.okButtonaba10:destroy(); self.okButtonaba10 = nil; end;
+        if self.rectangle23 ~= nil then self.rectangle23:destroy(); self.rectangle23 = nil; end;
+        if self.rectangle13 ~= nil then self.rectangle13:destroy(); self.rectangle13 = nil; end;
+        if self.flowLayout112 ~= nil then self.flowLayout112:destroy(); self.flowLayout112 = nil; end;
+        if self.multiplicadorcon ~= nil then self.multiplicadorcon:destroy(); self.multiplicadorcon = nil; end;
+        if self.scrollBox11 ~= nil then self.scrollBox11:destroy(); self.scrollBox11 = nil; end;
+        if self.totalEsquiva ~= nil then self.totalEsquiva:destroy(); self.totalEsquiva = nil; end;
+        if self.multiplicadorAcerto ~= nil then self.multiplicadorAcerto:destroy(); self.multiplicadorAcerto = nil; end;
+        if self.flowPart3 ~= nil then self.flowPart3:destroy(); self.flowPart3 = nil; end;
+        if self.flowLayout109 ~= nil then self.flowLayout109:destroy(); self.flowLayout109 = nil; end;
+        if self.baseMira ~= nil then self.baseMira:destroy(); self.baseMira = nil; end;
+        if self.flowLayout41 ~= nil then self.flowLayout41:destroy(); self.flowLayout41 = nil; end;
+        if self.flowPart8 ~= nil then self.flowPart8:destroy(); self.flowPart8 = nil; end;
+        if self.multiplicadorcar ~= nil then self.multiplicadorcar:destroy(); self.multiplicadorcar = nil; end;
+        if self.edit23 ~= nil then self.edit23:destroy(); self.edit23 = nil; end;
+        if self.extraint ~= nil then self.extraint:destroy(); self.extraint = nil; end;
+        if self.flowLayout44 ~= nil then self.flowLayout44:destroy(); self.flowLayout44 = nil; end;
+        if self.treinosab ~= nil then self.treinosab:destroy(); self.treinosab = nil; end;
+        if self.flowLayout125 ~= nil then self.flowLayout125:destroy(); self.flowLayout125 = nil; end;
+        if self.edit26 ~= nil then self.edit26:destroy(); self.edit26 = nil; end;
+        if self.armaEsquiva ~= nil then self.armaEsquiva:destroy(); self.armaEsquiva = nil; end;
+        if self.totalBloqueio ~= nil then self.totalBloqueio:destroy(); self.totalBloqueio = nil; end;
+        if self.forVantagem4 ~= nil then self.forVantagem4:destroy(); self.forVantagem4 = nil; end;
+        if self.edit8 ~= nil then self.edit8:destroy(); self.edit8 = nil; end;
+        if self.edit29 ~= nil then self.edit29:destroy(); self.edit29 = nil; end;
+        if self.flowLayout68 ~= nil then self.flowLayout68:destroy(); self.flowLayout68 = nil; end;
+        if self.flowLayout90 ~= nil then self.flowLayout90:destroy(); self.flowLayout90 = nil; end;
+        if self.forVantagem3 ~= nil then self.forVantagem3:destroy(); self.forVantagem3 = nil; end;
+        if self.horzLine20 ~= nil then self.horzLine20:destroy(); self.horzLine20 = nil; end;
+        if self.flowPart19 ~= nil then self.flowPart19:destroy(); self.flowPart19 = nil; end;
+        if self.destrezaEsquiva ~= nil then self.destrezaEsquiva:destroy(); self.destrezaEsquiva = nil; end;
+        if self.horzLine7 ~= nil then self.horzLine7:destroy(); self.horzLine7 = nil; end;
+        if self.outroint ~= nil then self.outroint:destroy(); self.outroint = nil; end;
+        if self.extradex ~= nil then self.extradex:destroy(); self.extradex = nil; end;
+        if self.treinocar ~= nil then self.treinocar:destroy(); self.treinocar = nil; end;
+        if self.flowLayout63 ~= nil then self.flowLayout63:destroy(); self.flowLayout63 = nil; end;
+        if self.dataLink4 ~= nil then self.dataLink4:destroy(); self.dataLink4 = nil; end;
+        if self.intVantagem2 ~= nil then self.intVantagem2:destroy(); self.intVantagem2 = nil; end;
+        if self.edit2 ~= nil then self.edit2:destroy(); self.edit2 = nil; end;
+        if self.sabVantagem5 ~= nil then self.sabVantagem5:destroy(); self.sabVantagem5 = nil; end;
+        if self.flowLayout66 ~= nil then self.flowLayout66:destroy(); self.flowLayout66 = nil; end;
+        if self.dataLink3 ~= nil then self.dataLink3:destroy(); self.dataLink3 = nil; end;
+        if self.forMod ~= nil then self.forMod:destroy(); self.forMod = nil; end;
+        if self.flowPart13 ~= nil then self.flowPart13:destroy(); self.flowPart13 = nil; end;
+        if self.dexVantagem5 ~= nil then self.dexVantagem5:destroy(); self.dexVantagem5 = nil; end;
+        if self.baseAcerto ~= nil then self.baseAcerto:destroy(); self.baseAcerto = nil; end;
+        if self.edit38 ~= nil then self.edit38:destroy(); self.edit38 = nil; end;
+        if self.flowLayout1 ~= nil then self.flowLayout1:destroy(); self.flowLayout1 = nil; end;
+        if self.flowPart16 ~= nil then self.flowPart16:destroy(); self.flowPart16 = nil; end;
+        if self.flowLayout53 ~= nil then self.flowLayout53:destroy(); self.flowLayout53 = nil; end;
+        if self.label8 ~= nil then self.label8:destroy(); self.label8 = nil; end;
+        if self.flowLayout58 ~= nil then self.flowLayout58:destroy(); self.flowLayout58 = nil; end;
+        if self.flowLayout15 ~= nil then self.flowLayout15:destroy(); self.flowLayout15 = nil; end;
+        if self.label3 ~= nil then self.label3:destroy(); self.label3 = nil; end;
+        if self.racasab ~= nil then self.racasab:destroy(); self.racasab = nil; end;
+        if self.edit36 ~= nil then self.edit36:destroy(); self.edit36 = nil; end;
+        if self.carVantagem2 ~= nil then self.carVantagem2:destroy(); self.carVantagem2 = nil; end;
+        if self.label18 ~= nil then self.label18:destroy(); self.label18 = nil; end;
+        if self.horzLine11 ~= nil then self.horzLine11:destroy(); self.horzLine11 = nil; end;
+        if self.label6 ~= nil then self.label6:destroy(); self.label6 = nil; end;
+        if self.flowLayout12 ~= nil then self.flowLayout12:destroy(); self.flowLayout12 = nil; end;
+        if self.okButtonaba8 ~= nil then self.okButtonaba8:destroy(); self.okButtonaba8 = nil; end;
+        if self.label21 ~= nil then self.label21:destroy(); self.label21 = nil; end;
+        if self.edit11 ~= nil then self.edit11:destroy(); self.edit11 = nil; end;
+        if self.classesab ~= nil then self.classesab:destroy(); self.classesab = nil; end;
+        if self.richEdit7 ~= nil then self.richEdit7:destroy(); self.richEdit7 = nil; end;
+        if self.okButtonaba7 ~= nil then self.okButtonaba7:destroy(); self.okButtonaba7 = nil; end;
+        if self.flowLayout71 ~= nil then self.flowLayout71:destroy(); self.flowLayout71 = nil; end;
+        if self.label16 ~= nil then self.label16:destroy(); self.label16 = nil; end;
+        if self.rectangle9 ~= nil then self.rectangle9:destroy(); self.rectangle9 = nil; end;
+        if self.edit16 ~= nil then self.edit16:destroy(); self.edit16 = nil; end;
+        if self.label24 ~= nil then self.label24:destroy(); self.label24 = nil; end;
+        if self.editaba3 ~= nil then self.editaba3:destroy(); self.editaba3 = nil; end;
+        if self.okButtonaba2 ~= nil then self.okButtonaba2:destroy(); self.okButtonaba2 = nil; end;
+        if self.flowLayout27 ~= nil then self.flowLayout27:destroy(); self.flowLayout27 = nil; end;
+        if self.flowLayout37 ~= nil then self.flowLayout37:destroy(); self.flowLayout37 = nil; end;
+        if self.rectangle6 ~= nil then self.rectangle6:destroy(); self.rectangle6 = nil; end;
+        if self.flowLayout135 ~= nil then self.flowLayout135:destroy(); self.flowLayout135 = nil; end;
+        if self.dataLink23 ~= nil then self.dataLink23:destroy(); self.dataLink23 = nil; end;
+        if self.scrollBox5 ~= nil then self.scrollBox5:destroy(); self.scrollBox5 = nil; end;
+        if self.editaba6 ~= nil then self.editaba6:destroy(); self.editaba6 = nil; end;
+        if self.flowLayout87 ~= nil then self.flowLayout87:destroy(); self.flowLayout87 = nil; end;
+        if self.flowLayout142 ~= nil then self.flowLayout142:destroy(); self.flowLayout142 = nil; end;
+        if self.flowLayout22 ~= nil then self.flowLayout22:destroy(); self.flowLayout22 = nil; end;
+        if self.flowLayout30 ~= nil then self.flowLayout30:destroy(); self.flowLayout30 = nil; end;
+        if self.rectangle3 ~= nil then self.rectangle3:destroy(); self.rectangle3 = nil; end;
+        if self.flowLayout130 ~= nil then self.flowLayout130:destroy(); self.flowLayout130 = nil; end;
+        if self.popupaba5 ~= nil then self.popupaba5:destroy(); self.popupaba5 = nil; end;
+        if self.editaba9 ~= nil then self.editaba9:destroy(); self.editaba9 = nil; end;
+        if self.totalfor ~= nil then self.totalfor:destroy(); self.totalfor = nil; end;
+        if self.fundoDaImagem ~= nil then self.fundoDaImagem:destroy(); self.fundoDaImagem = nil; end;
+        if self.flowLayout82 ~= nil then self.flowLayout82:destroy(); self.flowLayout82 = nil; end;
+        if self.flowLayout104 ~= nil then self.flowLayout104:destroy(); self.flowLayout104 = nil; end;
+        if self.flowLayout147 ~= nil then self.flowLayout147:destroy(); self.flowLayout147 = nil; end;
+        if self.dataLink16 ~= nil then self.dataLink16:destroy(); self.dataLink16 = nil; end;
+        if self.multiplicadorMira ~= nil then self.multiplicadorMira:destroy(); self.multiplicadorMira = nil; end;
+        if self.abaVaziaaba5 ~= nil then self.abaVaziaaba5:destroy(); self.abaVaziaaba5 = nil; end;
+        if self.rectangle24 ~= nil then self.rectangle24:destroy(); self.rectangle24 = nil; end;
+        if self.rectangle16 ~= nil then self.rectangle16:destroy(); self.rectangle16 = nil; end;
+        if self.flowLayout89 ~= nil then self.flowLayout89:destroy(); self.flowLayout89 = nil; end;
+        if self.flowLayout101 ~= nil then self.flowLayout101:destroy(); self.flowLayout101 = nil; end;
+        if self.flowLayout111 ~= nil then self.flowLayout111:destroy(); self.flowLayout111 = nil; end;
+        if self.dataLink13 ~= nil then self.dataLink13:destroy(); self.dataLink13 = nil; end;
+        if self.flowLayout49 ~= nil then self.flowLayout49:destroy(); self.flowLayout49 = nil; end;
+        if self.classeEsquiva ~= nil then self.classeEsquiva:destroy(); self.classeEsquiva = nil; end;
+        if self.rectangle21 ~= nil then self.rectangle21:destroy(); self.rectangle21 = nil; end;
+        if self.dataLink18 ~= nil then self.dataLink18:destroy(); self.dataLink18 = nil; end;
+        if self.flowPart5 ~= nil then self.flowPart5:destroy(); self.flowPart5 = nil; end;
+        if self.rectangle18 ~= nil then self.rectangle18:destroy(); self.rectangle18 = nil; end;
+        if self.flowLayout43 ~= nil then self.flowLayout43:destroy(); self.flowLayout43 = nil; end;
+        if self.flowLayout126 ~= nil then self.flowLayout126:destroy(); self.flowLayout126 = nil; end;
+        if self.edit21 ~= nil then self.edit21:destroy(); self.edit21 = nil; end;
+        if self.carMod ~= nil then self.carMod:destroy(); self.carMod = nil; end;
+        if self.flowLayout98 ~= nil then self.flowLayout98:destroy(); self.flowLayout98 = nil; end;
+        if self.flowLayout46 ~= nil then self.flowLayout46:destroy(); self.flowLayout46 = nil; end;
+        if self.multiplicadordex ~= nil then self.multiplicadordex:destroy(); self.multiplicadordex = nil; end;
+        if self.comboBox1 ~= nil then self.comboBox1:destroy(); self.comboBox1 = nil; end;
+        if self.armaduraBloqueio ~= nil then self.armaduraBloqueio:destroy(); self.armaduraBloqueio = nil; end;
+        if self.edit24 ~= nil then self.edit24:destroy(); self.edit24 = nil; end;
+        if self.flowLayout123 ~= nil then self.flowLayout123:destroy(); self.flowLayout123 = nil; end;
+        if self.flowLayout95 ~= nil then self.flowLayout95:destroy(); self.flowLayout95 = nil; end;
+        if self.horzLine4 ~= nil then self.horzLine4:destroy(); self.horzLine4 = nil; end;
+        if self.intVantagem1 ~= nil then self.intVantagem1:destroy(); self.intVantagem1 = nil; end;
+        if self.flowLayout92 ~= nil then self.flowLayout92:destroy(); self.flowLayout92 = nil; end;
+        if self.horzLine1 ~= nil then self.horzLine1:destroy(); self.horzLine1 = nil; end;
+        if self.flowLayout129 ~= nil then self.flowLayout129:destroy(); self.flowLayout129 = nil; end;
+        if self.edit1 ~= nil then self.edit1:destroy(); self.edit1 = nil; end;
+        if self.flowLayout61 ~= nil then self.flowLayout61:destroy(); self.flowLayout61 = nil; end;
+        if self.dataLink6 ~= nil then self.dataLink6:destroy(); self.dataLink6 = nil; end;
+        if self.edit4 ~= nil then self.edit4:destroy(); self.edit4 = nil; end;
+        if self.sabVantagem3 ~= nil then self.sabVantagem3:destroy(); self.sabVantagem3 = nil; end;
+        if self.flowLayout64 ~= nil then self.flowLayout64:destroy(); self.flowLayout64 = nil; end;
+        if self.flowLayout4 ~= nil then self.flowLayout4:destroy(); self.flowLayout4 = nil; end;
+        if self.flowPart15 ~= nil then self.flowPart15:destroy(); self.flowPart15 = nil; end;
+        if self.dexVantagem3 ~= nil then self.dexVantagem3:destroy(); self.dexVantagem3 = nil; end;
+        if self.flowLayout50 ~= nil then self.flowLayout50:destroy(); self.flowLayout50 = nil; end;
+        if self.dataLink8 ~= nil then self.dataLink8:destroy(); self.dataLink8 = nil; end;
+        if self.flowLayout3 ~= nil then self.flowLayout3:destroy(); self.flowLayout3 = nil; end;
+        if self.nivelfor ~= nil then self.nivelfor:destroy(); self.nivelfor = nil; end;
+        if self.basesab ~= nil then self.basesab:destroy(); self.basesab = nil; end;
+        if self.conVantagem4 ~= nil then self.conVantagem4:destroy(); self.conVantagem4 = nil; end;
+        if self.abaVaziaaba10 ~= nil then self.abaVaziaaba10:destroy(); self.abaVaziaaba10 = nil; end;
+        if self.flowLayout55 ~= nil then self.flowLayout55:destroy(); self.flowLayout55 = nil; end;
+        if self.totalsab ~= nil then self.totalsab:destroy(); self.totalsab = nil; end;
+        if self.edit33 ~= nil then self.edit33:destroy(); self.edit33 = nil; end;
+        if self.treinofor ~= nil then self.treinofor:destroy(); self.treinofor = nil; end;
+        if self.conVantagem1 ~= nil then self.conVantagem1:destroy(); self.conVantagem1 = nil; end;
+        if self.edit19 ~= nil then self.edit19:destroy(); self.edit19 = nil; end;
+        if self.label1 ~= nil then self.label1:destroy(); self.label1 = nil; end;
+        if self.flowLayout17 ~= nil then self.flowLayout17:destroy(); self.flowLayout17 = nil; end;
+        if self.barraXpProfissao ~= nil then self.barraXpProfissao:destroy(); self.barraXpProfissao = nil; end;
+        if self.horzLine14 ~= nil then self.horzLine14:destroy(); self.horzLine14 = nil; end;
+        if self.edit34 ~= nil then self.edit34:destroy(); self.edit34 = nil; end;
+        if self.editaba10 ~= nil then self.editaba10:destroy(); self.editaba10 = nil; end;
+        if self.horzLine13 ~= nil then self.horzLine13:destroy(); self.horzLine13 = nil; end;
+        if self.label4 ~= nil then self.label4:destroy(); self.label4 = nil; end;
+        if self.richEdit2 ~= nil then self.richEdit2:destroy(); self.richEdit2 = nil; end;
+        if self.totalcar ~= nil then self.totalcar:destroy(); self.totalcar = nil; end;
+        if self.racaint ~= nil then self.racaint:destroy(); self.racaint = nil; end;
+        if self.flowLayout72 ~= nil then self.flowLayout72:destroy(); self.flowLayout72 = nil; end;
+        if self.label13 ~= nil then self.label13:destroy(); self.label13 = nil; end;
+        if self.edit13 ~= nil then self.edit13:destroy(); self.edit13 = nil; end;
+        if self.label23 ~= nil then self.label23:destroy(); self.label23 = nil; end;
+        if self.flowLayout19 ~= nil then self.flowLayout19:destroy(); self.flowLayout19 = nil; end;
+        if self.classedex ~= nil then self.classedex:destroy(); self.classedex = nil; end;
+        if self.richEdit9 ~= nil then self.richEdit9:destroy(); self.richEdit9 = nil; end;
+        if self.totalint ~= nil then self.totalint:destroy(); self.totalint = nil; end;
+        if self.flowLayout77 ~= nil then self.flowLayout77:destroy(); self.flowLayout77 = nil; end;
+        if self.multiplicadorEsquiva ~= nil then self.multiplicadorEsquiva:destroy(); self.multiplicadorEsquiva = nil; end;
+        if self.label14 ~= nil then self.label14:destroy(); self.label14 = nil; end;
+        if self.destrezaMira ~= nil then self.destrezaMira:destroy(); self.destrezaMira = nil; end;
+        if self.label26 ~= nil then self.label26:destroy(); self.label26 = nil; end;
+        if self.dataLink26 ~= nil then self.dataLink26:destroy(); self.dataLink26 = nil; end;
+        if self.tabelaAtributos ~= nil then self.tabelaAtributos:destroy(); self.tabelaAtributos = nil; end;
+        if self.outrocon ~= nil then self.outrocon:destroy(); self.outrocon = nil; end;
+        if self.niveldex ~= nil then self.niveldex:destroy(); self.niveldex = nil; end;
+        if self.classecar ~= nil then self.classecar:destroy(); self.classecar = nil; end;
+        if self.flowLayout138 ~= nil then self.flowLayout138:destroy(); self.flowLayout138 = nil; end;
+        if self.editaba1 ~= nil then self.editaba1:destroy(); self.editaba1 = nil; end;
+        if self.okButtonaba1 ~= nil then self.okButtonaba1:destroy(); self.okButtonaba1 = nil; end;
+        if self.flowLayout25 ~= nil then self.flowLayout25:destroy(); self.flowLayout25 = nil; end;
+        if self.flowLayout35 ~= nil then self.flowLayout35:destroy(); self.flowLayout35 = nil; end;
+        if self.flowLayout78 ~= nil then self.flowLayout78:destroy(); self.flowLayout78 = nil; end;
+        if self.flowLayout133 ~= nil then self.flowLayout133:destroy(); self.flowLayout133 = nil; end;
+        if self.dataLink21 ~= nil then self.dataLink21:destroy(); self.dataLink21 = nil; end;
+        if self.editaba4 ~= nil then self.editaba4:destroy(); self.editaba4 = nil; end;
+        if self.scrollBox7 ~= nil then self.scrollBox7:destroy(); self.scrollBox7 = nil; end;
+        if self.scrollBox8 ~= nil then self.scrollBox8:destroy(); self.scrollBox8 = nil; end;
+        if self.abaVaziaaba8 ~= nil then self.abaVaziaaba8:destroy(); self.abaVaziaaba8 = nil; end;
+        if self.popupaba8 ~= nil then self.popupaba8:destroy(); self.popupaba8 = nil; end;
+        if self.flowLayout81 ~= nil then self.flowLayout81:destroy(); self.flowLayout81 = nil; end;
+        if self.flowLayout119 ~= nil then self.flowLayout119:destroy(); self.flowLayout119 = nil; end;
+        if self.flowLayout144 ~= nil then self.flowLayout144:destroy(); self.flowLayout144 = nil; end;
+        if self.flowLayout20 ~= nil then self.flowLayout20:destroy(); self.flowLayout20 = nil; end;
+        if self.scrollBox2 ~= nil then self.scrollBox2:destroy(); self.scrollBox2 = nil; end;
+        if self.destrezaAcerto ~= nil then self.destrezaAcerto:destroy(); self.destrezaAcerto = nil; end;
+        if self.abaVaziaaba2 ~= nil then self.abaVaziaaba2:destroy(); self.abaVaziaaba2 = nil; end;
+        if self.popupaba7 ~= nil then self.popupaba7:destroy(); self.popupaba7 = nil; end;
+        if self.multiplicadorBloqueio ~= nil then self.multiplicadorBloqueio:destroy(); self.multiplicadorBloqueio = nil; end;
+        if self.rectangle15 ~= nil then self.rectangle15:destroy(); self.rectangle15 = nil; end;
+        if self.flowLayout114 ~= nil then self.flowLayout114:destroy(); self.flowLayout114 = nil; end;
+        if self.flowLayout106 ~= nil then self.flowLayout106:destroy(); self.flowLayout106 = nil; end;
+        if self.dataLink10 ~= nil then self.dataLink10:destroy(); self.dataLink10 = nil; end;
+        if self.popupaba2 ~= nil then self.popupaba2:destroy(); self.popupaba2 = nil; end;
+        if self.abaVaziaaba7 ~= nil then self.abaVaziaaba7:destroy(); self.abaVaziaaba7 = nil; end;
+        if self.rectangle22 ~= nil then self.rectangle22:destroy(); self.rectangle22 = nil; end;
+        if self.rectangle10 ~= nil then self.rectangle10:destroy(); self.rectangle10 = nil; end;
+        if self.flowLayout113 ~= nil then self.flowLayout113:destroy(); self.flowLayout113 = nil; end;
         self:_oldLFMDestroy();
     end;
 

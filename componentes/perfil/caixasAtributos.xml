@@ -66,31 +66,20 @@
                 local base = sheet.base$(name)
 
                 if base >= 400 then
-                    self.$(name)Vantagem1.color = 'white'
-                    self.$(name)Vantagem2.color = 'white'
-                    self.$(name)Vantagem3.color = 'white'
-                    self.$(name)Vantagem4.color = 'white'
+                    color1, color2, color3, color4 = 'white', 'white', 'white', 'white'
                 elseif base >= 300 then
-                    self.$(name)Vantagem1.color = 'white'
-                    self.$(name)Vantagem2.color = 'white'
-                    self.$(name)Vantagem3.color = 'white'
-                    self.$(name)Vantagem4.color = 'black'
+                    color1, color2, color3, color4 = 'white', 'white', 'white', 'black'
                 elseif base >= 200 then
-                    self.$(name)Vantagem1.color = 'white'
-                    self.$(name)Vantagem2.color = 'white'
-                    self.$(name)Vantagem3.color = 'black'
-                    self.$(name)Vantagem4.color = 'black'
+                    color1, color2, color3, color4 = 'white', 'white', 'black', 'black'
                 elseif base >= 100 then
-                    self.$(name)Vantagem1.color = 'white'
-                    self.$(name)Vantagem2.color = 'black'
-                    self.$(name)Vantagem3.color = 'black'
-                    self.$(name)Vantagem4.color = 'black'
+                    color1, color2, color3, color4 = 'white', 'black', 'black', 'black'
                 else
-                    self.$(name)Vantagem1.color = 'black'
-                    self.$(name)Vantagem2.color = 'black'
-                    self.$(name)Vantagem3.color = 'black'
-                    self.$(name)Vantagem4.color = 'black'
-                end       
+                    color1, color2, color3, color4 = 'black', 'black', 'black', 'black'
+                end
+                self.$(name)Vantagem1.color = color1
+                self.$(name)Vantagem2.color = color2
+                self.$(name)Vantagem3.color = color3
+                self.$(name)Vantagem4.color = color4     
             </event>
         </dataLink>
     </template>
